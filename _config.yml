@@ -108,7 +108,7 @@ author:
   avatar           : "/assets/images/headshot.jpeg"
   bio              : "I am a 4th year Economics PhD Student at George Mason University. My research interests include Economic History, Political Economy, and Applied Econometrics. I am broadly interested in the role of the media and public symbols in key historical events."
   location         : "Fairfax, VA"
-  email            :
+  email            : "mailto:ataylo46@gmu.edu"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
