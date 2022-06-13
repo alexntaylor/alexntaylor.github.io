@@ -9,4 +9,4 @@ Here are a few things I'm currently working on...
 ## Public Symbols and Voting Behavior: Confederate Monuments in the Post-Reconstruction South
 
 ## The Impact of the Black Death on the Adoption of the Printing Press
-# (Joint work with Noel D. Johnson and Andrew Thomas)
+### (Joint work with Noel D. Johnson and Andrew Thomas)
