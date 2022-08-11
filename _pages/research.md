@@ -14,4 +14,5 @@ permalink: /research/
 ## In the Media
 
 **[Code Snitching: Nashvillians Are Weaponizing Metro Codes Against ‘Undesirable’ Neighbors](https://www.nashvillescene.com/news/coverstory/code-snitching-nashvillians-are-weaponizing-metro-codes-against-undesirable-neighbors/article_5e94bd56-0c67-11ed-af4e-e3d04ad7e500.html)**
+
 Cover story of the July 28, 2022 issue of the Nashville Scene. I assisted journalist Radley Balko (Washington Post, Nashville Scene) in analyzing the use of metro code violation reports in gentrifying areas. I found that, even when controlling for a home's condition and other factors, lower-valued homes in gentrifying areas were more likely to have reports against them than higher-valued homes.
