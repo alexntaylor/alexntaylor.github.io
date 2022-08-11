@@ -4,6 +4,8 @@ date:   2022-8-11 16:00:00 -0500
 permalink: /research/
 ---
 
+!["Arithmetic" on Tapestry](assets/images/arithmetic_tapestry.jpeg ""Arithmetic" on Tapestry")
+
 ## Works in Progress...
 
 **Public Symbols and Voting Behavior: Confederate Monuments in the Post-Reconstruction South**\\
