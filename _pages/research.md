@@ -7,8 +7,7 @@ permalink: /research/
 ## A Few Things I'm Working On...
 
 **Public Symbols and Voting Behavior: Confederate Monuments in the Post-Reconstruction South**\\
-\\
-<sub><sup>Uses a Two-Way Fixed Effects model to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1872-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. This implies that monuments affect how societies are perceived and perceive themselves, which have political consequences. Further updates to come!</sup></sub>
+<sub>Uses a Two-Way Fixed Effects model to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1872-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. This implies that monuments affect how societies are perceived and perceive themselves, which have political consequences. Further updates to come!</sub>
 
 **The Impact of the Black Death on the Adoption of the Printing Press**
 (joint with Noel D. Johnson and Andrew Thomas)\\
