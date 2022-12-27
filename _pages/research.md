@@ -1,6 +1,6 @@
 ---
 title:  "Research"
-date:   2022-8-11 16:00:00 -0500
+date:   2022-12-27 16:00:00 -0500
 permalink: /research/
 ---
 
@@ -18,7 +18,7 @@ permalink: /research/
 ## Papers in Progress
 
 **Dictionaries and Language in Early Modern Europe**\\
-<sub>Investigates the impact of printed dictionaries in early modern Europe. Preliminary findings indicate that the publication of a translation dictionary in a city increases the diversity of languages printed in a city.</sub>
+<sub>Investigates the impact of printed dictionaries in early modern Europe. Preliminary findings indicate that the publication of a translation dictionary in a city increases the diversity of languages printed.</sub>
 
 **Policy, Printing, and Linguistic Homogenization: The Case of Early Modern French**
 (joint with Jacob Hall)\\
