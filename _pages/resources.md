@@ -25,22 +25,35 @@ permalink: /resources/
 
 ## Econometrics and Causal Inference
 
-- ["Causal Inference: The Mixtape" by Scott Cunningham](https://mixtape.scunning.com)
 - ["The Effect" by Nick Huntington-Klein](https://theeffectbook.net)
+- ["Causal Inference: The Mixtape" by Scott Cunningham](https://mixtape.scunning.com)
+- [Difference-in-Difference (DiD) Repository from Asjad Naqvi](https://asjadnaqvi.github.io/DiD/)
 
 ## Getting Started with R
 
-- [Download R from posit](https://posit.co/downloads/)
+- [Download R](https://www.r-project.org)
+- [Download RStudio from posit](https://posit.co/downloads/)
 - [Starter links from posit](https://support.posit.co/hc/en-us/articles/201141096-Getting-Started-with-R)
+- [Package Cheatsheets from posit](https://posit.co/resources/cheatsheets/?type=posit-cheatsheets/)
 
 ## Data Science in R
 
 - [R for Data Science by Wickham & Grolemund](https://r4ds.had.co.nz/index.html)
 
-## Web Scraping in R
+## Web Crawling & Scraping in R
+
+- [Rvest R Package (Part of Tidyverse)](https://rvest.tidyverse.org)
+- [Web Crawling & Scraping Tutorial by Alex Cardazzi](https://alexcardazzi.github.io/using-r/2022/web_stuff.html)
 
 ## GIS
+
+- ["Geocomputation with R" by Lovelace, Nowosad, and Muenchow](https://geocompr.robinlovelace.net/index.html)
 
 ## Fun and Useful
 
 - [ChatGPT (Impressively good at coding!)](https://chat.openai.com)
+
+## Fun and (Academically) Useless
+
+- [Phish.net](https://phish.net)
+  - Full of fan-sourced song, venue, and performance statistics for the jam band Phish
