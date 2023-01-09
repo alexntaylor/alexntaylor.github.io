@@ -8,7 +8,7 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Research"
     url: /research/
-   - title: "Resources"
-     url: /resources/
+  - title: "Resources"
+    url: /resources/
   # - title: "Sitemap"
   #   url: /sitemap/
