@@ -8,4 +8,10 @@ permalink: /resources/
 
 ## Getting Started with R
 
-## 
+## Data Cleaning
+
+## Web Scraping
+
+## Econometrics
+
+## GIS
