@@ -8,6 +8,9 @@ permalink: /resources/
 
 ## Getting Started with R
 
+- [Download R from posit][https://posit.co/downloads/]
+- [Starter links from posit][https://support.posit.co/hc/en-us/articles/201141096-Getting-Started-with-R]
+
 ## Data Cleaning
 
 ## Web Scraping
