@@ -25,8 +25,11 @@ permalink: /resources/
 
 ## Econometrics and Causal Inference
 
+These resources are helpful for both learning basic metrics & causal inference as well as tracking packages to implement these techniques in different data analysis software, primarily R, Stata, and Python
+
 - ["The Effect" by Nick Huntington-Klein](https://theeffectbook.net)
 - ["Causal Inference: The Mixtape" by Scott Cunningham](https://mixtape.scunning.com)
+- [The Library of Statistical Techniques (LOST)](https://lost-stats.github.io)
 - [Difference-in-Difference (DiD) Repository from Asjad Naqvi](https://asjadnaqvi.github.io/DiD/)
 
 ## Getting Started with R
@@ -48,10 +51,17 @@ permalink: /resources/
 ## GIS
 
 - ["Geocomputation with R" by Lovelace, Nowosad, and Muenchow](https://geocompr.robinlovelace.net/index.html)
+- [Atlas of Historical County Boundaries (US)](https://digital.newberry.org/ahcb/index.html)
+  - Shapefiles for historical county (1629-2000) and state/territory (1783-2000) boundaries. Tracks all boundary changes over time.
+- [IPUMS NHGIS (US)](https://www.nhgis.org)
+  - Shapefiles for historical boundaries in census years from 1790-Present. Does not track all changes, only shows boundaries as they existed in census years.
+- [Eurostat (From the EU)]https://ec.europa.eu/eurostat/web/gisco)
+  - Shapefiles for modern Europe
 
 ## Fun and Useful
 
 - [ChatGPT (Impressively good at coding!)](https://chat.openai.com)
+- [Elicit: The AI Research Assistant](https://elicit.org/)
 
 ## Fun and (Academically) Useless
 
