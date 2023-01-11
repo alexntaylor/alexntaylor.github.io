@@ -55,7 +55,7 @@ These resources are helpful for both learning basic metrics & causal inference a
   - Shapefiles for historical county (1629-2000) and state/territory (1783-2000) boundaries. Tracks all boundary changes over time.
 - [IPUMS NHGIS (US)](https://www.nhgis.org)
   - Shapefiles for historical boundaries in census years from 1790-Present. Does not track all changes, only shows boundaries as they existed in census years.
-- [Eurostat (From the EU)]https://ec.europa.eu/eurostat/web/gisco)
+- [Eurostat (From the EU)](https://ec.europa.eu/eurostat/web/gisco)
   - Shapefiles for modern Europe
 
 ## Fun and Useful
