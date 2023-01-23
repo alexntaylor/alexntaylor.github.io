@@ -50,13 +50,17 @@ These resources are helpful for both learning basic metrics & causal inference a
 
 ## GIS
 
-- ["Geocomputation with R" by Lovelace, Nowosad, and Muenchow](https://geocompr.robinlovelace.net/index.html)
+- ["Geocomputation with R" by Lovelace, Nowosad, & Muenchow](https://geocompr.robinlovelace.net/index.html)
 - [Atlas of Historical County Boundaries (US)](https://digital.newberry.org/ahcb/index.html)
   - Shapefiles for historical county (1629-2000) and state/territory (1783-2000) boundaries. Tracks all boundary changes over time.
 - [IPUMS NHGIS (US)](https://www.nhgis.org)
   - Shapefiles for historical boundaries in census years from 1790-Present. Does not track all changes, only shows boundaries as they existed in census years.
 - [Eurostat (From the EU)](https://ec.europa.eu/eurostat/web/gisco)
   - Shapefiles for modern Europe
+
+## Text as Data
+
+- ["Text Mining with R" by Silge & Robinson](https://www.tidytextmining.com/index.html)
 
 ## Fun and Useful
 
