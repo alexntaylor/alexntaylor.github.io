@@ -8,8 +8,8 @@ permalink: /research/
 
 ## Working Papers
 
-**Monumental Effects: Symbols of the Lost Cause in the Post-Reconstruction South**\\
-<sub>Uses a Two-Way Fixed Effects model to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (Current Draft: Dec 2022)</sub>
+**[Monumental Effects: Symbols of the Lost Cause in the Post-Reconstruction South](https://alexntaylor.github.io/assets/documents/taylor_monuments_1-28-23.pdf)**\\
+<sub>Uses a Two-Way Fixed Effects model to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (Current Draft: Jan 2023)</sub>
 
 **The Impact of the Black Death on the Adoption of the Printing Press**
 (joint with Noel D. Johnson and Andrew Thomas)\\
