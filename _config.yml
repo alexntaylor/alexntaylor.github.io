@@ -259,9 +259,11 @@ plugins:
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-remote-
 
 
 # Archives
