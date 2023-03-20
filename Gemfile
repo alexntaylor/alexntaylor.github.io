@@ -10,7 +10,6 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 gem "github-pages", group: :jekyll_plugins
-gem "jekyll-remote-theme"
 
 # To upgrade, run `bundle update`.
 
