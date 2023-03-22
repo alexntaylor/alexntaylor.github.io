@@ -46,7 +46,7 @@ These resources are helpful for both learning basic metrics & causal inference a
 ## Web Crawling & Scraping in R
 
 - [Rvest R Package (Part of Tidyverse)](https://rvest.tidyverse.org)
-- [Web Crawling & Scraping Tutorial by Alex Cardazzi](https://alexcardazzi.github.io/using-r/2022/web_stuff.html)
+- [Web Crawling & Scraping Tutorial by Alex Cardazzi](https://alexcardazzi.github.io/using-r/ew_wvu_2022/web_stuff.html)
 
 ## GIS
 
