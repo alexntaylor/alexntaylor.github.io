@@ -99,7 +99,7 @@ social:
 analytics:
   provider               : "google-gtag"
   google:
-    tracking_id          : "G-12ZZLPHMSQ"
+    tracking_id          : G-12ZZLPHMSQ
     anonymize_ip         : # true, false (default)
 
 # Google Analytics
