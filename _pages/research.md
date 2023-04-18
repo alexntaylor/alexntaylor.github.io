@@ -9,11 +9,11 @@ permalink: /research/
 ## Working Papers
 
 **[Monumental Effects: Symbols of the Lost Cause in the Post-Reconstruction South](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0)**\\
-<sub>Uses a Two-Way Fixed Effects model to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (Current Draft: Mar 2023)</sub>
+<sub>Uses a Two-Way Fixed Effects model to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (Updates coming soon! Current Draft: Mar 2023)</sub>
 
 **The Impact of the Black Death on the Adoption of the Printing Press**
 (joint with Noel D. Johnson and Andrew Thomas)\\
-<sub>Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. (Current Draft: Mar 2023)</sub>
+<sub>Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. (Under Review, Current Draft: Apr 2023)</sub>
 
 ## Papers in Progress
 
