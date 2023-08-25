@@ -27,7 +27,7 @@ Presentations (including planned): World Economic History Congress, World Cliome
 **Policy, Printing, and Linguistic Homogenization: The Case of Early Modern French**
 (joint with Jacob Hall)\\
 <sub>Investigates the impact of language policy and state capacity on printed early modern French.\\
-Presentations: SEA\\</sub>
+Presentations: SEA</sub>
 
 **The History of the Urban-Rural Divide in American Politics**
 (joint with Jacob Hall and Pradyot Sharma)\\
