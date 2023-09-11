@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -110,7 +110,7 @@ google_analytics: G-12ZZLPHMSQ
 author:
   name             : "Alex Taylor"
   avatar           : "/assets/images/headshot.jpeg"
-  bio              : "I am a 5th year Economics PhD Candidate at George Mason University. My research interests include Economic History, Political Economy, and Applied Econometrics."
+  bio              : "I am a 5th year Economics PhD Candidate at George Mason University. My research interests include Political Economy, Economic History, and Applied Econometrics."
   location         : "Fairfax, VA"
   email            : "ataylo46@gmu.edu"
   links:
