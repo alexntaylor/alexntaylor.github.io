@@ -9,13 +9,12 @@ permalink: /resources/
 ## Economics at George Mason University
 
 - [Center for the Study of Public Choice](https://publicchoice.gmu.edu)
-- [Fall 2023 Seminar Series](https://publicchoice.gmu.edu/center-programs/spring-2023)
+- [Fall 2023 Seminar Series](https://publicchoice.gmu.edu/center-programs/fall-2023)
 
 ## Economic History
 
 - [EHA Website](https://eh.net/eha/)
 - [EH.net](https://eh.net)
-- [Explorations in Economic History](https://www.sciencedirect.com/journal/explorations-in-economic-history)
 - [Journal of Economic History](https://www.cambridge.org/core/journals/journal-of-economic-history)
 - [Economic History Podcast](https://podcasts.apple.com/us/podcast/the-economic-history-podcast/id1513552663)
 - [GrowthChat Podcast](https://podcasts.apple.com/us/podcast/growthchat-by-marco-lecci-and-sascha-o-becker/id1547360381)
