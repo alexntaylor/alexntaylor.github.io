@@ -17,7 +17,7 @@ permalink: /research/
 **[The Impact of the Black Death on the Adoption of the Printing Press](https://www.dropbox.com/s/824qoddbym035eb/BDPress_current.pdf?dl=0)**
 (joint with Noel D. Johnson and Andrew Thomas)\\
 ![Bin Scatter, Effect of Market Size on Early Print Adoption](/assets/images/2sls_print1500.png "Bin Scatter, Effect of Market Size on Early Print Adoption")
-<sub>Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. (**Under Review**, Current Draft: Apr 2023) [\[Dropbox\]](https://www.dropbox.com/s/824qoddbym035eb/BDPress_current.pdf?dl=0)\\
+<sub>Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1500 and 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. (**Under Review**, Current Draft: Apr 2023) [\[Dropbox\]](https://www.dropbox.com/s/824qoddbym035eb/BDPress_current.pdf?dl=0)\\
 <ins>Presentations</ins>: World Economic History Congress, World Cliometric Conference, Markets & Society Conference</sub>
 
 ## Papers in Progress
