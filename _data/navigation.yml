@@ -4,8 +4,8 @@ main:
     url: /
   - title: "CV"
     url: /assets/documents/taylor_cv.pdf
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "JMP"
+    url: https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0
   - title: "Research"
     url: /research/
   - title: "Teaching"
