@@ -15,6 +15,7 @@ permalink: /resources/
 
 - [EHA Website](https://eh.net/eha/)
 - [EH.net](https://eh.net)
+- [Explorations in Economic History](https://www.sciencedirect.com/journal/explorations-in-economic-history)
 - [Journal of Economic History](https://www.cambridge.org/core/journals/journal-of-economic-history)
 - [Economic History Podcast](https://podcasts.apple.com/us/podcast/the-economic-history-podcast/id1513552663)
 - [GrowthChat Podcast](https://podcasts.apple.com/us/podcast/growthchat-by-marco-lecci-and-sascha-o-becker/id1547360381)
