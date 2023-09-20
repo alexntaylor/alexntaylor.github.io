@@ -1,6 +1,6 @@
 ---
 title:  "Research"
-date:   2023-8-1 16:00:00 -0500
+date:   2023-9-19 16:00:00 -0500
 permalink: /research/
 ---
 
@@ -24,6 +24,10 @@ permalink: /research/
 
 **The Word of God or Man? Bibles, Dictionaries, and the Vernacular Shift**\\
 <sub>Uses generalized difference-in-differences and event study designs to assess the impact of printed bibles and dictionaries on shift away from Latin to vernacular languages in early modern Europe. This topic has implications for better understanding the formation of national identities through language, as well as the communication of ideas across linguistic divides.</sub>
+
+**Institution Building in Indian Country: Tribal Courts**
+(joint with Thomas Stratmann and Adam Crepelle)\\
+<sub>Investigates the impact of institutional improvements on American Indian Reservations.</sub>
 
 **Policy, Printing, and Linguistic Homogenization: The Case of Early Modern French**
 (joint with Jacob Hall)\\
