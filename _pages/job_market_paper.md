@@ -14,8 +14,10 @@ Popular Media: [The Conversation Article](https://theconversation.com/when-confe
 
 ## Paper Summary
 
+<sub>Current Draft: July 2023 [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)</sub>
+
 <sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications were associated with an increase in Democratic Party vote share. I also find that these counties saw a decrease in voter turnout and Black population share. The political findings are robust to pre-processing with propensity score matching and a number of other robustness checks.</sub>
 
 ![Effect of Confederate monument dedication on congressional Democratic Party vote share](/assets/images/mon_cdem_event.jpg "Effect of Confederate monument dedication on congressional Democratic Party vote share")
 
-<sub>I further explore monuments' effects along other margins, including monument intensity and characteristics. I also show that Black out-migration does not explain my political findings, suggesting monuments either politically energized southern whites, suppressed southern blacks, or both. My findings imply that monuments affect collective memory, as well as how societies are perceived and perceive themselves. (Current Draft: Jul 2023) [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)</sub>
+<sub>I further explore monuments' effects along other margins, including monument intensity and characteristics. I also show that Black out-migration does not explain my political findings, suggesting monuments either politically energized southern whites, suppressed southern blacks, or both. My findings imply that monuments affect collective memory, as well as how societies are perceived and perceive themselves.</sub>
