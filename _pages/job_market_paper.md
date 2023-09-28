@@ -5,12 +5,12 @@ permalink: /jmp/
 ---
 
 **[Monumental Effects: Confederate Monuments in the Post-Reconstruction South](https://ssrn.com/abstract=4451402)**\\
-Revise & Resubmit at Explorations in Economic History
+Revise & Resubmit at Explorations in Economic History\\
+<sub><ins>Presentations</ins>: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA</sub>
 
-![First Monument Dedication, 1878-1912](/assets/images/mon_yrded_map_4-14-23 "First Monument Dedication, 1878-1912")
+![First Monument Dedication, 1878-1912](/assets/images/mon_yrded_map_4-14-23.png "First Monument Dedication, 1878-1912")
 
-<ins>Presentations</ins>: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA\\
-<sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with an increase in Democratic Party vote share. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (Current Draft: Jul 2023) [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)</sub>\\
+<sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with an increase in Democratic Party vote share. I also find that these counties saw a decrease in voter turnout and the black population. I explore monuments' effects along additional margins, including monument intensity and characteristics. I also show that Black out-migration does not explain my political findings, suggesting monuments either political energized southern whites, suppressed southern blacks, or both. My findings imply that monuments affect collective memory, as well as how societies are perceived and perceive themselves. (Current Draft: Jul 2023) [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)</sub>
 
 ## In the Media
 
