@@ -6,7 +6,8 @@ permalink: /jmp/
 
 **[Monumental Effects: Confederate Monuments in the Post-Reconstruction South](https://ssrn.com/abstract=4451402)**\\
 Revise & Resubmit at Explorations in Economic History\\
-<sub>Popular Media: [The Conversation Article](https://theconversation.com/when-confederate-glorifying-monuments-went-up-in-the-south-voting-in-black-areas-went-down-208275), [Election Law Blog Mention](https://electionlawblog.org/?p=136948)</sub>
+<sub>Popular Media: [The Conversation Article](https://theconversation.com/when-confederate-glorifying-monuments-went-up-in-the-south-voting-in-black-areas-went-down-208275), [Election Law Blog Mention](https://electionlawblog.org/?p=136948)\\
+<ins>Presentations</ins>: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA</sub>
 
 ![First Monument Dedication, 1878-1912](/assets/images/mon_yrded_map_4-14-23.png "First Monument Dedication, 1878-1912")
 
