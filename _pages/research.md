@@ -31,7 +31,7 @@ permalink: /research/
 
 **Policy, Printing, and Linguistic Homogenization: The Case of Early Modern French**
 (joint with Jacob Hall)\\
-<sub>Investigates the impact of language policy and state capacity on printed early modern French.\\
+<sub>Investigates the impact of language policy and state capacity on printed early modern French. [\[Slides\]](https://alexntaylor.github.io/assets/documents/kings_french_SEA_11-19-22.pdf)\\
 <ins>Presentations</ins>: SEA</sub>
 
 **The History of the Urban-Rural Divide in American Politics**
