@@ -1,6 +1,6 @@
 ---
 title:  "Research"
-date:   2023-9-19 16:00:00 -0500
+date:   2023-12-7 16:00:00 -0500
 permalink: /research/
 ---
 
@@ -14,10 +14,10 @@ permalink: /research/
 <sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (**Revise & Resubmit at Explorations in Economic History**, Current Draft: Jul 2023) [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Slides\]](https://alexntaylor.github.io/assets/documents/taylor_monuments_sea_11-18-23.pdf) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)\\
 <ins>Presentations</ins>: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA</sub>
 
-**[The Impact of the Black Death on the Adoption of the Printing Press](https://www.dropbox.com/s/824qoddbym035eb/BDPress_current.pdf?dl=0)**
+**[The Impact of the Black Death on the Adoption of the Printing Press](https://www.dropbox.com/scl/fi/89lu18dixr4epcylgcbj3/BDPress_current.pdf?rlkey=8npnf76r0qwpoetsd5hjjrybj&dl=0)**
 (joint with Noel D. Johnson and Andrew Thomas)\\
 ![Bin Scatter, Effect of Market Size on Early Print Adoption](/assets/images/2sls_print1500.png "Bin Scatter, Effect of Market Size on Early Print Adoption")
-<sub>Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1500 and 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. (**Under Review**, Current Draft: Apr 2023) [\[Dropbox\]](https://www.dropbox.com/s/824qoddbym035eb/BDPress_current.pdf?dl=0) [\[Slides\]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)\\
+<sub>Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1500 and 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. (**Under Review**, Current Draft: Dec 2023) [\[Dropbox\]](https://www.dropbox.com/scl/fi/89lu18dixr4epcylgcbj3/BDPress_current.pdf?rlkey=8npnf76r0qwpoetsd5hjjrybj&dl=0) [\[Slides\]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)\\
 <ins>Presentations</ins>: World Economic History Congress, World Cliometric Conference, Markets & Society Conference</sub>
 
 ## Papers in Progress
