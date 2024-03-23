@@ -11,5 +11,3 @@ Economics of Developing Areas, Fall 2021\\
 
 International Economic Policy, Spring 2022\\
 <sub>Introduces economic way of thinking on trade and international finance. Presents historical and current information on consequences of trade and protectionism.</sub>
-
-[Course Evaluations](https://alexntaylor.github.io/assets/documents/taylor_evals_short.pdf)
