@@ -40,6 +40,9 @@ permalink: /research/
 
 ## In the Media
 
+**[Confederate Monuments in the Post‐​Reconstruction South.](https://www.cato.org/research-briefs-economic-policy/confederate-monuments-post-reconstruction-south)**\\
+<sub>The Cato Institute, Research Briefs in Economic Policy No. 384, May 22, 2024. Summary of findings in "Monumental Effects: Confederate Monuments in the Post-Reconstruction South."</sub>
+
 **[When Confederate-glorifying monuments went up in the South, voting in Black areas went down.](https://theconversation.com/when-confederate-glorifying-monuments-went-up-in-the-south-voting-in-black-areas-went-down-208275)**\\
 <sub>The Conversation, August 8, 2023. Summary of findings in "Monumental Effects: Confederate Monuments in the Post-Reconstruction South."</sub>
 
