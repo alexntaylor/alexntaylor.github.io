@@ -11,7 +11,7 @@ permalink: /research/
 **[Monumental Effects: Confederate Monuments in the Post-Reconstruction South](https://ssrn.com/abstract=4451402)**
 (Job Market Paper)\\
 ![Effect of Confederate monument dedication on congressional Democratic Party vote share](/assets/images/mon_cdem_event.jpg "Effect of Confederate monument dedication on congressional Democratic Party vote share")
-<sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (**Revise & Resubmit at Explorations in Economic History**, Current Draft: Jul 2023) [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Slides\]](https://alexntaylor.github.io/assets/documents/taylor_monuments_sea_11-18-23.pdf) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)\\
+<sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (**Revised & Resubmitted at Explorations in Economic History**, Current Draft: June 2024) [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Slides\]](https://alexntaylor.github.io/assets/documents/taylor_monuments_sea_11-18-23.pdf) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)\\
 <ins>Presentations</ins>: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA</sub>
 
 **[The Impact of the Black Death on the Adoption of the Printing Press](https://www.dropbox.com/scl/fi/89lu18dixr4epcylgcbj3/BDPress_current.pdf?rlkey=8npnf76r0qwpoetsd5hjjrybj&dl=0)**
@@ -35,13 +35,13 @@ permalink: /research/
 
 **The King’s French**
 (joint with Jacob Hall)\\
-<sub>Investigates the impact of language policy and state capacity on the standardization of early modern French. [\[Slides\]](https://alexntaylor.github.io/assets/documents/kings_french_SEA_11-19-22.pdf)\\
+<sub>Investigates the impact of language policy and state capacity on the standardization of early modern French.\\
 <ins>Presentations</ins>: SEA</sub>
 
 ## In the Media
 
 **[Confederate Monuments in the Post‐​Reconstruction South.](https://www.cato.org/research-briefs-economic-policy/confederate-monuments-post-reconstruction-south)**\\
-<sub>The Cato Institute, Research Briefs in Economic Policy No. 384, May 22, 2024. Summary of findings in "Monumental Effects: Confederate Monuments in the Post-Reconstruction South."</sub>
+<sub>The Cato Institute, Research Briefs in Economic Policy No. 384, May 22, 2024.</sub>
 
 **[When Confederate-glorifying monuments went up in the South, voting in Black areas went down.](https://theconversation.com/when-confederate-glorifying-monuments-went-up-in-the-south-voting-in-black-areas-went-down-208275)**\\
 <sub>The Conversation, August 8, 2023. Summary of findings in "Monumental Effects: Confederate Monuments in the Post-Reconstruction South."</sub>
