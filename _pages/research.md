@@ -1,18 +1,19 @@
 ---
 title:  "Research"
-date:   2023-12-7 16:00:00 -0500
+date:   2024-8-6 16:00:00 -0500
 permalink: /research/
 ---
 
 !["Arithmetic" on Tapestry](/assets/images/arithmetic_tapestry.jpeg ""Arithmetic" on Tapestry")
 
-## Working Papers
+## Peer-Reviewed Publications
 
-**[Monumental Effects: Confederate Monuments in the Post-Reconstruction South](https://ssrn.com/abstract=4451402)**
-(Job Market Paper)\\
+**[Monumental Effects: Confederate Monuments in the Post-Reconstruction South](https://ssrn.com/abstract=4451402)**\\
 ![Effect of Confederate monument dedication on congressional Democratic Party vote share](/assets/images/mon_cdem_event.jpg "Effect of Confederate monument dedication on congressional Democratic Party vote share")
-<sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (**Revised & Resubmitted at Explorations in Economic History**, Current Draft: June 2024) [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Slides\]](https://alexntaylor.github.io/assets/documents/taylor_monuments_sea_11-18-23.pdf) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)\\
+<sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (**Conditionally Accepted at Explorations in Economic History**, Current Draft: June 2024) [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Slides\]](https://alexntaylor.github.io/assets/documents/taylor_monuments_sea_11-18-23.pdf) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)\\
 <ins>Presentations</ins>: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA</sub>
+
+## Working Papers
 
 **[The Impact of the Black Death on the Adoption of the Printing Press](https://www.dropbox.com/scl/fi/89lu18dixr4epcylgcbj3/BDPress_current.pdf?rlkey=8npnf76r0qwpoetsd5hjjrybj&dl=0)**
 (joint with Noel D. Johnson and Andrew Thomas)\\
