@@ -6,10 +6,10 @@ permalink: /resources/
 
 ![Settlers Resources](/assets/images/catan_resources.png "Settlers Resources")
 
-## Economics at George Mason University
+## Economics at the University of Evansville
 
-- [Center for the Study of Public Choice](https://publicchoice.gmu.edu)
-- [Fall 2023 Seminar Series](https://publicchoice.gmu.edu/center-programs/fall-2023)
+- [The Schroeder School of Business](https://www.evansville.edu/majors/business/)
+- [Majoring in Economics](https://www.evansville.edu/majors/business/economics.cfm)
 
 ## Economic History
 
@@ -65,10 +65,9 @@ These resources are helpful for both learning basic metrics & causal inference a
 
 ## Fun and Useful
 
-- [ChatGPT (Impressively good at coding!)](https://chat.openai.com)
 - [Elicit: The AI Research Assistant](https://elicit.org/)
 
-## Fun and (Academically) Useless
+## Fun and Useless
 
 - [Phish.net](https://phish.net)
   - Full of fan-sourced song, venue, and performance statistics for the jam band Phish
