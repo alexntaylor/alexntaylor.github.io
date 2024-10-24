@@ -10,7 +10,7 @@ permalink: /research/
 
 **[Monumental Effects: Confederate Monuments in the Post-Reconstruction South](https://ssrn.com/abstract=4451402)**\\
 ![Effect of Confederate monument dedication on congressional Democratic Party vote share](/assets/images/mon_cdem_event.jpg "Effect of Confederate monument dedication on congressional Democratic Party vote share")
-<sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (**Conditionally Accepted at Explorations in Economic History**, Current Draft: June 2024) [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Slides\]](https://alexntaylor.github.io/assets/documents/taylor_monuments_sea_11-18-23.pdf) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)\\
+<sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes. (**Accepted at Explorations in Economic History**, Current Draft: June 2024) [\[Dropbox\]](https://www.dropbox.com/s/g1qshyoslzgxb1o/monuments_current.pdf?dl=0) [\[SSRN\]](https://ssrn.com/abstract=4451402) [\[Slides\]](https://alexntaylor.github.io/assets/documents/taylor_monuments_sea_11-18-23.pdf) [\[Poster\]](https://alexntaylor.github.io/assets/documents/monuments_poster_EHA_8-23-23.pdf)\\
 <ins>Presentations</ins>: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA</sub>
 
 ## Working Papers
@@ -26,13 +26,13 @@ permalink: /research/
 **Institution Building in Indian Country: Tribal Courts**
 (joint with Thomas Stratmann and Adam Crepelle)\\
 <sub>Investigates the impact of institutional improvements on American Indian Reservations.</sub>
-
+<!-- 
 **Spatial Specialization of Early Printing: A Cosine Similarity Analysis of Titles from 1450 to 1650**
 (joint with Noel D. Johnson)\\
-<sub>Investigates printing specialization across European cities between 1450-1650 using textual analysis.</sub>
+<sub>Investigates printing specialization across European cities between 1450-1650 using textual analysis.</sub> -->
 
-**The Word of God or Man? Bibles, Dictionaries, and the Vernacular Shift**\\
-<sub>Uses generalized difference-in-differences and event study designs to assess the impact of printed bibles and dictionaries on shift away from Latin to vernacular languages in early modern Europe. This topic has implications for better understanding the formation of national identities through language, as well as the communication of ideas across linguistic divides.</sub>
+**The Word of God or Man? Bibles and the Vernacular Shift**\\
+<sub>Uses generalized difference-in-differences and event study designs to assess the impact of printed bibles on the shift from Latin to vernacular languages in early modern Europe. This topic has implications for better understanding the formation of national identities through language, as well as the communication of ideas across linguistic divides.</sub>
 
 **The King’s French**
 (joint with Jacob Hall)\\
