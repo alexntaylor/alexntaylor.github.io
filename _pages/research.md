@@ -1,6 +1,6 @@
 ---
 title:  "Research"
-date:   2024-8-6 16:00:00 -0500
+date:   2024-11-25 16:00:00 -0500
 permalink: /research/
 ---
 
@@ -33,12 +33,13 @@ permalink: /research/
 <sub>Investigates printing specialization across European cities between 1450-1650 using textual analysis.</sub> -->
 
 **The Word of God or Man? Bibles and the Vernacular Shift**\\
-<sub>Uses generalized difference-in-differences and event study designs to assess the impact of printed bibles on the shift from Latin to vernacular languages in early modern Europe. This topic has implications for better understanding the formation of national identities through language, as well as the communication of ideas across linguistic divides.</sub>
+<sub>Uses generalized difference-in-differences and event study designs to assess the impact of printed bibles on the shift from Latin to vernacular languages in early modern Europe. This topic has implications for better understanding the formation of national identities through language, as well as the communication of ideas across linguistic divides.\\
+<ins>Presentations</ins>: Markets & Society Conference, SEA 2024</sub>
 
 **The King’s French**
 (joint with Jacob Hall)\\
 <sub>Investigates the impact of language policy and state capacity on the standardization of early modern French.\\
-<ins>Presentations</ins>: SEA</sub>
+<ins>Presentations</ins>: SEA 2022</sub>
 
 ## In the Media
 
