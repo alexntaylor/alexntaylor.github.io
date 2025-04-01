@@ -23,6 +23,7 @@ permalink: /resources/
 ## Historical Political Economy
 
 - [Broadstreet Blog](https://broadstreet.blog)
+- [Virtual Workshop in Historical Political Economy](https://historicalpe.org)
 
 ## Econometrics and Causal Inference
 
@@ -62,10 +63,10 @@ These resources are helpful for both learning basic metrics & causal inference a
 ## Text as Data
 
 - ["Text Mining with R" by Silge & Robinson](https://www.tidytextmining.com/index.html)
-
+<!-- 
 ## Fun and Useful
 
-- [Elicit: The AI Research Assistant](https://elicit.org/)
+- [Elicit: The AI Research Assistant](https://elicit.org/) -->
 
 ## Fun and Useless
 

@@ -1,6 +1,6 @@
 ---
 title:  "Research"
-date:   2024-11-25 16:00:00 -0500
+date:   2025-4-1 16:00:00 -0500
 permalink: /research/
 ---
 
@@ -9,7 +9,7 @@ permalink: /research/
 ## Peer-Reviewed Publications
 
 **[Monumental Effects: Confederate Monuments in the Post-Reconstruction South](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615)**\\
-*Explorations in Economic History, Forthcoming, 2024*\\
+*(2025), Explorations in Economic History, 95,* 101635\\
 ![Effect of Confederate monument dedication on congressional Democratic Party vote share](/assets/images/mon_cdem_event.jpg "Effect of Confederate monument dedication on congressional Democratic Party vote share")
 <sub>Uses generalized difference-in-differences and event study designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878-1912. I find that monument dedications are associated with increases in the percentage of voters voting for Democratic candidates, which were largely anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and the black population. This implies that monuments affect how societies are perceived and perceive themselves, which affect political outcomes.\\
 <ins>Presentations</ins>: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA, GMU CDS Seminar</sub>

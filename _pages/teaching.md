@@ -6,7 +6,7 @@ permalink: /teaching/
 
 ## University of Evansville
 
-Principles of Macroeconomics (ECON 101): Fall 2024, Spring 2025\\
+Principles of Macroeconomics (ECON 101): Fall 2024, Spring 2025, Fall 2025\\
 <sub>**Catalog Description:** Macroeconomics is the branch of economics that studies the domestic economic system as a whole and its interaction with foreign economies. This course focuses on the behavior of the aggregate economy as it pertains to the determination of national income, production, level of employment, general price level, and trace flows. Particular attention is devoted to fiscal policy and monetary policy and their respective impact on the economic system. Satisfies a general education requirement in human behavior and society. [(Syllabus)](/assets/documents/taylor_ue_econ101_syllabus_f24.pdf)</sub>
 
 Principles of Microeconomics (ECON 102): Spring 2025\\
@@ -14,6 +14,9 @@ Principles of Microeconomics (ECON 102): Spring 2025\\
 
 Regression Analysis (ECON 300): Fall 2024\\
 <sub>**Catalog Description:** Second course in applied statistics for students in economics and other social sciences, business administration, mathematics, or natural sciences. Topics include simple and multiple regression analysis, extensions of the classical regression model, and problems associated with forecasting. Assigned work exposes students to problems from a wide range of applications. This course includes introduction to econometric software and experiments involving a variety of real world data sets. [(Syllabus)](/assets/documents/taylor_ue_econ300_syllabus_f24.pdf)</sub>
+
+Intermediate Macroeconomics (ECON 346): Fall 2025\\
+<sub>**Catalog Description:** Macroeconomics is the study of the economy as a whole. Course analyzes the factors determining the growth in income, changes in prices, and the rate of unemployment. As appropriate, the course makes use of models suited to the long run and the short run and models of both open and closed economies.</sub>
 
 ## George Mason University
 
