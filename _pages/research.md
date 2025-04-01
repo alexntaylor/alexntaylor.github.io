@@ -19,7 +19,7 @@ permalink: /research/
 **The King’s French: The Political Economy of Language**
 (joint with Jacob Hall)\\
 <sub>Investigates the impact of language policy and state capacity on the standardization of early modern French.\\
-<ins>Presentations</ins>: SEA 2022</sub>
+<ins>Presentations</ins>: SEA 2022, PCS, VWHPE</sub>
 
 **[The Word of God or Man? Bibles and the Vernacular Shift](https://www.dropbox.com/scl/fi/3xyws1qqzk64uhh9vw3by/bibles_current.pdf?rlkey=6cd87c9c2e5kg4df2sgsgiqt9&st=33cp946e&dl=0)**\\
 <sub>Uses generalized difference-in-differences and event study designs to assess the impact of printed bibles on the shift from Latin to vernacular languages in early modern Europe. This topic has implications for better understanding the formation of national identities through language, as well as the communication of ideas across linguistic divides.\\
