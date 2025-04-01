@@ -63,8 +63,8 @@ These resources are helpful for both learning basic metrics & causal inference a
 ## Text as Data
 
 - ["Text Mining with R" by Silge & Robinson](https://www.tidytextmining.com/index.html)
-<!-- 
-## Fun and Useful
+
+<!-- ## Fun and Useful
 
 - [Elicit: The AI Research Assistant](https://elicit.org/) -->
 
