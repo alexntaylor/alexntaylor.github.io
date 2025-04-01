@@ -16,30 +16,30 @@ permalink: /research/
 
 ## Working Papers
 
+**The King’s French: The Political Economy of Language**
+(joint with Jacob Hall)\\
+<sub>Investigates the impact of language policy and state capacity on the standardization of early modern French.\\
+<ins>Presentations</ins>: SEA 2022</sub>
+
+**[The Word of God or Man? Bibles and the Vernacular Shift](https://www.dropbox.com/scl/fi/3xyws1qqzk64uhh9vw3by/bibles_current.pdf?rlkey=6cd87c9c2e5kg4df2sgsgiqt9&st=33cp946e&dl=0)**\\
+<sub>Uses generalized difference-in-differences and event study designs to assess the impact of printed bibles on the shift from Latin to vernacular languages in early modern Europe. This topic has implications for better understanding the formation of national identities through language, as well as the communication of ideas across linguistic divides.\\
+<ins>Presentations</ins>: Markets & Society Conference 2024, SEA 2024</sub>
+
 **[The Impact of the Black Death on the Adoption of the Printing Press](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607)**
 (joint with Noel D. Johnson and Andrew Thomas)\\
 <!-- ![Bin Scatter, Effect of Market Size on Early Print Adoption](/assets/images/2sls_print1500.png "Bin Scatter, Effect of Market Size on Early Print Adoption") -->
 <sub>Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1500 and 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. (Current Draft: Dec 2024) [\[Slides\]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)\\
-<ins>Presentations</ins>: World Economic History Congress, World Cliometric Conference, Markets & Society Conference</sub>
+<ins>Presentations</ins>: World Economic History Congress, World Cliometric Conference, Markets & Society Conference 2023</sub>
 
 ## Papers in Progress
 
 **Institution Building in Indian Country: Tribal Courts**
 (joint with Thomas Stratmann and Adam Crepelle)\\
-<sub>Investigates the impact of institutional improvements on American Indian Reservations.</sub>
+<!-- <sub>Investigates the impact of institutional improvements on American Indian Reservations.</sub> -->
 <!-- 
 **Spatial Specialization of Early Printing: A Cosine Similarity Analysis of Titles from 1450 to 1650**
 (joint with Noel D. Johnson)\\
 <sub>Investigates printing specialization across European cities between 1450-1650 using textual analysis.</sub> -->
-
-**The Word of God or Man? Bibles and the Vernacular Shift**\\
-<sub>Uses generalized difference-in-differences and event study designs to assess the impact of printed bibles on the shift from Latin to vernacular languages in early modern Europe. This topic has implications for better understanding the formation of national identities through language, as well as the communication of ideas across linguistic divides.\\
-<ins>Presentations</ins>: Markets & Society Conference, SEA 2024</sub>
-
-**The King’s French**
-(joint with Jacob Hall)\\
-<sub>Investigates the impact of language policy and state capacity on the standardization of early modern French.\\
-<ins>Presentations</ins>: SEA 2022</sub>
 
 ## In the Media
 
