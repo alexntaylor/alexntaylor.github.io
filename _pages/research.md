@@ -17,7 +17,7 @@ permalink: /research/
 ## Working Papers
 
 **[The Impact of the Black Death on the Adoption of the Printing Press](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607)**
-(joint with Noel D. Johnson and Andrew Thomas) *Revise & Resubmit at the Journal of Economic History*\\
+(joint with Noel D. Johnson and Andrew Thomas), *Revise & Resubmit at the Journal of Economic History*\\
 <sub>Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1500 and 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. (Current Draft: Dec 2024) [\[Slides\]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)\\
 <ins>Presentations</ins>: World Economic History Congress, World Cliometric Conference, Markets & Society Conference 2023</sub>
 
