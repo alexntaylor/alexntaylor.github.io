@@ -27,7 +27,7 @@ Investigations into mechanisms suggest monuments solidified Jim Crow culture and
 
 <details class="accordion" markdown="1">
 <summary markdown="1">
-The Impact of the Black Death on the Adoption of the Printing Press (joint with Noel D. Johnson and Andrew Thomas), **R&R, Journal of Economic History**
+The Impact of the Black Death on the Adoption of the Printing Press (joint with Noel D. Johnson and Andrew Thomas), *R&R, Journal of Economic History*
 </summary>
 [[Current Draft]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607) [[Slides]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)
 
