@@ -12,15 +12,15 @@ permalink: /research/
 <summary>
 Taylor, Alexander N. (2025). "Monumental Effects: Confederate Monuments in the Post-Reconstruction South," Explorations in Economic History, 95, 101635
 </summary>
-[[Published Paper]](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615) [[Earlier SSRN Version]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451402)
+<sub>[[Published Paper]](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615) [[Earlier SSRN Version]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451402)</sub>
 
-**Abstract:** This paper explores the contemporaneous effects of Confederate monuments dedicated in the Post-Reconstruction South. I combine monument, election, and census data to create an election-year panel dataset of former Confederate counties between 1878–1912, then exploit the temporally staggered and geographically distributed dedication of monuments using a generalized difference-in-differences design. I find that monuments caused increases in Democratic Party vote share and decreases in voter turnout, with less robust decreases in Black population share. I find some evidence that more intense monument-building is associated with a decrease in Black lynchings. I also find varying effects based on the era of monument dedication, the intensity of monument-building, and monument characteristics. To address potential mechanisms, I present evidence that monuments were associated with increased use of famous Confederate names for children and show that decreases in voter turnout occurred exclusively in areas with larger Black population shares. Overall, my results suggest monuments promoted a distorted view of Civil War history that primarily persuaded southern whites, but also contributed to Black political suppression. The findings have implications for current debates over Confederate monuments in the United States.
+<sub>**Abstract:** This paper explores the contemporaneous effects of Confederate monuments dedicated in the Post-Reconstruction South. I combine monument, election, and census data to create an election-year panel dataset of former Confederate counties between 1878–1912, then exploit the temporally staggered and geographically distributed dedication of monuments using a generalized difference-in-differences design. I find that monuments caused increases in Democratic Party vote share and decreases in voter turnout, with less robust decreases in Black population share. I find some evidence that more intense monument-building is associated with a decrease in Black lynchings. I also find varying effects based on the era of monument dedication, the intensity of monument-building, and monument characteristics. To address potential mechanisms, I present evidence that monuments were associated with increased use of famous Confederate names for children and show that decreases in voter turnout occurred exclusively in areas with larger Black population shares. Overall, my results suggest monuments promoted a distorted view of Civil War history that primarily persuaded southern whites, but also contributed to Black political suppression. The findings have implications for current debates over Confederate monuments in the United States.</sub>
 
 <!-- Uses generalized difference-in-differences designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878–1912. I find that monument dedications are associated with increases in Democratic vote shares, in a time period where Democrats were staunchly anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and Black population shares. In some situations, monuments were associated with decreases in lynchings, suggesting that monuments may have served as a substitute for more violent forms of racial control.
 
 Investigations into mechanisms suggest monuments solidified Jim Crow culture and attitudes, creating a more pro-Confederate white population and a politically and socially marginalized Black population. I find that white southerners were more likely to name their children after Confederate generals following monument dedications, where declines in turnout were concentrated in areas with higher Black populations. -->
 
-**Presentations**: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA, GMU CDS Seminar
+<sub>**Presentations**: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA, GMU CDS Seminar</sub>
 </details>
 
 ## Working Papers
@@ -29,13 +29,13 @@ Investigations into mechanisms suggest monuments solidified Jim Crow culture and
 <summary markdown="1">
 The Impact of the Black Death on the Adoption of the Printing Press (joint with Noel D. Johnson and Andrew Thomas), *R&R, Journal of Economic History*
 </summary>
-[[Current Draft]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607) [[Slides]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)
+<sub>[[Current Draft]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607) [[Slides]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)</sub>
 
-**Abstract:** We leverage plausibly exogenous variation in mortality from the Black Death (1347-52) across European cities to estimate the causal impact of market size on early print adoption. Using the universe of data from the Universal Short Title Catalogue we create a database linking early European printed material to historical city populations. We find that cities whose populations were more heavily impacted by the Black Death were less likely to be early adopters of the press and printed fewer unique book editions. We also provide evidence that beyond own-city mortality there were also spatial spillovers from the Black Death shock.
+<sub>**Abstract:** We leverage plausibly exogenous variation in mortality from the Black Death (1347-52) across European cities to estimate the causal impact of market size on early print adoption. Using the universe of data from the Universal Short Title Catalogue we create a database linking early European printed material to historical city populations. We find that cities whose populations were more heavily impacted by the Black Death were less likely to be early adopters of the press and printed fewer unique book editions. We also provide evidence that beyond own-city mortality there were also spatial spillovers from the Black Death shock.</sub>
 
 <!-- Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1500 and 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. -->
 
-**Presentations**: World Economic History Congress, World Cliometric Conference, Markets & Society Conference 2023
+<sub>**Presentations**: World Economic History Congress, World Cliometric Conference, Markets & Society Conference 2023</sub>
 </details>
 
 <details class="accordion" markdown="1">
@@ -43,12 +43,13 @@ The Impact of the Black Death on the Adoption of the Printing Press (joint with 
 The King’s French: The Political Economy of Language (joint with Jacob Hall)
 </summary>
 
-**Abstract:** This paper investigates the impact of state-building on linguistic transition and standardization in Early Modern France. Using the Universal Short Title Catalogue, we construct a city-decade panel of printing activity in European cities from 1500 to 1650. We then estimate the impact of the Ordinance of Villers-Cotterˆets, an ordinance requiring the use of French—rather than Latin—in all legal documents, on French language printing using a difference-in-discontinuities design. Results suggest that the ordinance had spillover effects on non-legal printed materials, promoting the general use of vernacular language in print. The findings have implications for the role of the state in shaping national identity and the legibility of the law.
+<sub>**Abstract:** This paper investigates the impact of state-building on linguistic transition and standardization in Early Modern France. Using the Universal Short Title Catalogue, we construct a city-decade panel of printing activity in European cities from 1500 to 1650. We then estimate the impact of the Ordinance of Villers-Cotterˆets, an ordinance requiring the use of French—rather than Latin—in all legal documents, on French language printing using a difference-in-discontinuities design. Results suggest that the ordinance had spillover effects on non-legal printed materials, promoting the general use of vernacular language in print. The findings have implications for the role of the state in shaping national identity and the legibility of the law.</sub>
 
 <!-- Investigates the impact of language policy and state capacity on the standardization of early modern French. -->
 
-**Presentations**: SEA 2022, PCS, VWHPE, Markets & Society, SEA 2025
+<sub>**Presentations**: SEA 2022, PCS, VWHPE, Markets & Society, SEA 2025</sub>
 </details>
+
 
 <details class="accordion" markdown="1">
 <summary>
