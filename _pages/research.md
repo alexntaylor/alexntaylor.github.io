@@ -30,7 +30,6 @@ Investigations into mechanisms suggest monuments solidified Jim Crow culture and
 The Impact of the Black Death on the Adoption of the Printing Press (joint with Noel D. Johnson and Andrew Thomas), *R&R, Journal of Economic History*
 </summary>
 <sub>[[Current Draft]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607) [[Slides]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)</sub>
-
 <sub>**Abstract:** We leverage plausibly exogenous variation in mortality from the Black Death (1347-52) across European cities to estimate the causal impact of market size on early print adoption. Using the universe of data from the Universal Short Title Catalogue we create a database linking early European printed material to historical city populations. We find that cities whose populations were more heavily impacted by the Black Death were less likely to be early adopters of the press and printed fewer unique book editions. We also provide evidence that beyond own-city mortality there were also spatial spillovers from the Black Death shock.</sub>
 
 <!-- Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1500 and 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. -->
