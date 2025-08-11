@@ -8,7 +8,7 @@ permalink: /research/
 
 ## Peer-Reviewed Publications
 
-<details>
+<details markdown="1">
 <summary>
 Taylor, Alexander N. (2025). "Monumental Effects: Confederate Monuments in the Post-Reconstruction South," Explorations in Economic History, 95, 101635
 </summary>
@@ -17,6 +17,7 @@ Taylor, Alexander N. (2025). "Monumental Effects: Confederate Monuments in the P
 
 Uses generalized difference-in-differences designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878–1912. I find that monument dedications are associated with increases in Democratic vote shares, in a time period where Democrats were staunchly anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and Black population shares. Investigations into mechanisms suggest monuments shifted southern culture and attitudes, creating a more pro-Confederate white population and a politically and socially marginalized Black population.  
 
+<!-- cSpell:ignore ACEI Troesken EHA ASSA -->
 **Presentations**: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA, GMU CDS Seminar
 </details>
 
