@@ -54,14 +54,21 @@ The King’s French: The Political Economy of Language (joint with Jacob Hall)
 <summary>
 The Word of God or Man? Bibles and the Vernacular Shift
 </summary>
-[Current Draft](https://www.dropbox.com/scl/fi/3xyws1qqzk64uhh9vw3by/bibles_current.pdf?rlkey=6cd87c9c2e5kg4df2sgsgiqt9&st=33cp946e&dl=0)
+<sub>[Current Draft](https://www.dropbox.com/scl/fi/3xyws1qqzk64uhh9vw3by/bibles_current.pdf?rlkey=6cd87c9c2e5kg4df2sgsgiqt9&st=33cp946e&dl=0)
 
 **Abstract:** This paper explores the impact of vernacular Bible translations on printed language diversity in early modern Europe. Using data from the Universal Short Title Catalogue, a database containing the universe of known books from the first centuries of moveable-type printing, I construct a language-city panel dataset of vernacular Bible in European cities from 1450–1650. I then use quasi-experimental generalized diﬀerence-in-diﬀerences and event study designs to assess their eﬀect on the rise of non-Latin printing. I find that vernacular Bibles are associated with increases in vernacular printing on the intensive margin and as a share of total print output. The results have implications for our understanding of the rise and standardization of vernacular languages.
 
-**Presentations**: Markets & Society Conference 2024, SEA 2024
+**Presentations**: Markets & Society Conference 2024, SEA 2024</sub>
 </details>
 
 ## Papers in Progress
+
+<details class="accordion" markdown="1">
+<summary>
+Political Emails
+</summary>
+
+</details>
 
 <details class="accordion" markdown="1">
 <summary>
