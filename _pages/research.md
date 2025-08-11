@@ -8,12 +8,12 @@ permalink: /research/
 
 ## Peer-Reviewed Publications
 
-<details markdown="1">
+<details class="accordion" markdown="1">
 <summary>
 Taylor, Alexander N. (2025). "Monumental Effects: Confederate Monuments in the Post-Reconstruction South," Explorations in Economic History, 95, 101635
 </summary>
-
-[[Published Paper]](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615) [[Earlier SSRN Version]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451402)
+**Link**: [Published Paper](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615)  
+**Link**: [Earlier SSRN Version](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451402)
 
 Uses generalized difference-in-differences designs to assess the impact of confederate monument dedications on congressional voting patterns in the US South from 1878–1912. I find that monument dedications are associated with increases in Democratic vote shares, in a time period where Democrats were staunchly anti-Reconstruction. I also find that these counties saw a decrease in voter turnout and Black population shares. Investigations into mechanisms suggest monuments shifted southern culture and attitudes, creating a more pro-Confederate white population and a politically and socially marginalized Black population.  
 
@@ -23,29 +23,55 @@ Uses generalized difference-in-differences designs to assess the impact of confe
 
 ## Working Papers
 
-**[The Impact of the Black Death on the Adoption of the Printing Press](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607)**
-(joint with Noel D. Johnson and Andrew Thomas), *Revise & Resubmit at the Journal of Economic History*\\
-<sub>Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1500 and 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. (Current Draft: Dec 2024) [\[Slides\]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)\\
-<ins>Presentations</ins>: World Economic History Congress, World Cliometric Conference, Markets & Society Conference 2023</sub>
+<details class="accordion" markdown="1">
+<summary>
+The Impact of the Black Death on the Adoption of the Printing Press (joint with Noel D. Johnson and Andrew Thomas), _R&R, Journal of Economic History_
+</summary>
+**Link**: [Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607)
 
-**The King’s French: The Political Economy of Language**
-(joint with Jacob Hall)\\
-<sub>Investigates the impact of language policy and state capacity on the standardization of early modern French.\\
-<ins>Presentations</ins>: SEA 2022, PCS, VWHPE</sub>
+Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1500 and 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. (Current Draft: Dec 2024)
 
-**[The Word of God or Man? Bibles and the Vernacular Shift](https://www.dropbox.com/scl/fi/3xyws1qqzk64uhh9vw3by/bibles_current.pdf?rlkey=6cd87c9c2e5kg4df2sgsgiqt9&st=33cp946e&dl=0)**\\
-<sub>Uses generalized difference-in-differences and event study designs to assess the impact of printed bibles on the shift from Latin to vernacular languages in early modern Europe. This topic has implications for better understanding the formation of national identities through language, as well as the communication of ideas across linguistic divides.\\
-<ins>Presentations</ins>: Markets & Society Conference 2024, SEA 2024</sub>
+**Slides**: [PDF](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)
+
+**Presentations**: World Economic History Congress, World Cliometric Conference, Markets & Society Conference 2023
+</details>
+
+<details class="accordion" markdown="1">
+<summary>
+The King’s French: The Political Economy of Language (joint with Jacob Hall)
+</summary>
+**Link**: none
+
+Investigates the impact of language policy and state capacity on the standardization of early modern French.
+
+**Presentations**: SEA 2022, PCS, VWHPE
+</details>
+
+<details class="accordion" markdown="1">
+<summary>
+The Word of God or Man? Bibles and the Vernacular Shift
+</summary>
+**Link**: [Link](https://www.dropbox.com/scl/fi/3xyws1qqzk64uhh9vw3by/bibles_current.pdf?rlkey=6cd87c9c2e5kg4df2sgsgiqt9&st=33cp946e&dl=0)
+
+Uses generalized difference-in-differences and event study designs to assess the impact of printed bibles on the shift from Latin to vernacular languages in early modern Europe. This topic has implications for better understanding the formation of national identities through language, as well as the communication of ideas across linguistic divides.
+
+**Presentations**: Markets & Society Conference 2024, SEA 2024
+</details>
 
 ## Papers in Progress
 
-**Institution Building in Indian Country: Tribal Courts**
-(joint with Thomas Stratmann and Adam Crepelle)\\
-<!-- <sub>Investigates the impact of institutional improvements on American Indian Reservations.</sub> -->
-<!-- 
+<details class="accordion" markdown="1">
+<summary>
+Institution Building in Indian Country: Tribal Courts (joint with Thomas Stratmann and Adam Crepelle)
+</summary>
+**Link**: none
+</details>
+
+<!--
 **Spatial Specialization of Early Printing: A Cosine Similarity Analysis of Titles from 1450 to 1650**
-(joint with Noel D. Johnson)\\
-<sub>Investigates printing specialization across European cities between 1450-1650 using textual analysis.</sub> -->
+(joint with Noel D. Johnson)  
+Investigates printing specialization across European cities between 1450-1650 using textual analysis.
+-->
 
 ## In the Media
 
