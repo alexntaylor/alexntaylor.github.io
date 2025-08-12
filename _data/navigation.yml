@@ -10,6 +10,8 @@ main:
     url: /research/
   - title: "Teaching"
     url: /teaching/
+  - title: "R Links"
+    url: /r-links/
   - title: "Resources"
     url: /resources/
   # - title: "Sitemap"
