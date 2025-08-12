@@ -1,6 +1,6 @@
 ---
 title:  "Resources"
-date:   2023-1-9 16:00:00 -0500
+date:   2025-8-12 16:00:00 -0500
 permalink: /resources/
 ---
 
@@ -36,10 +36,42 @@ These resources are helpful for both learning basic metrics & causal inference a
 
 ## Getting Started with R
 
+Start by downloading the R software environment
 - [Download R](https://www.r-project.org)
-- [Download RStudio from posit](https://posit.co/downloads/)
+
+Next download one of two IDEs, both developed by Posit
+- [Positron](https://positron.posit.co)
+  - A more general IDE that supports R, but also Python and Julia
+  - Just came out of beta, but is mostly stable and has modern features absent from RStudio (git integration, in-line LLM chat and code generation, and more)
+  - If you have experience in VSCode, I recommend Positron
+- [RStudio](https://posit.co/downloads/)
+  - The classic IDE for R, and still the most popular
+  - Straightforward, easier to navigate, and very stable
+  - If you have no experience with IDEs, I recommend RStudio
+
+After installing R and an IDE, you can start learning R. Here are some resources to get you started:
 - [Starter links from posit](https://support.posit.co/hc/en-us/articles/201141096-Getting-Started-with-R)
+  - Recommended resources for learning R
 - [Package Cheatsheets from posit](https://posit.co/resources/cheatsheets/?type=posit-cheatsheets/)
+  - Cheatsheets for a variety of offerings from Posit
+
+## Working with LLMs in R
+
+Working with Large Language Models in R requires using an API from the LLM provider. This typically requires creating an account *separate* from your chat account, generating the API key, and adding it to your R environment. [See here for more information.](https://tilburg.ai/2024/03/tutorial-openai-api-in-r/)
+
+[See this blog post for a collection of LLM-related packages.](https://blog.stephenturner.us/p/r-production-ai) Here are some specific features and packages I've found useful:
+
+- [Copilot code completion in RStudio](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
+  - Setting this up is much easier in [Positron](https://positron.posit.co)
+- [ellmer](https://ellmer.tidyverse.org)
+  - Many packages below built on ellmer
+  - Interact directly with a variety of LLMs
+  - Chat, submit batch queries, parallel queries, queries for structured data responses, and more!
+- [chattr](https://mlverse.github.io/chattr/)
+  - Chat with an LLM within your IDE, similar to copilot chat in VSCode
+- [gander](https://simonpcouch.github.io/gander/)
+  - Simple chat that sees your environment and existing code, and writes code according to your instructions
+  - Somewhat similar to copilot chat in VSCode, but has more context
 
 ## Data Science in R
 
