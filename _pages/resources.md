@@ -41,8 +41,8 @@ Start by downloading the R software environment
 
 Next download one of two IDEs, both developed by Posit
 - [Positron](https://positron.posit.co)
-  - A more general IDE that supports R, but also Python and Julia
-  - Just came out of beta, but is mostly stable and has modern features absent from RStudio (git integration, in-line LLM chat and code generation, and more)
+  - A general IDE that supports R, but also Python and Julia
+  - Just came out of beta, but is mostly stable and has modern features absent from RStudio
   - If you have experience in VSCode, I recommend Positron
 - [RStudio](https://posit.co/downloads/)
   - The classic IDE for R, and still the most popular
