@@ -2,6 +2,9 @@
 /.quarto/
 _site/
 
+# Jekyll backup (legacy files)
+_jekyll_backup/
+
 # Jekyll generated files (legacy)
 .jekyll-cache
 .jekyll-metadata

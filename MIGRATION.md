@@ -83,16 +83,17 @@ rm -rf _site .quarto
 ./site-management.sh deploy
 ```
 
-## Files You Can Remove (if desired)
+## Files Moved to Backup
 
-These Jekyll-specific files are no longer needed but kept for reference:
+These Jekyll-specific files have been moved to `_jekyll_backup/` folder to prevent conflicts:
 
 - `Gemfile` and `Gemfile.lock` (Ruby dependencies)
-- `_layouts/`, `_includes/`, `_sass/` directories
+- `_layouts/`, `_includes/`, `_sass/`, `_data/` directories (Jekyll templates)
 - `_config.yml.backup` (backed up configuration)
 - `index.html.backup` (backed up home page)
-- `.travis.yml` (old CI configuration)
-- `Rakefile` (Ruby tasks)
+- `.travis.yml`, `Rakefile`, `staticman.yml` (old CI and config files)
+
+These files are preserved for reference but won't interfere with Quarto builds.
 
 ## Important Notes
 
@@ -109,6 +110,20 @@ If something doesn't work:
 2. Try rebuilding: `quarto render`
 3. Check the GitHub Actions logs in your repository
 4. Verify GitHub Pages is set to "GitHub Actions" as the source
+
+### Common Issues Fixed
+
+**Issue: GitHub Actions using deprecated artifacts**
+- ✅ Fixed: Updated to `actions/upload-pages-artifact@v3` and `actions/deploy-pages@v4`
+
+**Issue: Jekyll trying to process Quarto site**
+- ✅ Fixed: Added `.nojekyll` file to disable Jekyll processing
+- ✅ Fixed: Moved Jekyll files to `_jekyll_backup/` folder
+- ✅ Fixed: Updated workflow to only trigger on `gh-pages` branch
+
+**Issue: Conflicting configuration files**
+- ✅ Fixed: Moved `Gemfile`, `_layouts`, `_includes`, `_sass`, `_data` to backup folder
+- ✅ Fixed: These files are preserved but won't interfere with Quarto
 
 ## Next Steps
 
