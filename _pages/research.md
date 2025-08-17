@@ -8,11 +8,12 @@ permalink: /research/
 
 ## Peer-Reviewed Publications
 
+[Taylor, Alexander N. (2025). "Monumental Effects: Confederate Monuments in the Post-Reconstruction South," *Explorations in Economic History*, 95, 101635](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615)
 <details class="accordion" markdown="1">
-<summary>
-Taylor, Alexander N. (2025). "Monumental Effects: Confederate Monuments in the Post-Reconstruction South," Explorations in Economic History, 95, 101635
+<summary markdown="1">
+Details
 </summary>
-<sub>[[Published Paper]](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615) [[Earlier SSRN Version]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451402)</sub>
+<sub>[[Earlier SSRN Version]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451402)</sub>
 
 <sub>**Abstract:** This paper explores the contemporaneous effects of Confederate monuments dedicated in the Post-Reconstruction South. I combine monument, election, and census data to create an election-year panel dataset of former Confederate counties between 1878–1912, then exploit the temporally staggered and geographically distributed dedication of monuments using a generalized difference-in-differences design. I find that monuments caused increases in Democratic Party vote share and decreases in voter turnout, with less robust decreases in Black population share. I find some evidence that more intense monument-building is associated with a decrease in Black lynchings. I also find varying effects based on the era of monument dedication, the intensity of monument-building, and monument characteristics. To address potential mechanisms, I present evidence that monuments were associated with increased use of famous Confederate names for children and show that decreases in voter turnout occurred exclusively in areas with larger Black population shares. Overall, my results suggest monuments promoted a distorted view of Civil War history that primarily persuaded southern whites, but also contributed to Black political suppression. The findings have implications for current debates over Confederate monuments in the United States.</sub>
 
@@ -25,11 +26,12 @@ Investigations into mechanisms suggest monuments solidified Jim Crow culture and
 
 ## Working Papers
 
+[The Impact of the Black Death on the Adoption of the Printing Press (joint with Noel D. Johnson and Andrew Thomas), *R&R, Journal of Economic History*.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607)
 <details class="accordion" markdown="1">
 <summary markdown="1">
-The Impact of the Black Death on the Adoption of the Printing Press (joint with Noel D. Johnson and Andrew Thomas), *R&R, Journal of Economic History*
+Details
 </summary>
-<sub>[[Current Draft]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607) [[Slides]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)</sub>
+<sub>[[Slides]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)</sub>
 <sub>**Abstract:** We leverage plausibly exogenous variation in mortality from the Black Death (1347-52) across European cities to estimate the causal impact of market size on early print adoption. Using the universe of data from the Universal Short Title Catalogue we create a database linking early European printed material to historical city populations. We find that cities whose populations were more heavily impacted by the Black Death were less likely to be early adopters of the press and printed fewer unique book editions. We also provide evidence that beyond own-city mortality there were also spatial spillovers from the Black Death shock.</sub>
 
 <!-- Uses a 2SLS model to predict the impact of Black Death mortality on the adoption of the printing press. We find that cities with higher levels of Black Death mortality were less likely to adopt the printing press before both 1500 and 1600. We also find that higher Black Death mortality is associated with later adoption and higher levels of printing specialization on the intensive margin. This suggests that market size is important in the adoption of labor-saving technologies. -->
@@ -37,11 +39,11 @@ The Impact of the Black Death on the Adoption of the Printing Press (joint with 
 <sub>**Presentations**: World Economic History Congress, World Cliometric Conference, Markets & Society Conference 2023</sub>
 </details>
 
+The King’s French: The Political Economy of Language (joint with Jacob Hall)
 <details class="accordion" markdown="1">
 <summary>
-The King’s French: The Political Economy of Language (joint with Jacob Hall)
+Details
 </summary>
-
 <sub>**Abstract:** This paper investigates the impact of state-building on linguistic transition and standardization in Early Modern France. Using the Universal Short Title Catalogue, we construct a city-decade panel of printing activity in European cities from 1500 to 1650. We then estimate the impact of the Ordinance of Villers-Cotterˆets, an ordinance requiring the use of French—rather than Latin—in all legal documents, on French language printing using a difference-in-discontinuities design. Results suggest that the ordinance had spillover effects on non-legal printed materials, promoting the general use of vernacular language in print. The findings have implications for the role of the state in shaping national identity and the legibility of the law.</sub>
 
 <!-- Investigates the impact of language policy and state capacity on the standardization of early modern French. -->
@@ -49,13 +51,11 @@ The King’s French: The Political Economy of Language (joint with Jacob Hall)
 <sub>**Presentations**: SEA 2022, PCS, VWHPE, Markets & Society, SEA 2025</sub>
 </details>
 
-
+[The Word of God or Man? Bibles and the Vernacular Shift](https://www.dropbox.com/scl/fi/3xyws1qqzk64uhh9vw3by/bibles_current.pdf?rlkey=6cd87c9c2e5kg4df2sgsgiqt9&st=33cp946e&dl=0)
 <details class="accordion" markdown="1">
 <summary>
-The Word of God or Man? Bibles and the Vernacular Shift
+Details
 </summary>
-<sub>[Current Draft](https://www.dropbox.com/scl/fi/3xyws1qqzk64uhh9vw3by/bibles_current.pdf?rlkey=6cd87c9c2e5kg4df2sgsgiqt9&st=33cp946e&dl=0)</sub>
-
 <sub>**Abstract:** This paper explores the impact of vernacular Bible translations on printed language diversity in early modern Europe. Using data from the Universal Short Title Catalogue, a database containing the universe of known books from the first centuries of moveable-type printing, I construct a language-city panel dataset of vernacular Bible in European cities from 1450–1650. I then use quasi-experimental generalized diﬀerence-in-diﬀerences and event study designs to assess their eﬀect on the rise of non-Latin printing. I find that vernacular Bibles are associated with increases in vernacular printing on the intensive margin and as a share of total print output. The results have implications for our understanding of the rise and standardization of vernacular languages.</sub>
 
 <sub>**Presentations**: Markets & Society Conference 2024, SEA 2024</sub>
@@ -63,19 +63,9 @@ The Word of God or Man? Bibles and the Vernacular Shift
 
 ## Papers in Progress
 
-<details class="accordion" markdown="1">
-<summary>
 Political Emails
-</summary>
 
-</details>
-
-<details class="accordion" markdown="1">
-<summary>
 Institution Building in Indian Country: Tribal Courts (joint with Thomas Stratmann and Adam Crepelle)
-</summary>
-
-</details>
 
 <!--
 **Spatial Specialization of Early Printing: A Cosine Similarity Analysis of Titles from 1450 to 1650**
