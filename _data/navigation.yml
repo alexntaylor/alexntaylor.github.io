@@ -7,7 +7,7 @@ main:
   # - title: "JMP"
   #   url: /jmp/
   - title: "Research"
-    url: /research/
+    href: _pages/research.qmd
   - title: "Teaching"
     url: /teaching/
   - title: "R Links"
