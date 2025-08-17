@@ -9,8 +9,10 @@ permalink: /research/
 ## Peer-Reviewed Publications
 
 [Taylor, Alexander N. (2025). "Monumental Effects: Confederate Monuments in the Post-Reconstruction South," *Explorations in Economic History*, 95, 101635](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615)
-
-::: {.callout collapse="true" title="Details"}
+<details class="accordion" markdown="1">
+<summary markdown="1">
+Details
+</summary>
 <sub>[[Earlier SSRN Version]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451402)</sub>
 
 <sub>**Abstract:** This paper explores the contemporaneous effects of Confederate monuments dedicated in the Post-Reconstruction South. I combine monument, election, and census data to create an election-year panel dataset of former Confederate counties between 1878–1912, then exploit the temporally staggered and geographically distributed dedication of monuments using a generalized difference-in-differences design. I find that monuments caused increases in Democratic Party vote share and decreases in voter turnout, with less robust decreases in Black population share. I find some evidence that more intense monument-building is associated with a decrease in Black lynchings. I also find varying effects based on the era of monument dedication, the intensity of monument-building, and monument characteristics. To address potential mechanisms, I present evidence that monuments were associated with increased use of famous Confederate names for children and show that decreases in voter turnout occurred exclusively in areas with larger Black population shares. Overall, my results suggest monuments promoted a distorted view of Civil War history that primarily persuaded southern whites, but also contributed to Black political suppression. The findings have implications for current debates over Confederate monuments in the United States.</sub>
@@ -20,7 +22,7 @@ permalink: /research/
 Investigations into mechanisms suggest monuments solidified Jim Crow culture and attitudes, creating a more pro-Confederate white population and a politically and socially marginalized Black population. I find that white southerners were more likely to name their children after Confederate generals following monument dedications, where declines in turnout were concentrated in areas with higher Black populations. -->
 
 <sub>**Presentations**: Yale Econ History Grad Student Conference, GMU, PCS, VAE, ACEI, Troesken Memorial Conference, EHA (Poster), SEA, ASSA, GMU CDS Seminar</sub>
-:::
+</details>
 
 ## Working Papers
 
