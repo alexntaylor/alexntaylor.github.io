@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Alexander N. Taylor"
+  site-url: "https://alexntaylor.github.io"
+  repo-url: "https://github.com/alexntaylor/alexntaylor.github.io"
+  
+  navbar:
+    background: light
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "CV"
+        href: assets/documents/taylor_cv.pdf
+      - text: "Research"
+        href: research.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "R Links"
+        href: r-links.qmd
+      - text: "Resources"
+        href: resources.qmd
+  
+  page-footer:
+    left: |
+      © 2025 Alexander N. Taylor
+    right: |
+      <a href="https://github.com/alexntaylor"><i class="fab fa-github"></i></a>
+
+  google-analytics: "G-12ZZLPHMSQ"
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - custom.scss
+    css: styles.css
+    toc: true
+    toc-location: right
+    page-layout: article
+    grid:
+      sidebar-width: 300px
+      body-width: 900px
+      margin-width: 200px
+
+execute:
+  freeze: auto
+
+author:
+  name: "Alex Taylor"
+  email: "at154@evansville.edu"
+  affiliation: "University of Evansville"
+  bio: |
+    I am Assistant Professor of Economics in the Schroeder School of Business at the University of Evansville. 
+    I'm interested in Political Economy, Economic History, and Applied Econometrics.

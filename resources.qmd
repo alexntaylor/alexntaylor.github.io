@@ -1,0 +1,38 @@
+---
+title: "Resources"
+---
+
+![Settlers Resources](/assets/images/catan_resources.png "Settlers Resources")
+
+## Economics at the University of Evansville
+
+- [The Schroeder School of Business](https://www.evansville.edu/majors/business/)
+- [Majoring in Economics](https://www.evansville.edu/majors/business/economics.cfm)
+
+## Economic History
+
+- [EHA Website](https://eh.net/eha/)
+- [EH.net](https://eh.net)
+- [Explorations in Economic History](https://www.sciencedirect.com/journal/explorations-in-economic-history)
+- [Journal of Economic History](https://www.cambridge.org/core/journals/journal-of-economic-history)
+- [Economic History Podcast](https://podcasts.apple.com/us/podcast/the-economic-history-podcast/id1513552663)
+- [GrowthChat Podcast](https://podcasts.apple.com/us/podcast/growthchat-by-marco-lecci-and-sascha-o-becker/id1547360381)
+
+## Historical Political Economy
+
+- [Broadstreet Blog](https://broadstreet.blog)
+- [Virtual Workshop in Historical Political Economy](https://historicalpe.org)
+
+## Econometrics and Causal Inference
+
+These resources are helpful for both learning basic metrics & causal inference as well as tracking packages to implement these techniques in different data analysis software, primarily R, Stata, and Python:
+
+- ["The Effect" by Nick Huntington-Klein](https://theeffectbook.net)
+- ["Causal Inference: The Mixtape" by Scott Cunningham](https://mixtape.scunning.com)
+- [The Library of Statistical Techniques (LOST)](https://lost-stats.github.io)
+- [Difference-in-Difference (DiD) Repository from Asjad Naqvi](https://asjadnaqvi.github.io/DiD/)
+
+## Fun and Useless
+
+- [Phish.net](https://phish.net)
+  - Full of fan-sourced song, venue, and performance statistics for the jam band Phish

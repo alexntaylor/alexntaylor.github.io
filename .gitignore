@@ -1,3 +1,14 @@
+# Quarto
+/.quarto/
+_site/
+
+# Jekyll generated files (legacy)
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+_asset_bundler_cache
+_site.old/
+
 # Vim
 *~
 *.sw[p_]
@@ -21,9 +32,18 @@ codekit-config.json
 # macOS
 .DS_Store
 
-# Jekyll generated files
-.jekyll-cache
-.jekyll-metadata
-.sass-cache
-_asset_bundler_cache
-_site
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs
+.vscode/
+.idea/

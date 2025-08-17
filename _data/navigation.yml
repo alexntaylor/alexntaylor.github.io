@@ -1,18 +1,18 @@
-# main links
+# This file is no longer used with Quarto
+# Navigation is now configured in _quarto.yml
+# Keeping for reference during transition
+
+# main links (DEPRECATED - now in _quarto.yml)
 main:
   - title: "Home"
     url: /
   - title: "CV"
     url: /assets/documents/taylor_cv.pdf
-  # - title: "JMP"
-  #   url: /jmp/
   - title: "Research"
-    href: _pages/research.qmd
+    url: /research/
   - title: "Teaching"
     url: /teaching/
   - title: "R Links"
     url: /r-links/
   - title: "Resources"
     url: /resources/
-  # - title: "Sitemap"
-  #   url: /sitemap/
