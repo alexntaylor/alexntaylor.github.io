@@ -2,7 +2,7 @@
 title: "Research"
 ---
 
-!["Arithmetic" on Tapestry](/assets/images/arithmetic_tapestry.jpeg ""Arithmetic" on Tapestry")
+![](/assets/images/centre_pompidou.jpeg "Centre Pompidou")
 
 ## Peer-Reviewed Publications
 

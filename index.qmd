@@ -1,46 +1,50 @@
 ---
-title: "Alexander N. Taylor"
-subtitle: "Assistant Professor of Economics"
+# title: "Alexander N. Taylor"
+# subtitle: "Economics Educator and Researcher"
 page-layout: full
-title-block-banner: true
+title-block-banner: false
+author: ""
 ---
 
 ::: {.author-profile}
-![Alex Taylor](/assets/images/headshot_2024.png)
+![](/assets/images/headshot_2024.png)
 
-**Alex Taylor**  
+**Alexander N. Taylor**  
 Assistant Professor of Economics  
 Schroeder School of Business  
 University of Evansville  
-Evansville, IN
-
-Email: [at154@evansville.edu](mailto:at154@evansville.edu)  
-GitHub: [alexntaylor](https://github.com/alexntaylor)
+Evansville, IN  
+[[Email]](mailto:at154@evansville.edu)[[Bluesky]](https://bsky.app/profile/alextaylorecon.bsky.social)[[Github]](https://github.com/alexntaylor)
+:::
 
 ::: {.author-bio}
-I am Assistant Professor of Economics in the Schroeder School of Business at the University of Evansville. I'm interested in Political Economy, Economic History, and Applied Econometrics.
+<div style="text-align: center;">
+I am a dedicated economics educator and an active researcher, primarily in political economy and economic history. My work has been published in *Explorations in Economic History*. In my free time I enjoy traveling, attending music shows, and spending time with my wife Victoria and our miniature dachshund Stanley.
+</div>
 :::
-:::
 
-## Welcome
+<!-- ## Welcome
 
-Welcome to my academic website. Here you can find information about my research in economic history and political economy, my teaching at the University of Evansville, and various resources I've developed for students and researchers.
-
-### Recent Updates
-
-- **2025**: "Monumental Effects: Confederate Monuments in the Post-Reconstruction South" published in *Explorations in Economic History*
-- **2024**: Started position as Assistant Professor at University of Evansville
-- **2024**: Received Ph.D. in Economics from George Mason University
+Welcome! Here you can find information about my research in economic history and political economy, my teaching at the University of Evansville, and various resources I've developed for students and researchers.
 
 ### Research Interests
 
 - **Political Economy**: The intersection of political and economic forces in historical contexts
-- **Economic History**: Particularly focused on American economic development and institutional change
+- **Economic History**: Particularly focused on monuments and printed media
 - **Applied Econometrics**: Using modern statistical methods to understand historical phenomena
 
 ### Quick Links
 
 - [Research Papers and Publications](research.qmd)
 - [Teaching Information](teaching.qmd)
-- [CV](assets/documents/taylor_cv.pdf)
 - [R Programming Resources](r-links.qmd)
+- [CV](assets/documents/taylor_cv.pdf) -->
+
+### Recent Updates
+
+- **March 2025**: Had a great time presenting by working paper with Jacob Hall, "The King's French: The Political Economy of Language," at the Public Choice Society meetings. Very excited about this project.
+
+- **January 2025**: Happy to announce my job market paper, "Monumental Effects: Confederate Monuments in the Post-Reconstruction South," is now published in *Explorations in Economic History*.
+
+- **August 2024**: Excited to start as an Assistant Professor of Economics in the Schroeder School of Business at the University of Evansville!
+<!-- - **May 2024**: Received Ph.D. in Economics from George Mason University -->
