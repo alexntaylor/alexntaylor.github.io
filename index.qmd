@@ -13,15 +13,26 @@ author: ""
 Assistant Professor of Economics  
 Schroeder School of Business  
 University of Evansville  
-Evansville, IN  
-[[Email]](mailto:at154@evansville.edu)[[Bluesky]](https://bsky.app/profile/alextaylorecon.bsky.social)[[Github]](https://github.com/alexntaylor)
+[at154@evansville.edu](mailto:at154@evansville.edu)
+<!-- Evansville, IN  
+[[Email]](mailto:at154@evansville.edu)[[Bluesky]](https://bsky.app/profile/alextaylorecon.bsky.social)[[GitHub]](https://github.com/alexntaylor) -->
 :::
 
-::: {.author-bio}
-<div style="text-align: center;">
-I am a dedicated economics educator and an active researcher, primarily in political economy and economic history. My work has been published in *Explorations in Economic History*. In my free time I enjoy traveling, attending music shows, and spending time with my wife Victoria and our miniature dachshund Stanley.
-</div>
-:::
+## About Me
+
+<!-- ::: {.author-bio} -->
+<!-- <div style="text-align: center;"> -->
+I am a dedicated educator and an active researcher, primarily in political economy and economic history.
+
+My scholarly work has been published in [*Explorations in Economic History*](https://www.sciencedirect.com/journal/explorations-in-economic-history) and featured in [*Cato Institute Research Briefs in Economic Policy*](https://www.cato.org/research-briefs-economic-policy/confederate-monuments-post-reconstruction-south). In the popular press, I have written for [*The Conversation*](https://theconversation.com/when-confederate-glorifying-monuments-went-up-in-the-south-voting-in-black-areas-went-down-208275). For more information on my published writings and current paper drafts, check out my [Research](research.qmd) page.
+
+I also love teaching the economic way of thinking to students at all levels, and have experience teaching both introductory and upper level economics courses. This Fall, I am teaching the third iteration of my Principles of Macroeconomics course and my first section of Intermediate Macroeconomics. In the Spring, I will teach Principles of Microeconomics and offer a newly designed elective---Development Economics. For course descriptions and syllabi, check out my [Teaching](teaching.qmd) page.
+
+I also care deeply about communicating economic insights about pressing policy issues, and have experience [giving policy presentations](https://www.vancountydems.org/events/april-meeting) to local organizations.
+
+In my free time I enjoy traveling, live music, video games, television & cinema, and---most of all---spending time doing the aforementioned activities with my wife Victoria and our miniature dachshund Stanley.
+<!-- </div> -->
+<!-- ::: -->
 
 <!-- ## Welcome
 
@@ -40,13 +51,19 @@ Welcome! Here you can find information about my research in economic history and
 - [R Programming Resources](r-links.qmd)
 - [CV](assets/documents/taylor_cv.pdf) -->
 
-### Recent Updates
+## Recent Updates
 
-- **March 2025**: Had a great time presenting my working paper (joint with [Jacob Hall](https://jacobrhall.github.io)), "The King's French: The Political Economy of Language," to the [Virtual Workshop in Historical Political Economy](https://historicalpe.org). We received excellent feedback, and we're very excited about where the project is heading.
+- **18 August 2025**: After a productive summer, I'm excited to get back into the classroom on Wednesday. I'll be teaching my third iteration of Principles of Macro and my first iteration of Intermediate Macro. Excited to go in-depth on macro with my students across both levels! See my [Teaching](teaching.qmd) page for my syllabi.
+
+- **15 April 2025**: Wonderful to have Bob Jones---former Chairman & CEO of Old National Bancorp, [former Director of the St. Louis Fed and member of the Board of Governors Advisory Commitee](https://www.stlouisfed.org/on-the-economy/2017/march/reflections-former-st-louis-fed-director), and outgoing chair of the University of Evansville Board of Trustees---on campus to help us launch the new Economics Club! Students greatly enjoyed Mr. Jones' insight from his extensive experience in the public and private sectors. Props to the inaugural leadership team for hosting an excellent first event.
+
+<!-- - **12 April 2025**: Happy to receive  -->
+
+- **27 March 2025**: Had a great time presenting my working paper (joint with [Jacob Hall](https://jacobrhall.github.io)), "The King's French: The Political Economy of Language," to the [Virtual Workshop in Historical Political Economy](https://historicalpe.org). We received excellent feedback, and we're very excited about where the project is heading.
 
 - **January 2025**: Happy to announce my job market paper, "Monumental Effects: Confederate Monuments in the Post-Reconstruction South," is now published in *Explorations in Economic History*. [Find it here.](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615)
 
-- **October 2024**: Many thanks to George Mason University's [Computational & Data Sciences Seminar](https://science.gmu.edu/academics/departments-units/computational-data-sciences) for hosting me to present on my paper, "Monumental Effects: Confederate Monuments in the Post-Reconstruction South"!
+- **25 October 2024**: Many thanks to George Mason University's [Computational & Data Sciences Seminar](https://science.gmu.edu/academics/departments-units/computational-data-sciences) for hosting me to present on my paper, "Monumental Effects: Confederate Monuments in the Post-Reconstruction South"!
 
-- **August 2024**: Excited to start as an Assistant Professor of Economics in the [Schroeder School of Business at the University of Evansville!](https://www.evansville.edu/majors/business/index.cfm)
+- **1 August 2024**: Excited to start as an Assistant Professor of Economics in the [Schroeder School of Business at the University of Evansville!](https://www.evansville.edu/majors/business/index.cfm)
 <!-- - **May 2024**: Received Ph.D. in Economics from George Mason University -->

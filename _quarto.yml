@@ -25,6 +25,13 @@ website:
         href: r-links.qmd
       - text: "Resources"
         href: resources.qmd
+    right: 
+      - icon: envelope
+        href: mailto:at154@evansville.edu
+      - icon: twitter #bluesky
+        href: https://bsky.app/profile/alextaylorecon.bsky.social
+      - icon: github
+        href: https://github.com/alexntaylor
   
   page-footer:
     left: |

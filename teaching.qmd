@@ -13,36 +13,45 @@ author: ""
 \
 [Syllabus](/assets/documents/taylor_ue_econ101_syllabus_f25.pdf)
 
-**Taught**: Fall 2024, Spring 2025, Fall 2025
-
 **Description**: Macroeconomics is the branch of economics that studies the domestic economic system as a whole and its interaction with foreign economies. This course focuses on the behavior of the aggregate economy as it pertains to the determination of national income, production, level of employment, general price level, and trace flows. Particular attention is devoted to fiscal policy and monetary policy and their respective impact on the economic system. Satisfies a general education requirement in human behavior and society.
+
+**Taught**: Fall 2024, Spring 2025, Fall 2025
 :::
 
 ::: {.callout collapse="true" title="Principles of Microeconomics"}
 \
 [Syllabus](/assets/documents/taylor_ue_econ102_syllabus_s25.pdf)
 
-**Taught**: Spring 2025
-
 **Description**: Markets are among the oldest social institutions known to man. Microeconomics is a branch of economics that studies the dynamics of individual markets and prices. Focuses on the behavior of producers and consumers and the interdependence in the market process. Pays particular attention to the structure and evolution of competitive markets. Satisfies a general education requirement in human behavior and society.
+
+**Taught**: Spring 2025, Spring 2026
 :::
 
 ::: {.callout collapse="true" title="Regression Analysis"}
 \
 [Syllabus](/assets/documents/taylor_ue_econ300_syllabus_f24.pdf)
 
-**Taught**: Fall 2024
-
 **Description**: Second course in applied statistics for students in economics and other social sciences, business administration, mathematics, or natural sciences. Topics include simple and multiple regression analysis, extensions of the classical regression model, and problems associated with forecasting. Assigned work exposes students to problems from a wide range of applications. This course includes introduction to econometric software and experiments involving a variety of real world data sets.
+
+**Taught**: Fall 2024
 :::
 
 ::: {.callout collapse="true" title="Intermediate Macroeconomics"}
 \
 [Syllabus](/assets/documents/taylor_ue_econ346_syllabus_f25.pdf)
 
-**Taught**: Fall 2025
-
 **Description**: Macroeconomics is the study of the economy as a whole. Course analyzes the factors determining the growth in income, changes in prices, and the rate of unemployment. As appropriate, the course makes use of models suited to the long run and the short run and models of both open and closed economies.
+
+**Taught**: Fall 2025
+:::
+
+::: {.callout collapse="true" title="Development Economics"}
+\
+Syllabus Coming Soon
+
+**Description**: Examines the processes of economic development and structural transformation in low- and middle-income countries. Covers growth and development theories; measurement of welfare, poverty, and inequality; population dynamics; human capital (health and education); agriculture and rural organization; industrialization and trade; finance and microcredit; institutions, governance, and corruption; environment and sustainability; foreign aid and policy design. Emphasizes applying microeconomic reasoning and empirical methods (including impact evaluation and randomized controlled trials) to real-world data. Students interpret development indicators, critically read research, and craft evidence-based policy recommendations.
+
+**Taught**: Fall 2026
 :::
 
 ## George Mason University
@@ -51,16 +60,37 @@ author: ""
 \
 [Syllabus](/assets/documents/taylor_gmu_econ360_syllabus.pdf)
 
-**Taught**: Fall 2021
-
 **Description**: Economic growth characteristic of developing countries. Economic development, obstacles to development, policies, and planning.
+
+**Taught**: Fall 2021
 :::
 
 ::: {.callout collapse="true" title="International Economic Policy"}
 \
 [Syllabus](/assets/documents/taylor_gmu_econ360_syllabus.pdf)
 
-**Taught**: Spring 2022
-
 **Description**: Introduces economic way of thinking on trade and international finance. Presents historical and current information on consequences of trade and protectionism.
+
+**Taught**: Spring 2022
 :::
+
+## Guest Lectures
+
+::: {.callout collapse="true" title="Web Scraping in R"}
+\
+**Description**: Introduces students to web crawling and scraping methods for data collection using the R programming language. Briefly discusses css and html, then introduces and demonstrates the `rvest` tidyverse package. Includes scraping of tables and specific text.
+
+**Given In**:   
+- GMU ECON 637: Econometrics I (Spring 2022)    
+- GMU ECON 895: Text as Data (Spring 2022)
+:::
+<!-- 
+## Policy Presentations
+
+::: {.callout collapse="true" title="The Impact of Tariffs"}
+\
+**Description**: Summarizes the state of economic research regarding the impact of tariffs to the domestic economy. Highlights explanations of tariff increases and tests their validity against historical effects of tariffs.
+
+**Given To**:   
+- Vanderburgh County Democratic Party (May 2025)
+::: -->
