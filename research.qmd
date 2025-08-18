@@ -5,6 +5,8 @@ author: ""
 
 ![](/assets/images/centre_pompidou.jpeg "Centre Pompidou")
 
+[Where we investigate puzzling questions...](assets/images/confused.png)
+
 ## Peer-Reviewed Publications
 
 <!-- [Taylor, Alexander N. (2025). "Monumental Effects: Confederate Monuments in the Post-Reconstruction South," *Explorations in Economic History*, 95, 101635](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615) -->

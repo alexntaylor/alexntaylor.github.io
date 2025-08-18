@@ -5,6 +5,8 @@ author: ""
 
 ![](/assets/images/arithmetic_tapestry.jpeg ""Arithmetic" on Tapestry")
 
+[Click here to see a proud student on graduation day!](assets/images/satisfied_graduate.jpg)
+
 ## University of Evansville
 
 ::: {.callout collapse="true" title="Principles of Macroeconomics"}
@@ -62,12 +64,3 @@ author: ""
 
 **Description**: Introduces economic way of thinking on trade and international finance. Presents historical and current information on consequences of trade and protectionism.
 :::
-
-## Other
-
-::: {.callout collapse="true" title="Click to see a proud student on graudation day!"}
-\
-![](assets/images/satisfied_graduate.jpg)
-
-:::
-
