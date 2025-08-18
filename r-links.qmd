@@ -4,7 +4,7 @@ title: "R Links"
 
 :::{.columns style="display:flex; justify-content:center; align-items:center; gap:2rem; text-align:center;"}
 ::: {.column width="45%"}
-I built this page to point students (and anyone else learning R) to resources I've found helpful in my R journey. Use whatever information you'd like, but only for good. And give Stanley a pat on the head as payment.
+I built this page to point students (and anyone else learning R) to resources I've found helpful in my R journey. Use whatever information you'd like, but only for good. And give Stanley a virtual pat on the head as payment.
 :::
 ::: {.column width="45%"}
 [![](assets/images/stanley.jpg){width=300px}](https://www.instagram.com/stanleythemanly04/)
