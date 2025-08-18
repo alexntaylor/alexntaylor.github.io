@@ -3,10 +3,10 @@ title: "R Links"
 ---
 
 :::{.columns style="display:flex; justify-content:center; align-items:center; gap:2rem; text-align:center;"}
-::: {.column width="45%"}
+::: {.column width="50%"}
 I built this page to point students (and anyone else learning R) to resources I've found helpful in my R journey. Use whatever information you'd like, but only for good. And give Stanley a virtual pat on the head before you go.
 :::
-::: {.column width="45%"}
+::: {.column width="50%"}
 [![](assets/images/stanley.jpg){width=300px}](https://www.instagram.com/stanleythemanly04/)
 :::
 :::
@@ -46,17 +46,25 @@ Working with Large Language Models in R requires using an API from the LLM provi
 
 [See this blog post for a collection of LLM-related packages.](https://blog.stephenturner.us/p/r-production-ai) Here are some specific features and packages I've found useful:
 
+::: {.callout collapse="true" title="Coding Assistance"}
 - [Copilot code completion in RStudio](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
-  - Setting this up is easier in [Positron](https://positron.posit.co)
+  - Setting this up is easier in [Positron](https://positron.posit.co). It also has [Positron Assistant](https://positron.posit.co/assistant.html), which allows for far better LLM integration into your coding experience. It currently only supports Anthropic models, though more LLM options are coming soon.
+- [chattr](https://mlverse.github.io/chattr/)
+  - Chat with an LLM within your IDE, similar to copilot chat in VSCode
+- [gander](https://simonpcouch.github.io/gander/)
+  - Simple chat that sees your environment and existing code, and generates code in your Rscript according to your instructions
+  - Somewhat similar to in-line copilot chat in VSCode (or Positron Assistant)
+:::
+::: {.callout collapse="true" title="Direct LLM Interaction for Data Processing & Beyond"}
 - [ellmer](https://ellmer.tidyverse.org)
   - Many other packages built on ellmer
   - Interact directly with a variety of LLMs
   - Chat, submit batch queries, parallel queries, queries for structured data responses, and more!
-- [chattr](https://mlverse.github.io/chattr/)
-  - Chat with an LLM within your IDE, similar to copilot chat in VSCode
-- [gander](https://simonpcouch.github.io/gander/)
-  - Simple chat that sees your environment and existing code, and writes code according to your instructions
-  - Somewhat similar to copilot chat in VSCode, but has more context
+- [mall](https://mlverse.github.io/mall/)
+  - Natural language processing using LLMs in R
+  - Package functions include built-in prompts for text extraction, classification, translation, sentiment analysis, and more!
+  - Can also easily create your own custom prompts
+:::
 
 ## Web Crawling & Scraping in R
 
