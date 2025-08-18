@@ -1,8 +1,9 @@
 ---
 title: "Resources"
+author: ""
 ---
 
-![Settlers Resources](/assets/images/catan_resources.png "Settlers Resources")
+![](/assets/images/catan_resources.png){fig-align="center"}
 
 ## Economics at the University of Evansville
 
