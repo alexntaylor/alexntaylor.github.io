@@ -48,7 +48,9 @@ Working with Large Language Models in R requires using an API from the LLM provi
 
 ::: {.callout collapse="true" title="Coding Assistance"}
 - [Copilot code completion in RStudio](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
-  - Setting this up is easier in [Positron](https://positron.posit.co). It also has [Positron Assistant](https://positron.posit.co/assistant.html), which allows for far better LLM integration into your coding experience. It currently only supports Anthropic models, though more LLM options are coming soon.
+  - Setting this up is easier in [Positron](https://positron.posit.co).
+- [Positron Assistant](https://positron.posit.co/assistant.html)
+  - Only available in Positron. Low-friction LLM integration into your coding experience. It currently only supports Anthropic models, though more LLM options are coming soon.
 - [`chattr`](https://mlverse.github.io/chattr/)
   - Chat with an LLM within your IDE, similar to copilot chat in VSCode
 - [`gander`](https://simonpcouch.github.io/gander/)
