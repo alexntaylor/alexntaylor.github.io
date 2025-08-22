@@ -22,9 +22,9 @@ University of Evansville
 
 <!-- ::: {.author-bio} -->
 <!-- <div style="text-align: center;"> -->
-I am a dedicated educator and an active researcher, primarily in political economy and economic history.
+I am a dedicated economics educator and an active researcher, primarily in political economy and economic history.
 
-My scholarly work has been published in [*Explorations in Economic History*](https://www.sciencedirect.com/journal/explorations-in-economic-history) and featured in [*Cato Institute Research Briefs in Economic Policy*](https://www.cato.org/research-briefs-economic-policy/confederate-monuments-post-reconstruction-south). In the popular press, I have written for [*The Conversation*](https://theconversation.com/when-confederate-glorifying-monuments-went-up-in-the-south-voting-in-black-areas-went-down-208275). For more information on my published writings and current paper drafts, check out my [Research](research.qmd) page.
+My scholarly work has been published in [*Explorations in Economic History*](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615) and featured in [*Cato Institute Research Briefs in Economic Policy*](https://www.cato.org/research-briefs-economic-policy/confederate-monuments-post-reconstruction-south). In the popular press, I have written for [*The Conversation*](https://theconversation.com/when-confederate-glorifying-monuments-went-up-in-the-south-voting-in-black-areas-went-down-208275). For more information on my published writings and current paper drafts, check out my [Research](research.qmd) page.
 
 I also love teaching the economic way of thinking to students at all levels, and have experience teaching both introductory and upper level economics courses. This Fall, I am teaching the third iteration of my Principles of Macroeconomics course and my first section of Intermediate Macroeconomics. In the Spring, I will teach Principles of Microeconomics and offer a newly designed elective---Development Economics. For course descriptions and syllabi, check out my [Teaching](teaching.qmd) page.
 

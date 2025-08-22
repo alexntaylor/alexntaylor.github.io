@@ -5,7 +5,7 @@ author: ""
 
 ![](/assets/images/centre_pompidou.jpeg "Centre Pompidou")
 
-[Where we investigate puzzling questions...](assets/images/confused.png)
+Where we investigate [puzzling](assets/images/confused.png) questions...
 
 ## Peer-Reviewed Publications
 
@@ -24,7 +24,7 @@ author: ""
 
 <!-- [The Impact of the Black Death on the Adoption of the Printing Press (joint with Noel D. Johnson and Andrew Thomas), *R&R, Journal of Economic History*.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607) -->
 
-::: {.callout collapse="true" title="\"The Impact of the Black Death on the Adoption of the Printing Press\" (joint with Noel D. Johnson and Andrew Thomas), *R&R, Journal of Economic History*."}
+::: {.callout collapse="true" title="\"The Impact of the Black Death on the Adoption of the Printing Press\" (joint with [Noel D. Johnson](https://noeldjohnson.github.io) and Andrew Thomas), *R&R, Journal of Economic History*."}
 \
 [[Current Draft]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607)[[Slides]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)
 
@@ -35,7 +35,7 @@ author: ""
 
 <!-- The King's French: The Political Economy of Language (joint with Jacob Hall) -->
 
-::: {.callout collapse="true" title="\"The King's French: The Political Economy of Language\" (joint with Jacob Hall)."}
+::: {.callout collapse="true" title="\"The King's French: The Political Economy of Language\" (joint with [Jacob Hall](https://jacobrhall.github.io/))."}
 \
 [Draft Coming Soon]
 
@@ -59,11 +59,11 @@ author: ""
 
 **Political Emails**
 
-**Plague, Print, and Persecution: The Role of Print Media in Shaping Social Responses to Epidemics in Early-Modern Europe** (joint with Noel D. Johnson)
+**Plague, Print, and Persecution: The Role of Print Media in Shaping Social Responses to Epidemics in Early-Modern Europe** (joint with [Noel D. Johnson](https://noeldjohnson.github.io))
 
-**The Varieties of Printed Material in Europe between 1450 and 1650: A Title Embeddings Approach** (joint with Noel D. Johnson)
+**The Varieties of Printed Material in Europe between 1450 and 1650: A Title Embeddings Approach** (joint with [Noel D. Johnson](https://noeldjohnson.github.io))
 
-**Institution Building in Indian Country: Tribal Courts** (joint with Thomas Stratmann and Adam Crepelle)
+**Institution Building in Indian Country: Tribal Courts** (joint with [Thomas Stratmann](https://publicchoice.gmu.edu/thomas-stratmann) and [Adam Crepelle](https://www.luc.edu/law/faculty/facultyandadministrationprofiles/crepelle-adam.shtml))
 
 ## In the Media
 
