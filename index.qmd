@@ -6,6 +6,29 @@ title-block-banner: false
 author: ""
 ---
 
+<style>
+.responsive-content {
+  overflow: auto;
+}
+
+.responsive-content img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  .responsive-content img {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+</style>
+
 ::: {.author-profile}
 ![](/assets/images/headshot_2024.png)
 
@@ -20,11 +43,9 @@ University of Evansville
 
 ## About Me
 
-<div style="overflow: auto;">
-<img src="/assets/images/ireland_hike.png" alt="Ireland Hike" style="float: left; margin-right: 20px; margin-bottom: 10px; width: 300px;">
+<div class="responsive-content">
+<img src="/assets/images/ireland_hike.png" alt="Ireland Hike">
 
-<!-- ::: {.author-bio} -->
-<!-- <div style="text-align: center;"> -->
 I am a dedicated economics educator and an active researcher, primarily in political economy and economic history.
 
 My scholarly work has been published in [*Explorations in Economic History*](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615) and featured in [*Cato Institute Research Briefs in Economic Policy*](https://www.cato.org/research-briefs-economic-policy/confederate-monuments-post-reconstruction-south). In the popular press, I have written for [*The Conversation*](https://theconversation.com/when-confederate-glorifying-monuments-went-up-in-the-south-voting-in-black-areas-went-down-208275). For more information on my published writings and current paper drafts, check out my [Research](research.qmd) page.
@@ -35,8 +56,6 @@ I also care deeply about communicating economic insights about pressing policy i
 
 In my free time I enjoy traveling, live music, video games, television & cinema, and---most of all---spending time doing these activities with my wife Victoria and our miniature dachshund Stanley.
 </div>
-<!-- </div> -->
-<!-- ::: -->
 
 <!-- ## Welcome
 
