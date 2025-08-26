@@ -20,6 +20,9 @@ University of Evansville
 
 ## About Me
 
+<div style="overflow: auto;">
+<img src="/assets/images/ireland_hike.png" alt="Ireland Hike" style="float: left; margin-right: 20px; margin-bottom: 10px; width: 300px;">
+
 <!-- ::: {.author-bio} -->
 <!-- <div style="text-align: center;"> -->
 I am a dedicated economics educator and an active researcher, primarily in political economy and economic history.
@@ -31,6 +34,7 @@ I also love teaching the economic way of thinking to students at all levels, and
 I also care deeply about communicating economic insights about pressing policy issues, and have experience giving policy presentations to local organizations.
 
 In my free time I enjoy traveling, live music, video games, television & cinema, and---most of all---spending time doing these activities with my wife Victoria and our miniature dachshund Stanley.
+</div>
 <!-- </div> -->
 <!-- ::: -->
 
