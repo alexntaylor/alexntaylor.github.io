@@ -43,7 +43,7 @@ Where we investigate [puzzling](assets/images/confused.png) questions...
 ::: {.callout collapse="true" title="\"The King's French: The Political Economy of Language.\""}
 (joint with [Jacob Hall](https://jacobrhall.github.io/))
 
-[Draft Coming Soon]
+[[November 2025 Draft]](https://www.dropbox.com/scl/fi/tw1x9etonh6vlwdj303zz/kings_french_current.pdf?rlkey=rsnpzi1vzpbnx0ev2fv9p64hj&st=hz5fwmgw&dl=0)
 
 **Abstract:** This paper investigates the impact of state-building on linguistic transition and standardization in Early Modern France. Using the Universal Short Title Catalogue, we construct a city-decade panel of printing activity in European cities from 1500 to 1650. We then estimate the impact of the Ordinance of Villers-Cotterˆets, an ordinance requiring the use of French—rather than Latin—in all legal documents, on French language printing using a difference-in-discontinuities design. Results suggest that the ordinance had spillover effects on non-legal printed materials, promoting the general use of vernacular language in print. The findings have implications for the role of the state in shaping national identity and the legibility of the law.
 
