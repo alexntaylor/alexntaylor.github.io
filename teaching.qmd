@@ -5,8 +5,6 @@ author: ""
 
 ![](/assets/images/arithmetic_tapestry.jpeg ""Arithmetic" on Tapestry")
 
-[Click here to see a proud student on graduation day!](assets/images/satisfied_graduate.jpg)
-
 ## University of Evansville
 
 ::: {.callout collapse="true" title="Principles of Macroeconomics"}
@@ -84,6 +82,8 @@ Syllabus Coming Soon
 - GMU ECON 637: Econometrics I (Spring 2022)    
 - GMU ECON 895: Text as Data (Spring 2022)
 :::
+
+[Click here to see a proud student on graduation day!](assets/images/satisfied_graduate.jpg)
 <!-- 
 ## Policy Presentations
 
