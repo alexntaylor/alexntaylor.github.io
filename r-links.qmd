@@ -20,8 +20,8 @@ Start by downloading the R software environment:
 Next download one of two IDEs, both developed by Posit:
 
 - **[Positron](https://positron.posit.co)**
-  - A general IDE that supports R, but also Python and Julia
-  - Just came out of beta, but is mostly stable and has modern features absent from RStudio
+  - A fork of VSCode specifically designed for R, also supports Python and Julia
+  - Recently out of beta, but is mostly stable and has modern features absent from RStudio
   - If you have experience in VSCode, I recommend Positron
 
 - **[RStudio](https://posit.co/downloads/)**
@@ -42,22 +42,24 @@ After installing R and an IDE, you can start learning R. Here are some resources
 
 ## Working with LLMs in R
 
-Working with Large Language Models in R requires using an API from the LLM provider. This typically requires creating an account *separate* from your chat account, generating an API key, and adding it to your R environment. [See here for more information.](https://tilburg.ai/2024/03/tutorial-openai-api-in-r/)
+LLMs are rapidly enhancing work across many domains, including academia. Here are some resources for working with LLMs in R, including agentic coding and direct interaction with LLMs for data processing and more. This is a rapidly evolving space, so this list is not meant to be exhaustive nor perfectly up to date. But I'll do my best to keep up!
 
-[See this blog post for a collection of LLM-related packages.](https://blog.stephenturner.us/p/r-production-ai) Here are some specific features and packages I've found useful:
-
-::: {.callout collapse="true" title="Coding Assistance"}
-- [Copilot code completion in RStudio](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
-  - Setting this up is easier in [Positron](https://positron.posit.co).
-- [Positron Assistant](https://positron.posit.co/assistant.html)
-  - Only available in Positron. Low-friction LLM integration into your coding experience. It currently only supports Anthropic models, though more LLM options are coming soon.
-- [`chattr`](https://mlverse.github.io/chattr/)
-  - Chat with an LLM within your IDE, similar to copilot chat in VSCode
-- [`gander`](https://simonpcouch.github.io/gander/)
-  - Simple chat that sees your environment and existing code, and generates code in your Rscript according to your instructions
-  - Somewhat similar to in-line copilot chat in VSCode (or Positron Assistant)
+::: {.callout collapse="true" title="Agentic Coding"}
+- [Free Github Copilot Access with the Student Developer Pack](https://education.github.com/pack)
+  - Basic access to GitHub Copilot for students
+  - Teachers can also apply for full (and free!) Copilot Pro access
+- [Claude Code](https://claude.com/product/claude-code)
+  - My preferred coding agent; has full access to your project folder (and anything else on your computer you give it access to) and can create, edit, and delete files
+  - [Getting Started](https://code.claude.com/docs/en/overview)
+  - [How it Works](https://code.claude.com/docs/en/how-claude-code-works)
+  - [Best Practices](https://code.claude.com/docs/en/best-practices)
+- Claude Code for R/Economics
+  - [Pedro Sant'Anna's Claude Code Setup](https://psantanna.com/claude-code-my-workflow/): An extensive workflow for using Claude Code across any academic task (steep learning curve)
+  - [Claude Skills for R Users](https://rworks.dev/posts/claude-skills-for-r-users/): A collection of Claude Skills to help with R coding (shallower learning curve)
+- [OpenAI Codex](https://openai.com/codex/)
+  - OpenAI's coding agent similar to Claude Code
 :::
-::: {.callout collapse="true" title="Direct LLM Interaction for Data Processing & Beyond"}
+::: {.callout collapse="true" title="Packages for Data Processing & Beyond"}
 - [`ellmer`](https://ellmer.tidyverse.org)
   - Many other packages built on ellmer
   - Interact directly with a variety of LLMs
@@ -66,6 +68,15 @@ Working with Large Language Models in R requires using an API from the LLM provi
   - Natural language processing using LLMs in R
   - Package functions include built-in prompts for text extraction, classification, translation, sentiment analysis, and more!
   - Can also easily create your own custom prompts
+:::
+::: {.callout collapse="true" title="AI Coding Assistance for the Claude Code Skeptic"}
+- [Copilot code completion in RStudio](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
+  - Setting this up is easier in [Positron](https://positron.posit.co).
+- [`chattr`](https://mlverse.github.io/chattr/)
+  - Chat with an LLM within your IDE, similar to copilot chat in VSCode
+- [`gander`](https://simonpcouch.github.io/gander/)
+  - Simple chat that sees your environment and existing code, and generates code in your Rscript according to your instructions
+  - Somewhat similar to in-line copilot chat in VSCode (or Positron Assistant)
 :::
 
 ## Web Crawling & Scraping in R
