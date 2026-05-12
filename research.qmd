@@ -26,7 +26,7 @@ Where we investigate [puzzling](assets/images/confused.png) questions...
 
 <!-- [The Impact of the Black Death on the Adoption of the Printing Press (joint with Noel D. Johnson and Andrew Thomas), *R&R, Journal of Economic History*.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607) -->
 
-::: {.callout collapse="true" title="\"The Impact of the Black Death on the Adoption of the Printing Press\", *R&R, Journal of Economic History*."}
+::: {.callout collapse="true" title="\"The Impact of the Black Death on the Adoption of the Printing Press,\" *R&R, Journal of Economic History*."}
 (joint with [Noel D. Johnson](https://noeldjohnson.github.io) and Andrew Thomas)
 
 **ABDC Journal Ranking: A\***
@@ -40,14 +40,14 @@ Where we investigate [puzzling](assets/images/confused.png) questions...
 
 <!-- The King's French: The Political Economy of Language (joint with Jacob Hall) -->
 
-::: {.callout collapse="true" title="\"The King's French: The Political Economy of Language.\""}
+::: {.callout collapse="true" title="\"The King's French: The Political Economy of Language,\" *Under Review*"}
 (joint with [Jacob Hall](https://jacobrhall.github.io/))
 
-[[November 2025 Draft]](https://www.dropbox.com/scl/fi/tw1x9etonh6vlwdj303zz/kings_french_current.pdf?rlkey=rsnpzi1vzpbnx0ev2fv9p64hj&st=hz5fwmgw&dl=0)
+[[May 2026 Draft]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740518)
 
-**Abstract:** This paper investigates the impact of state-building on linguistic transition and standardization in Early Modern France. Using the Universal Short Title Catalogue, we construct a city-decade panel of printing activity in European cities from 1500 to 1650. We then estimate the impact of the Ordinance of Villers-Cotterˆets, an ordinance requiring the use of French—rather than Latin—in all legal documents, on French language printing using a difference-in-discontinuities design. Results suggest that the ordinance had spillover effects on non-legal printed materials, promoting the general use of vernacular language in print. The findings have implications for the role of the state in shaping national identity and the legibility of the law.
+**Abstract:** We investigate the impact of language policy on language choice, linguistic standardization, and national identity. In 1539, the Ordinance of Villers-Cotterêts made French the official administrative language of France. Using a geographic difference-in-discontinuities design exploiting the French border, we show that Villers-Cotterêts caused a dramatic shift away from Latin toward French in the larger print market and homogenized printed French. We then show that the ordinance fostered French national identity, as reflected in book titles, and that towns with larger ordinance-induced shifts toward vernacular printing expressed stronger national identity on the eve of the French Revolution.
 
-**Presentations**: SEA 2022, PCS, VWHPE, Markets & Society, SEA 2025
+**Presentations**: PCS, Virtual Workshop in HPE, Markets & Society, UE, SEA 2025
 :::
 
 <!-- [The Word of God or Man? Bibles and the Vernacular Shift](https://www.dropbox.com/scl/fi/3xyws1qqzk64uhh9vw3by/bibles_current.pdf?rlkey=6cd87c9c2e5kg4df2sgsgiqt9&st=33cp946e&dl=0) -->
