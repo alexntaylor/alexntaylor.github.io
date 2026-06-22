@@ -76,6 +76,14 @@ Welcome! Here you can find information about my research in economic history and
 
 ## Recent Updates
 
+- **19 June 2026**: Excited to share a new working paper with [Noel D. Johnson](https://noeldjohnson.github.io), "Mapping the Market for Ideas in Europe, 1450–1650: A Title-Embeddings Approach," which investigates how the expansion of the European print market between 1450 and 1650 changed the way knowledge was organized and how that reorganization in turn shaped city growth. [Find our draft here.](https://www.dropbox.com/scl/fi/iez0uaap9xnnig2ew5c0v/Johnson_Taylor_Market_for_Ideas_2026-06-19.pdf)
+
+- **8 May 2026**: Excited to share a new working paper with [Jacob Hall](https://jacobrhall.github.io), "The King's French: The Political Economy of Language," which investigates the impact of the 1539 Ordinance of Villers-Cotterêts on language choice, linguistic standardization, and national identity in France. [Find our draft here.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740518)
+
+- **15 January 2026**: Happy to be teaching a special topics course on Development Economics this Spring! This course will cover the determinants of historical economic development using *How the World Became Rich* by Koyama and Rubin, as well as more recent development issues and questions using *Poor Economics* by Banerjee and Duflo. I greatly enjoyed designing this course and look forward to teaching it for the first time.
+
+- **1 September 2025**: I'm excited to teach Intermediate Macroeconomics for the first time this Fall. I look forward to going in-depth on macroeconomic theory and policy with my students across both my Principles and Intermediate sections. See my [Teaching](teaching.qmd) page for my syllabi.
+
 - **29 August 2025**: Very grateful to receive a grant from the Institute for Humane studies for my work with [Jacob Hall](https://jacobrhall.github.io) on "The King's French: The Political Economy of Language"! Their support will greatly accelerate our work on the project.
 
 - **18 August 2025**: After a productive summer, I'm excited to get back into the classroom on Wednesday. I'll be teaching my third iteration of Principles of Macro and my first iteration of Intermediate Macro. Excited to go in-depth on macro with my students across both levels! See my [Teaching](teaching.qmd) page for my syllabi.
