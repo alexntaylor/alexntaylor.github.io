@@ -40,7 +40,7 @@ Where we investigate [puzzling](assets/images/confused.png) questions...
 
 <!-- The King's French: The Political Economy of Language (joint with Jacob Hall) -->
 
-::: {.callout collapse="true" title="\"The King's French: The Political Economy of Language,\" *Under Review*"}
+::: {.callout collapse="true" title="\"The King's French: The Political Economy of Language,\" *Under Review.*"}
 (joint with [Jacob Hall](https://jacobrhall.github.io/))
 
 [[May 2026 Draft]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740518)
