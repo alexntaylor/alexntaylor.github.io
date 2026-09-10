@@ -13,7 +13,7 @@ Where we investigate [puzzling](assets/images/confused.png) questions...
 
 ::: {.callout collapse="true" title="Taylor, Alexander N. (2025). \"Monumental Effects: Confederate Monuments in the Post-Reconstruction South,\" *Explorations in Economic History*, 95, 101635."}
 \
-**ABDC Journal Ranking: A**
+<!-- **ABDC Journal Ranking: A** -->
 
 [[Published Version]](https://www.sciencedirect.com/science/article/abs/pii/S0014498324000615)[[Earlier SSRN Version]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451402)
 
@@ -29,7 +29,7 @@ Where we investigate [puzzling](assets/images/confused.png) questions...
 ::: {.callout collapse="true" title="\"The Impact of the Black Death on the Adoption of the Printing Press,\" *R&R, Journal of Economic History*."}
 (joint with [Noel D. Johnson](https://noeldjohnson.github.io) and Andrew Thomas)
 
-**ABDC Journal Ranking: A\***
+<!-- **ABDC Journal Ranking: A\*** -->
 
 [[Current Draft]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607)[[Slides]](https://alexntaylor.github.io/assets/documents/BDPress_markets_society.pdf)
 
@@ -53,7 +53,7 @@ Where we investigate [puzzling](assets/images/confused.png) questions...
 ::: {.callout collapse="true" title="\"Mapping the Market for Ideas in Europe, 1450–1650: A Title-Embeddings Approach.\""}
 (joint with [Noel D. Johnson](https://noeldjohnson.github.io))
 
-[[June 2026 Draft]](https://www.dropbox.com/scl/fi/iez0uaap9xnnig2ew5c0v/Johnson_Taylor_Market_for_Ideas_2026-06-19.pdf)
+<!-- [[June 2026 Draft]](https://www.dropbox.com/scl/fi/iez0uaap9xnnig2ew5c0v/Johnson_Taylor_Market_for_Ideas_2026-06-19.pdf) -->
 
 **Abstract:** Between 1450 and 1650 European print transformed from a Mainz craft producing about 3,000 Latin editions per decade into a market of nearly 800,000 editions across seven major languages and 1,300 cities. Did this expansion of the market for books and ideas change the way knowledge was organized and did that reorganization in turn shape city growth? Using title-level embeddings of the Universal Short Title Catalogue and a gravity-style city-period market access panel for six languages (Latin, German, Italian, French, Dutch, Spanish), we find that within-city increases in market access make a city’s print output more topically diverse, less distinct from the European centroid, and more topically even. This pattern is consistent with monopolistic competition under spatial product differentiation rather than with Smithian specialization. The useful-knowledge share of this compositional response carries growth-relevant content beyond market access, predicting subsequent 50-year city population growth, consistent with Mokyr’s Industrial Enlightenment thesis operating at the city level through trans-European scholarly print.
 :::
@@ -70,6 +70,8 @@ Where we investigate [puzzling](assets/images/confused.png) questions...
 :::
 
 ## Papers in Progress
+
+**The Public Choice Determinants of Confederate Monument Dedication**
 
 **Political Emails**
 
