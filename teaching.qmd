@@ -9,29 +9,29 @@ author: ""
 
 ::: {.callout collapse="true" title="Principles of Macroeconomics"}
 \
-[Syllabus](/assets/documents/taylor_ue_econ101_syllabus_f25.pdf)
+[Syllabus](/assets/documents/taylor_ue_econ101_syllabus_f26.pdf)
 
 **Description**: Macroeconomics is the branch of economics that studies the domestic economic system as a whole and its interaction with foreign economies. This course focuses on the behavior of the aggregate economy as it pertains to the determination of national income, production, level of employment, general price level, and trace flows. Particular attention is devoted to fiscal policy and monetary policy and their respective impact on the economic system. Satisfies a general education requirement in human behavior and society.
 
-**Taught**: Fall 2024, Spring 2025, Fall 2025
+**Taught**: Fall 2024, Spring 2025, Fall 2025, Fall 2026, Spring 2027
 :::
 
 ::: {.callout collapse="true" title="Principles of Microeconomics"}
 \
-[Syllabus](/assets/documents/taylor_ue_econ102_syllabus_s25.pdf)
+[Syllabus](/assets/documents/taylor_ue_econ102_syllabus_s26.pdf)
 
 **Description**: Markets are among the oldest social institutions known to man. Microeconomics is a branch of economics that studies the dynamics of individual markets and prices. Focuses on the behavior of producers and consumers and the interdependence in the market process. Pays particular attention to the structure and evolution of competitive markets. Satisfies a general education requirement in human behavior and society.
 
-**Taught**: Spring 2025, Spring 2026
+**Taught**: Spring 2025, Spring 2026, Spring 2027
 :::
 
 ::: {.callout collapse="true" title="Regression Analysis"}
 \
-[Syllabus](/assets/documents/taylor_ue_econ300_syllabus_f24.pdf)
+[Syllabus](/assets/documents/taylor_ue_econ300_syllabus_f26.pdf)
 
 **Description**: Second course in applied statistics for students in economics and other social sciences, business administration, mathematics, or natural sciences. Topics include simple and multiple regression analysis, extensions of the classical regression model, and problems associated with forecasting. Assigned work exposes students to problems from a wide range of applications. This course includes introduction to econometric software and experiments involving a variety of real world data sets.
 
-**Taught**: Fall 2024
+**Taught**: Fall 2024, Fall 2026
 :::
 
 ::: {.callout collapse="true" title="Intermediate Macroeconomics"}
@@ -45,7 +45,7 @@ author: ""
 
 ::: {.callout collapse="true" title="Development Economics"}
 \
-Syllabus Coming Soon
+[Syllabus](/assets/documents/taylor_ue_econ380dev_syllabus_s26.pdf)
 
 **Description**: Examines the processes of economic development and structural transformation in low- and middle-income countries. Covers growth and development theories; measurement of welfare, poverty, and inequality; population dynamics; human capital (health and education); agriculture and rural organization; industrialization and trade; finance and microcredit; institutions, governance, and corruption; environment and sustainability; foreign aid and policy design. Emphasizes applying microeconomic reasoning and empirical methods (including impact evaluation and randomized controlled trials) to real-world data. Students interpret development indicators, critically read research, and craft evidence-based policy recommendations.
 
