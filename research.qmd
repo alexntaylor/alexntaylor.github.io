@@ -26,7 +26,7 @@ Where we investigate [puzzling](assets/images/confused.png) questions...
 
 <!-- [The Impact of the Black Death on the Adoption of the Printing Press (joint with Noel D. Johnson and Andrew Thomas), *R&R, Journal of Economic History*.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5047607) -->
 
-::: {.callout collapse="true" title="\"The Impact of the Black Death on the Adoption of the Printing Press,\" *R&R, Journal of Economic History*."}
+::: {.callout collapse="true" title="\"The Impact of the Black Death on the Adoption of the Printing Press,\" *Revised & Resubmitted, Journal of Economic History*."}
 (joint with [Noel D. Johnson](https://noeldjohnson.github.io) and Andrew Thomas)
 
 <!-- **ABDC Journal Ranking: A\*** -->
