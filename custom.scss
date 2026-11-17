@@ -1,0 +1,10 @@
+/*-- scss:defaults --*/
+$primary: #667eea;
+$secondary: #764ba2;
+$light: #f8f9fa;
+$dark: #343a40;
+
+/*-- scss:rules --*/
+.quarto-title-block .quarto-title-banner {
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+}

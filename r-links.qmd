@@ -1,0 +1,99 @@
+---
+title: "R Links"
+---
+
+:::{.columns style="display:flex; justify-content:center; align-items:center; gap:2rem; text-align:center;"}
+::: {.column width="50%"}
+I built this page to point students (and anyone else learning R) to resources I've found helpful in my R journey. Use whatever information you'd like, but only for good. And give Stanley a virtual pat on the head before you go.
+:::
+::: {.column width="50%"}
+[![](assets/images/stanley.jpg){width=300px}](https://www.instagram.com/stanleythemanly04/)
+:::
+:::
+
+## Getting Started with R
+
+Start by downloading the R software environment:
+
+- [Download R](https://www.r-project.org)
+
+Next download one of two IDEs, both developed by Posit:
+
+- **[Positron](https://positron.posit.co)**
+  - A fork of VSCode specifically designed for R, also supports Python and Julia
+  - Recently out of beta, but is mostly stable and has modern features absent from RStudio
+  - If you have experience in VSCode, I recommend Positron
+
+- **[RStudio](https://posit.co/downloads/)**
+  - The classic IDE for R, and still the most popular
+  - Straightforward, easier to navigate, and very stable
+  - If you have no experience with IDEs, I recommend RStudio
+
+After installing R and an IDE, you can start learning R. Here are some resources to get you started:
+
+- [Starter links from posit](https://support.posit.co/hc/en-us/articles/201141096-Getting-Started-with-R)
+  - Recommended resources for learning R
+- [Package Cheatsheets from posit](https://posit.co/resources/cheatsheets/?type=posit-cheatsheets/)
+  - Cheatsheets for a variety of offerings from Posit
+
+## Data Science in R
+
+- [R for Data Science by Wickham & Grolemund](https://r4ds.had.co.nz/index.html)
+
+## Working with LLMs in R
+
+LLMs are rapidly enhancing work across many domains, including academia. Here are some resources for working with LLMs in R, including agentic coding and direct interaction with LLMs for data processing and more. This is a rapidly evolving space, so this list is not meant to be exhaustive nor perfectly up to date. But I'll do my best to keep up!
+
+::: {.callout collapse="true" title="Agentic Coding"}
+- [Free Github Copilot Access with the Student Developer Pack](https://education.github.com/pack)
+  - Basic access to GitHub Copilot for students
+  - Teachers can also apply for full (and free!) Copilot Pro access
+- [Claude Code](https://claude.com/product/claude-code)
+  - My preferred coding agent; has full access to your project folder (and anything else on your computer you give it access to) and can create, edit, and delete files
+  - [Getting Started](https://code.claude.com/docs/en/overview)
+  - [How it Works](https://code.claude.com/docs/en/how-claude-code-works)
+  - [Best Practices](https://code.claude.com/docs/en/best-practices)
+- Claude Code for R/Economics
+  - [Pedro Sant'Anna's Claude Code Setup](https://psantanna.com/claude-code-my-workflow/): An extensive workflow for using Claude Code across any academic task (steep learning curve)
+  - [Claude Skills for R Users](https://rworks.dev/posts/claude-skills-for-r-users/): A collection of Claude Skills to help with R coding (shallower learning curve)
+- [OpenAI Codex](https://openai.com/codex/)
+  - OpenAI's coding agent similar to Claude Code
+:::
+::: {.callout collapse="true" title="Packages for Data Processing & Beyond"}
+- [`ellmer`](https://ellmer.tidyverse.org)
+  - Many other packages built on ellmer
+  - Interact directly with a variety of LLMs
+  - Chat, submit batch queries, parallel queries, queries for structured data responses, and more!
+- [`mall`](https://mlverse.github.io/mall/)
+  - Natural language processing using LLMs in R
+  - Package functions include built-in prompts for text extraction, classification, translation, sentiment analysis, and more!
+  - Can also easily create your own custom prompts
+:::
+::: {.callout collapse="true" title="AI Coding Assistance for the Claude Code Skeptic"}
+- [Copilot code completion in RStudio](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
+  - Setting this up is easier in [Positron](https://positron.posit.co).
+- [`chattr`](https://mlverse.github.io/chattr/)
+  - Chat with an LLM within your IDE, similar to copilot chat in VSCode
+- [`gander`](https://simonpcouch.github.io/gander/)
+  - Simple chat that sees your environment and existing code, and generates code in your Rscript according to your instructions
+  - Somewhat similar to in-line copilot chat in VSCode (or Positron Assistant)
+:::
+
+## Web Crawling & Scraping in R
+
+- [`Rvest` R Package (Part of Tidyverse)](https://rvest.tidyverse.org)
+- [Web Crawling & Scraping Tutorial by Alex Cardazzi](https://alexcardazzi.github.io/using-r/ew_wvu_2022/web_stuff.html)
+
+## GIS
+
+- ["Geocomputation with R" by Lovelace, Nowosad, & Muenchow](https://geocompr.robinlovelace.net/index.html)
+- [Atlas of Historical County Boundaries (US)](https://digital.newberry.org/ahcb/index.html)
+  - Shapefiles for historical county (1629-2000) and state/territory (1783-2000) boundaries. Tracks all boundary changes over time.
+- [IPUMS NHGIS (US)](https://www.nhgis.org)
+  - Shapefiles for historical boundaries in census years from 1790-Present. Does not track all changes, only shows boundaries as they existed in census years.
+- [Eurostat (From the EU)](https://ec.europa.eu/eurostat/web/gisco)
+  - Shapefiles for modern Europe
+
+## Text as Data
+
+- ["Text Mining with R" by Silge & Robinson](https://www.tidytextmining.com/index.html)

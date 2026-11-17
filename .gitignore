@@ -1,0 +1,28 @@
+# Quarto
+/.quarto/
+_site/
+
+# Local-only notes and old Jekyll backup (never published)
+_notes/
+_jekyll_backup/
+
+# macOS
+.DS_Store
+
+# Editors
+*~
+*.sw[p_]
+.vscode/
+.idea/
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class

@@ -1,0 +1,73 @@
+project:
+  type: website
+  output-dir: _site
+  # Only the .qmd pages are published; README.md, CLAUDE.md and other
+  # Markdown files in the repo are not rendered into the site.
+  render:
+    - "*.qmd"
+  resources:
+    - .nojekyll
+
+website:
+  title: "Alexander N. Taylor"
+  site-url: "https://alexntaylor.github.io"
+  repo-url: "https://github.com/alexntaylor/alexntaylor.github.io"
+  
+  navbar:
+    background: light
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "CV"
+        href: assets/documents/taylor_cv.pdf
+      - text: "Research"
+        href: research.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "R Links"
+        href: r-links.qmd
+      - text: "Resources"
+        href: resources.qmd
+    right: 
+      - icon: envelope
+        href: mailto:at154@evansville.edu
+      - icon: twitter #bluesky
+        href: https://bsky.app/profile/alextaylorecon.bsky.social
+      - icon: github
+        href: https://github.com/alexntaylor
+  
+  page-footer:
+    left: |
+      © 2026 Alexander N. Taylor
+    right:
+      - icon: github
+        href: https://github.com/alexntaylor
+        aria-label: GitHub
+
+  google-analytics: "G-12ZZLPHMSQ"
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - custom.scss
+    css: styles.css
+    toc: true
+    toc-location: right
+    page-layout: article
+    grid:
+      sidebar-width: 300px
+      body-width: 900px
+      margin-width: 200px
+
+execute:
+  freeze: auto
+
+author:
+  name: "Alex Taylor"
+  email: "at154@evansville.edu"
+  affiliation: "University of Evansville"
+  bio: |
+    I am Assistant Professor of Economics in the Schroeder School of Business at the University of Evansville. 
+    I'm interested in Political Economy, Economic History, and Applied Econometrics.
