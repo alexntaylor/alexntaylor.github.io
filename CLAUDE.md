@@ -35,9 +35,9 @@ The GitHub repo is public and the site is public, so treat every tracked file as
 ## Structure
 
 - `_quarto.yml` — the single source for navbar, footer, theme, Google Analytics, and site-wide HTML options (right-hand TOC, `article` layout). Adding a page means creating a root-level `.qmd` and adding it to `website.navbar.left` here.
-- `index.qmd`, `research.qmd`, `teaching.qmd`, `r-links.qmd`, `resources.qmd` — the navbar pages.
-- `labs.qmd` — the "Practice Labs" index for students, grouped by course. It is linked from the course callouts in `teaching.qmd`, not from the navbar.
-- `labs/` — the labs themselves: standalone, self-contained HTML apps (own CSS and JS, no external dependencies). Quarto does not render them; `project.resources` in `_quarto.yml` copies `labs/*.html` into the site unchanged, so they get no navbar, footer, Google Analytics or search indexing. Adding a lab means dropping the file in `labs/`, adding a bullet to `labs.qmd`, and adding it to the course's `**Practice Labs**:` line in `teaching.qmd`. Lab links use `{target="_blank"}` because a lab has no link back to the site.
+- `index.qmd`, `research.qmd`, `teaching.qmd`, `labs.qmd`, `r-links.qmd`, `resources.qmd` — the pages, all in the navbar.
+- `labs.qmd` — the "Practice Labs" index for students, grouped by course. It is the only place labs are linked from (the Teaching page deliberately does not list them), so adding a lab touches nothing else.
+- `labs/` — the labs themselves: standalone, self-contained HTML apps (own CSS and JS, no external dependencies). Quarto does not render them; `project.resources` in `_quarto.yml` copies `labs/*.html` into the site unchanged, so they get no navbar, footer, Google Analytics or search indexing. Adding a lab means dropping the file in `labs/` and adding a bullet to `labs.qmd`. Lab links use `{target="_blank"}` because a lab has no link back to the site.
 - `custom.scss` (Bootstrap variable overrides layered on the `cosmo` theme) and `styles.css` (plain CSS rules). Both hard-code the same `#667eea` / `#764ba2` palette, so a color change has to be made in both.
 - `assets/documents/` — PDFs (CV, syllabi, slides); `assets/images/` — images.
 

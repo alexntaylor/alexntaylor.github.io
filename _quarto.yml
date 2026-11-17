@@ -27,6 +27,8 @@ website:
         href: research.qmd
       - text: "Teaching"
         href: teaching.qmd
+      - text: "Practice Labs"
+        href: labs.qmd
       - text: "R Links"
         href: r-links.qmd
       - text: "Resources"
