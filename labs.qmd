@@ -1,0 +1,10 @@
+---
+title: "Practice Labs"
+author: ""
+---
+
+Interactive labs for practicing the models we use in class. Each lab opens in its own tab and runs in your browser, so there is nothing to install and nothing to log in to. They work best on a laptop or tablet.
+
+## Principles of Macroeconomics
+
+- [AD–AS Lab](/labs/ad-as-lab.html){target="_blank"}: See how events and policy change real GDP, the price level, and unemployment in the aggregate demand and aggregate supply model. Includes policy missions based on real episodes, a look at sticky prices, and the adjustment from the short run to the long run.

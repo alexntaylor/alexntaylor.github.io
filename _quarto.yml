@@ -5,8 +5,10 @@ project:
   # Markdown files in the repo are not rendered into the site.
   render:
     - "*.qmd"
+  # The practice labs are standalone HTML apps, published unchanged.
   resources:
     - .nojekyll
+    - "labs/*.html"
 
 website:
   title: "Alexander N. Taylor"

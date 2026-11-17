@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AD–AS Lab</title>
+<style>
+:root{
+  color-scheme: light;
+  --desk:#e8edf2; --paper:#ffffff; --ink:#14213d; --muted:#566176; --rule:#d3dbe5; --soft:#f3f6f9;
+  /* Okabe–Ito color-blind-safe curve colors */
+  --ad:#0072B2; --sras:#D55E00; --lras:#009E73; --rec:#CC79A7; --inf:#E69F00;
+  --hl:#fff3c4;
+}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html{font-size:16px}
+html.present{font-size:clamp(17px,2.35vh,25px)}
+html.present .ctl label small{display:none}
+body{margin:0;background:var(--desk);color:var(--ink);line-height:1.4;overflow:auto;
+  font-family:"Avenir Next","Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif}
+.app{height:max(100dvh,600px);display:flex;flex-direction:column}
+
+/* Top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 16px;flex:none}
+.brand{display:flex;align-items:baseline;gap:14px;min-width:0}
+h1{font-size:1.35rem;margin:0;font-weight:800;letter-spacing:-.01em;white-space:nowrap}
+.brand span{color:var(--muted);font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbtns{display:flex;gap:8px;flex:none}
+button{font:inherit;font-size:.9rem;color:var(--ink);background:var(--paper);border:1.5px solid var(--rule);border-radius:8px;padding:6px 12px;cursor:pointer}
+button:hover:not(:disabled){border-color:var(--ink)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible{outline:3px solid var(--ad);outline-offset:2px}
+button.primary{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:650}
+button[aria-pressed=true].toggle{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* Main grid */
+main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.32fr) minmax(360px,1fr);gap:12px;padding:0 16px 12px}
+html.present main{grid-template-columns:minmax(0,1.5fr) minmax(380px,1fr)}
+.sheet{background:var(--paper);border-radius:12px;box-shadow:0 1px 0 var(--rule),0 0 0 1px var(--rule)}
+.left{display:flex;flex-direction:column;min-height:0}
+.ghead{display:flex;align-items:center;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding:8px 14px 2px}
+.pill{font-weight:700;font-size:.9rem;padding:3px 12px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:#e1f3ec;color:#00593f} .pill.rec{background:#f7e4ee;color:#8a2c5c} .pill.inf{background:#fcedcc;color:#6f4a00}
+.legend{display:flex;gap:4px 14px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.legend i{display:inline-block;width:18px;border-top:4px solid}
+.legend i.dash{border-top:3px dashed #6b7588}
+.legend b{color:var(--ink)}
+.svgwrap{flex:1;min-height:0;position:relative}
+.svgwrap svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+svg text{font-family:inherit}
+svg .clbl{font-weight:800;font-size:19px;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}
+svg .tag{font-weight:700;font-size:15px;fill:#14213d;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}
+svg .tick{font-size:14px;fill:#566176}
+svg .axt{font-weight:650;font-size:16px;fill:#14213d}
+html.present svg .clbl{font-size:22px} html.present svg .tag{font-size:17px} html.present svg .tick{font-size:16px} html.present svg .axt{font-size:18px}
+.readouts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--rule);flex:none}
+.ro{padding:7px 14px 9px}
+.ro + .ro{border-left:1.5px solid var(--rule)}
+.rl{font-size:.82rem;color:var(--muted);font-weight:600}
+.rv{font-size:1.6rem;font-weight:800;line-height:1.15;font-variant-numeric:tabular-nums}
+.rv small{font-size:.85rem;font-weight:700;margin-left:4px}
+.rs{font-size:.8rem;color:var(--muted)}
+
+/* Right column */
+.right{display:flex;flex-direction:column;gap:12px;min-height:0}
+.explain{padding:10px 14px 12px;flex:none;border-left:6px solid var(--ink);min-height:9.6rem}
+h2{font-size:.95rem;margin:0 0 4px;font-weight:800}
+#explainBody p{margin:.3em 0;font-size:.95rem}
+#explainBody .key{background:var(--hl);border-radius:6px;padding:4px 8px;margin-top:.45em}
+.cAD{color:var(--ad);font-weight:700} .cS{color:var(--sras);font-weight:700} .cL{color:#00724f;font-weight:700}
+.panel{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.tabs{display:flex;border-bottom:1.5px solid var(--rule);flex:none}
+.tabs button{flex:1;border:0;border-radius:0;background:none;padding:9px 6px 7px;font-weight:700;font-size:.98rem;color:var(--muted);border-bottom:3px solid transparent}
+.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--ink)}
+.tabbody{flex:1;min-height:0;overflow:auto;padding:10px 14px 12px}
+.note{font-size:.86rem;color:var(--muted);margin:0 0 8px}
+.rowtop{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.switch{display:inline-flex;align-items:center;gap:6px;font-weight:650;font-size:.9rem;white-space:nowrap;cursor:pointer}
+.switch input{width:18px;height:18px;accent-color:var(--ink);margin:0}
+
+/* Events */
+.events{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.events button{text-align:left;display:flex;justify-content:space-between;align-items:center;gap:6px;padding:8px 10px;line-height:1.2;min-height:2.6em}
+.events button .badge{font-size:.74rem;font-weight:800;white-space:nowrap}
+.events button[aria-pressed=true]{background:var(--soft);border-color:var(--c);box-shadow:inset 4px 0 0 var(--c);font-weight:650}
+.events button[aria-pressed=true] .badge{color:var(--c)}
+.fb{font-size:.9rem;margin:0 0 8px;padding:5px 9px;border-radius:6px;background:var(--soft)}
+.fb .ok{color:#00593f;font-weight:800} .fb .no{color:#8a2c5c;font-weight:800}
+.ask{background:var(--soft);border-radius:8px;padding:9px 11px;margin-bottom:8px}
+.ask p{margin:0 0 8px;font-size:.95rem}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.opts button{font-weight:700;padding:8px 4px}
+button.link{border:0;background:none;color:var(--muted);text-decoration:underline;padding:6px 0 0;font-size:.85rem}
+
+/* Policy sliders */
+.ctl{margin:0 0 10px}
+.ctl label{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:.95rem;font-weight:700}
+.ctl label small{font-weight:500;color:var(--muted);font-size:.82rem}
+.ctl output{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.92rem}
+input[type=range]{width:100%;height:24px;margin:2px 0 0;accent-color:var(--ad);cursor:pointer;display:block}
+input[type=range]:disabled{opacity:.4;cursor:not-allowed}
+.ends{display:flex;justify-content:space-between;font-size:.76rem;color:var(--muted)}
+
+/* Missions */
+.mlist{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.mlist button{text-align:left;display:flex;gap:8px;align-items:center;padding:8px 10px;line-height:1.2}
+.mlist button .n{flex:none;width:1.5em;height:1.5em;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-weight:800;font-size:.82rem}
+.mlist button.done .n{background:var(--lras);color:#fff}
+.mhead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+.mhead b{font-size:.98rem}
+.mhead button{padding:3px 9px;font-size:.82rem;white-space:nowrap}
+.goal{margin:0 0 8px;font-size:.93rem;padding:6px 9px;border-radius:6px;background:var(--soft)}
+.goal.met{background:#e1f3ec}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.choices button{font-weight:700;padding:8px 6px;line-height:1.2}
+.choices small{font-weight:500;color:var(--muted)}
+.choices.three{grid-template-columns:repeat(3,1fr)}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.success{background:#e1f3ec;border-radius:8px;padding:8px 11px;font-size:.92rem;margin:0 0 8px;display:flex;gap:12px;align-items:center}
+.success p{margin:0;flex:1}
+.success button{flex:none;white-space:nowrap}
+
+/* Mode switch */
+.seg{display:inline-flex;border:1.5px solid var(--rule);border-radius:999px;overflow:hidden;background:var(--paper);flex:none}
+.seg button{border:0;border-radius:0;padding:5px 14px;font-weight:700;white-space:nowrap}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+.seg.wide{display:flex;margin:0 0 10px}
+.seg.wide button{flex:1;white-space:normal;line-height:1.2}
+
+/* Sticky prices mode */
+#stShock,#lrShock{margin-bottom:8px}
+#stS,#lrK{accent-color:var(--sras)}
+#stShock button[aria-pressed=true],#lrShock button[aria-pressed=true]{background:var(--soft);border-color:var(--c,var(--ad));box-shadow:inset 4px 0 0 var(--c,var(--ad))}
+.shops{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin:2px 0 6px}
+.shop{border:1.5px solid var(--rule);border-radius:6px;text-align:center;background:#fff;padding:3px 0 4px}
+.shop i{display:block;font-style:normal;font-size:1.05rem;line-height:1.35}
+.shop span{display:block;font-weight:800;font-size:.8rem;font-variant-numeric:tabular-nums;color:var(--muted)}
+.shop.new{border-color:var(--sras);background:#fdf3ec}
+.shop.new span{color:#a84a00}
+.shops + .note{margin-bottom:10px}
+/* "Which prices stick?" bar list */
+.bars{width:100%;border-collapse:separate;border-spacing:0 5px;font-size:.88rem;margin:0 0 6px}
+.bars th{text-align:left;font-weight:650;white-space:nowrap;padding:0 10px 0 0;width:1%}
+.bars td.track{padding:0}
+.bars td.track i{display:block;height:.95rem;min-width:4px;background:var(--sras);border-radius:0 4px 4px 0}
+.bars td.v{text-align:right;font-weight:800;font-variant-numeric:tabular-nums;padding:0 0 0 10px;width:1%;white-space:nowrap}
+.bars tr:hover td.track i{background:#a84a00}
+
+/* Long run mode */
+.readouts.four{grid-template-columns:repeat(4,1fr)}
+.cmp{width:100%;border-collapse:collapse;table-layout:fixed;font-size:.86rem;margin:10px 0 0}
+.cmp thead td{width:36%}
+.cmp.c4 thead td{width:22%}
+#lrPolAsk button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+#lrPolAsk button[aria-pressed=true] small{color:#dfe5ee}
+.hard{background:var(--hl);border-radius:6px;padding:6px 9px;font-size:.9rem;margin:0 0 8px}
+.cmp th,.cmp td{padding:4px 8px 4px 0;text-align:left;border-top:1.5px solid var(--rule);vertical-align:top}
+.cmp thead th{border-top:0;color:var(--muted);font-weight:700}
+.cmp tbody th{font-weight:650}
+.cmp td b{font-variant-numeric:tabular-nums}
+.cmp td.q{color:var(--muted)}
+.cmp td.on,.cmp thead th.on{background:var(--soft)}
+.cmp th:not(:first-child),.cmp td{padding-left:8px}
+.split{display:flex;height:1.55rem;border-radius:6px;overflow:hidden;margin:3px 0 4px;background:var(--soft);font-weight:800;font-size:.9rem;color:#fff;line-height:1.55rem;text-align:center}
+.split .so{background:var(--ink)} .split .sp{background:var(--sras)}
+.pill.stage{background:#e3ebf5;color:var(--ink)}
+
+/* Key terms dialog */
+dialog{border:0;border-radius:14px;padding:0;max-width:min(680px,92vw);max-height:86vh;color:var(--ink);box-shadow:0 20px 60px rgba(20,33,61,.35)}
+dialog::backdrop{background:rgba(20,33,61,.45)}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1.5px solid var(--rule);position:sticky;top:0;background:#fff}
+.dhead h2{font-size:1.15rem;margin:0}
+dl{margin:0;padding:6px 18px 16px}
+dt{font-weight:800;margin-top:10px}
+dd{margin:1px 0 0;font-size:.95rem}
+
+/* Short laptop screens: slightly smaller type so everything still fits */
+@media (min-width:901px) and (max-height:690px){ html:not(.present){font-size:15px} .explain{min-height:9rem} }
+@media (min-width:901px) and (max-height:630px){ html:not(.present){font-size:14.5px} .top{padding:6px 16px} }
+
+/* Narrow screens: stack and let the page scroll */
+@media (max-width:900px){
+  .app{height:auto}
+  main{grid-template-columns:1fr;padding:0 10px 14px}
+  html.present main{grid-template-columns:1fr}
+  .svgwrap{flex:none;aspect-ratio:780/470}
+  .panel{overflow:visible} .tabbody{overflow:visible}
+  .brand span{display:none}
+  .brand{flex-wrap:wrap;gap:6px 14px}
+  .top{padding:8px 10px;flex-wrap:wrap}
+  .readouts.four{grid-template-columns:1fr 1fr}
+  .readouts.four .ro:nth-child(3){border-left:0}
+  .readouts.four .ro:nth-child(n+3){border-top:1.5px solid var(--rule)}
+  svg .clbl{font-size:26px} svg .tag{font-size:21px} svg .tick{font-size:20px} svg .axt{font-size:22px}
+  .rv{font-size:1.35rem} .ro{padding:6px 9px 8px}
+}
+@media (max-width:480px){ .events,.mlist{grid-template-columns:1fr} #presentBtn{display:none} .seg button{padding:5px 10px} }
+@media (prefers-reduced-motion:no-preference){ .pill,.goal{transition:background-color .2s} }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <h1>AD–AS Lab</h1>
+      <div class="seg" role="group" aria-label="Mode">
+        <button type="button" id="modeAdas" aria-pressed="true">AD–AS</button><button type="button" id="modeSticky" aria-pressed="false">Sticky prices</button><button type="button" id="modeLong" aria-pressed="false">Long run</button>
+      </div>
+      <span id="tagline">See how events and policy change real GDP, prices, and unemployment.</span>
+    </div>
+    <div class="topbtns">
+      <button type="button" id="termsBtn">Key terms</button>
+      <button type="button" id="presentBtn" class="toggle" aria-pressed="false">Presentation view</button>
+      <button type="button" id="resetBtn" class="primary">Start over</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="left sheet" aria-label="Graph and results">
+      <div class="ghead">
+        <span class="pill ok" id="status">At potential GDP</span>
+        <div class="legend" id="legend">
+          <span><i style="border-color:var(--ad)"></i><b>AD</b> total spending</span>
+          <span><i style="border-color:var(--sras)"></i><b>SRAS</b> short-run supply</span>
+          <span><i style="border-color:var(--lras)"></i><b>LRAS</b> potential GDP</span>
+          <span><i class="dash"></i>before</span>
+        </div>
+      </div>
+      <div class="svgwrap"><svg id="graph" viewBox="0 0 780 470" role="img" aria-labelledby="gTitle gDesc"></svg></div>
+      <div class="readouts" id="stats"></div>
+    </section>
+
+    <section class="right" aria-label="Explanation and controls">
+      <div class="explain sheet">
+        <h2>What's happening</h2>
+        <div id="explainBody" aria-live="polite"></div>
+      </div>
+
+      <div class="panel sheet">
+        <div class="tabs" role="tablist" id="tabsBar">
+          <button type="button" role="tab" id="tabBtn-events" aria-selected="true">Events</button>
+          <button type="button" role="tab" id="tabBtn-policy" aria-selected="false">Policy</button>
+          <button type="button" role="tab" id="tabBtn-missions" aria-selected="false">Missions</button>
+        </div>
+        <div class="tabbody" id="adasBody">
+          <!-- Events -->
+          <div id="tab-events">
+            <div class="rowtop">
+              <p class="note" id="evNote">Click an event to see what it does. Click it again to undo it.</p>
+              <label class="switch"><input type="checkbox" id="quizOn"> Guess first</label>
+            </div>
+            <div class="fb" id="quizFb" hidden></div>
+            <div class="ask" id="quizAsk" hidden></div>
+            <div class="events" id="eventBtns"></div>
+          </div>
+
+          <!-- Policy -->
+          <div id="tab-policy" hidden>
+            <p class="note">Both tools change total spending, so both shift AD. Expansionary policy shifts AD right. Contractionary policy shifts it left.</p>
+            <div id="pPolicy"></div>
+            <p class="note" style="margin:0">In real life, policy takes months to work. Here it is instant.</p>
+          </div>
+
+          <!-- Missions -->
+          <div id="tab-missions" hidden>
+            <div id="mList">
+              <p class="note" id="mProgress"></p>
+              <div class="mlist" id="mBtns"></div>
+              <p class="note" style="margin:8px 0 0">Missions are simplified versions of real situations.</p>
+            </div>
+            <div id="mView" hidden>
+              <div class="mhead"><b id="mTitle"></b><button type="button" id="mBack">All missions</button></div>
+              <p class="goal" id="mGoal"></p>
+              <div class="ask" id="mAsk">
+                <p><b>First, decide:</b> what does the economy need?</p>
+                <div class="choices">
+                  <button type="button" data-a="exp">Expansionary policy<br><small>boost spending</small></button>
+                  <button type="button" data-a="con">Contractionary policy<br><small>reduce spending</small></button>
+                </div>
+              </div>
+              <div class="fb" id="mFb" hidden></div>
+              <div class="success" id="mDone" hidden></div>
+              <div id="mPolicy"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky prices mode -->
+        <div class="tabs" role="tablist" id="stTabsBar" hidden>
+          <button type="button" role="tab" id="stTabBtn-flow" aria-selected="true">Follow a shock</button>
+          <button type="button" role="tab" id="stTabBtn-goods" aria-selected="false">Which prices stick?</button>
+        </div>
+        <div class="tabbody" id="stickyBody" hidden>
+          <!-- Follow a shock -->
+          <div id="stTab-flow">
+            <p class="note" id="stNote">Follow one change in spending through time. Start by picking a shock.</p>
+            <div class="choices" id="stShock">
+              <button type="button" data-d="1" aria-pressed="false">📈 Spending jumps</button>
+              <button type="button" data-d="-1" aria-pressed="false">📉 Spending drops</button>
+            </div>
+            <div class="ask" id="stAsk" hidden>
+              <p><b>Predict:</b> businesses have not changed their prices yet. What changes first?</p>
+              <div class="opts">
+                <button type="button" data-a="output">Output only</button>
+                <button type="button" data-a="prices">Prices only</button>
+                <button type="button" data-a="both">Both</button>
+              </div>
+            </div>
+            <div class="fb" id="stFb" hidden></div>
+            <div class="ask" id="stAsk2" hidden></div>
+            <div id="stTime" hidden>
+              <div class="ctl">
+                <label for="stS"><span>Businesses that have changed their prices</span><output id="stSOut"></output></label>
+                <input type="range" id="stS" min="0" max="100" step="25">
+                <div class="ends"><span>◀ immediate short run</span><span>short run ▶</span></div>
+              </div>
+              <div class="shops" id="stShops" aria-hidden="true"></div>
+              <p class="note">Prices that change often move first. Left to right: airline tickets, gasoline, farm products, stores, utilities, factory goods, newspapers, haircuts.</p>
+              <div class="btnrow">
+                <button type="button" class="primary" id="stPlay">Let time pass</button>
+                <button type="button" id="stNext" hidden>Next: the long run →</button>
+                <label class="switch"><input type="checkbox" id="stFlex"> What if no prices were sticky?</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Which prices stick? -->
+          <div id="stTab-goods" hidden>
+            <div class="ask" id="ggAsk">
+              <p><b>Guess first:</b> which kind of business waits longest between price changes?</p>
+              <div class="opts">
+                <button type="button" data-a="farming">🥕 Farming</button>
+                <button type="button" data-a="retail">🛒 Retail stores</button>
+                <button type="button" data-a="services">💈 Services</button>
+              </div>
+            </div>
+            <div id="ggView" hidden>
+              <div class="fb" id="ggFb"></div>
+              <table class="bars" id="ggBars"><caption class="note" style="text-align:left">Average months between price changes. Data: Gorodnichenko and Weber (2016), from your textbook.</caption><tbody></tbody></table>
+              <p class="note">Some prices move much faster. Airline tickets can change every hour and gasoline every two to three weeks. Some move much slower. Haircuts and newspapers often go more than two years.</p>
+              <p class="note" style="margin:0"><b>Why not change prices right away?</b> Customers like prices they can count on. A business that cuts its price may start a price war with its rivals. And many prices are fixed for a while by menus, catalogs, and contracts.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Long run mode -->
+        <div class="tabbody" id="longBody" hidden>
+          <p class="note" id="lrNote">Follow one shock from the short run to the long run. Start by picking a shock.</p>
+          <div class="choices three" id="lrShock">
+            <button type="button" data-s="boom" aria-pressed="false">📈 Spending jumps</button>
+            <button type="button" data-s="bust" aria-pressed="false">📉 Spending drops</button>
+            <button type="button" data-s="oil" aria-pressed="false" style="--c:var(--sras)">🛢️ Oil prices jump</button>
+          </div>
+          <div class="ask" id="lrAsk" hidden></div>
+          <div class="fb" id="lrFb" hidden></div>
+          <div id="lrTime" hidden>
+            <div class="seg wide" role="group" aria-label="What happens next" id="lrPath">
+              <button type="button" data-p="wait" aria-pressed="true">Wait: let wages adjust</button><button type="button" data-p="policy" aria-pressed="false">Act: use policy</button>
+            </div>
+            <div id="lrWait">
+              <div class="ctl">
+                <label for="lrK"><span>Workplaces where wages have changed</span><output id="lrKOut"></output></label>
+                <input type="range" id="lrK" min="0" max="100" step="25">
+                <div class="ends"><span>◀ short run</span><span>long run ▶</span></div>
+              </div>
+              <div class="shops" id="lrJobs" aria-hidden="true"></div>
+              <div class="btnrow">
+                <button type="button" class="primary" id="lrPlay">Let time pass</button>
+                <span class="note" id="lrJobsNote" style="margin:0;flex:1 1 12em"></span>
+              </div>
+            </div>
+            <div id="lrAct" hidden>
+              <div class="ask" id="lrPolAsk">
+                <p id="lrPolQ"></p>
+                <div class="choices">
+                  <button type="button" data-a="exp" aria-pressed="false">Expansionary policy<br><small>boost spending</small></button>
+                  <button type="button" data-a="con" aria-pressed="false">Contractionary policy<br><small>reduce spending</small></button>
+                </div>
+              </div>
+              <div class="fb" id="lrPolFb" hidden></div>
+              <p class="hard" id="lrHard" hidden><b>There is no painless choice.</b> After a supply shock, shifting AD can fix output or it can fix prices. It cannot fix both.</p>
+              <p class="note" id="lrPolNote" style="margin:0" hidden>In real life, policy takes months to work. Here it is instant.</p>
+            </div>
+            <table class="cmp" id="lrCmp"></table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<dialog id="terms" aria-labelledby="termsTitle">
+  <div class="dhead"><h2 id="termsTitle">Key terms</h2><button type="button" id="termsClose">Close</button></div>
+  <dl>
+    <dt>Real GDP</dt><dd>The total amount of goods and services the economy produces, adjusted for inflation. On this graph, 100 is where the economy starts.</dd>
+    <dt>Price level</dt><dd>An average of all prices in the economy. When it rises, that is inflation.</dd>
+    <dt>Aggregate demand (AD)</dt><dd>Total spending in the economy at each price level: consumption + investment + government spending + net exports. It slopes down.</dd>
+    <dt>Short-run aggregate supply (SRAS)</dt><dd>How much businesses produce at each price level while wages and other costs are slow to change. It slopes up.</dd>
+    <dt>Long-run aggregate supply (LRAS) and potential GDP</dt><dd>Potential GDP is what the economy can produce when its workers and machines are used at a normal rate. The LRAS line is vertical at potential GDP.</dd>
+    <dt>Recessionary gap</dt><dd>Real GDP is below potential. Businesses need fewer workers, so unemployment is above its normal rate.</dd>
+    <dt>Inflationary gap</dt><dd>Real GDP is above potential. Unemployment is below normal, and wages and prices are under pressure to rise.</dd>
+    <dt>Natural rate of unemployment</dt><dd>The normal unemployment rate when real GDP equals potential GDP. In this lab it is 4.5%.</dd>
+    <dt>Fiscal policy</dt><dd>Changes in government spending and taxes, decided by Congress and the President.</dd>
+    <dt>Monetary policy</dt><dd>The Federal Reserve (the Fed) raising or lowering interest rates to change borrowing and spending.</dd>
+    <dt>Expansionary and contractionary policy</dt><dd>Expansionary policy boosts spending and shifts AD right. Contractionary policy reduces spending and shifts AD left.</dd>
+    <dt>Stagflation</dt><dd>Falling output and rising prices at the same time. It happens when SRAS shifts left.</dd>
+    <dt>Sticky prices</dt><dd>Prices that change only now and then, even when demand changes. Menus are printed, contracts are signed, and businesses do not want to be the first to raise prices.</dd>
+    <dt>Immediate short run</dt><dd>A period so short that businesses have not changed their prices at all. The aggregate supply curve is flat, so a change in spending changes output only.</dd>
+    <dt>Short run</dt><dd>A period long enough for businesses to change the prices they charge, but not long enough for wages and other input costs to change. The aggregate supply curve (SRAS) slopes up.</dd>
+    <dt>Flexible prices</dt><dd>Prices that change right away when demand or supply changes. If every price and wage were flexible, a change in spending would change prices only, not output.</dd>
+    <dt>Long run</dt><dd>A period long enough for wages and other input costs to change too. Real GDP returns to potential GDP, which is why the long-run aggregate supply curve (LRAS) is vertical.</dd>
+    <dt>Self-correction</dt><dd>The economy's return to potential GDP on its own, as wages and other input costs adjust and SRAS shifts. It can be slow, especially when wages need to fall.</dd>
+    <dt>Demand-pull and cost-push inflation</dt><dd>Demand-pull inflation starts with a rise in spending: AD shifts right. Cost-push inflation starts with a rise in production costs: SRAS shifts left.</dd>
+    <dt>Economic growth</dt><dd>An increase in potential GDP, from better technology, more workers, or more machines. LRAS shifts right.</dd>
+  </dl>
+</dialog>
+
+<script>
+(function(){
+'use strict';
+
+/* ================= Model =================
+   AD:   Y = 100 + D - A(P - 100)
+   SRAS: Y = Yp + B(P - C)     (C = cost level; SRAS crosses LRAS where P = C)
+   LRAS: Y = Yp
+   A = B = 1 and whole-number steps keep every result a whole number. */
+const A = 1, B = 1, NAT_U = 4.5, OKUN = 0.5, D_LIMIT = 20;
+const YMIN = 80, YMAX = 126, PMIN = 76, PMAX = 120;
+const W = 780, H = 470, M = {l:92, r:16, t:14, b:56};
+const COL = {ad:'#0072B2', sras:'#D55E00', lras:'#009E73', ink:'#14213d', rec:'#CC79A7', inf:'#E69F00', ghost:'#6b7588'};
+const sx = y => M.l + (y - YMIN) / (YMAX - YMIN) * (W - M.l - M.r);
+const sy = p => H - M.b - (p - PMIN) / (PMAX - PMIN) * (H - M.t - M.b);
+
+const freshState = () => ({ev:{conf:0, bus:0, oil:0, tech:0, labor:0}, fiscal:0, rate:3});
+function model(s){
+  let D = 8 * (s.ev.conf + s.ev.bus) + 2 * s.fiscal - 4 * (s.rate - 3), clamp = false;
+  if (D > D_LIMIT){ D = D_LIMIT; clamp = true; }
+  if (D < -D_LIMIT){ D = -D_LIMIT; clamp = true; }
+  const Yp = 100 + 4 * (s.ev.tech + s.ev.labor);
+  const C = 100 + 10 * s.ev.oil - (Yp - 100) / A;   // growth lowers costs enough to stay at full employment
+  return {D, C, Yp, clamp};
+}
+function solve(m){
+  const P = (100 + m.D + 100 * A - m.Yp + B * m.C) / (A + B);
+  const Y = 100 + m.D - A * (P - 100);
+  const gap = 100 * (Y - m.Yp) / m.Yp;
+  return {P, Y, gap, U: Math.min(20, Math.max(1, NAT_U - OKUN * gap))};
+}
+const START = model(freshState()), E0 = solve(START);
+
+const EVENTS = [
+  {id:'gloomy',  label:'Consumers turn gloomy',            icon:'😟', key:'conf',  d:-1, curve:'AD',   dir:'left',  why:'Worried households cut back on spending, so consumption falls'},
+  {id:'boom',    label:'Stock market boom',                icon:'📈', key:'conf',  d:1,  curve:'AD',   dir:'right', why:'Households feel wealthier and spend more, so consumption rises'},
+  {id:'pess',    label:'Businesses turn pessimistic',      icon:'🏚️', key:'bus',   d:-1, curve:'AD',   dir:'left',  why:'Businesses expect weak sales, so they buy less new equipment and investment falls'},
+  {id:'optim',   label:'Businesses expect strong sales',   icon:'🏗️', key:'bus',   d:1,  curve:'AD',   dir:'right', why:'Businesses buy more equipment and buildings, so investment rises'},
+  {id:'oilup',   label:'Oil prices jump',                  icon:'🛢️', key:'oil',   d:1,  curve:'SRAS', dir:'left',  why:'Oil is used to make and ship almost everything, so production costs rise'},
+  {id:'oildown', label:'Oil prices fall',                  icon:'⛽', key:'oil',   d:-1, curve:'SRAS', dir:'right', why:'Oil is used to make and ship almost everything, so production costs fall'},
+  {id:'tech',    label:'New technology spreads',           icon:'🔬', key:'tech',  d:1,  curve:'LRAS', dir:'right', why:'The same workers and machines can now produce more, so potential GDP rises'},
+  {id:'labor',   label:'Labor force grows',                icon:'👷', key:'labor', d:1,  curve:'LRAS', dir:'right', why:'More workers means the economy can produce more, so potential GDP rises'}
+];
+const CURVE_COL = {AD:COL.ad, SRAS:COL.sras, LRAS:COL.lras};
+const CURVE_CLS = {AD:'cAD', SRAS:'cS', LRAS:'cL'};
+const shiftPhrase = ev => ev.curve === 'LRAS'
+  ? `<span class="cL">LRAS shifts ${ev.dir}</span>, and SRAS moves with it`
+  : `<span class="${CURVE_CLS[ev.curve]}">${ev.curve} shifts ${ev.dir}</span>`;
+
+const MISSIONS = [
+  {id:'recession', title:'Recession', setup:{ev:{conf:-1}}, goal:'gdp', answer:'exp',
+   story:'Consumers turn gloomy and cut their spending. Real GDP falls below potential and unemployment rises.',
+   goalText:'Get real GDP back to potential (100).',
+   why:'Spending is too low, so boost it: spend more, cut taxes, or lower the interest rate.',
+   debrief:(s,e) => `Real GDP is back at potential and unemployment is back to ${e.U.toFixed(1)}%. Expansionary policy replaced the spending that consumers cut.`},
+  {id:'boom', title:'Overheating economy', setup:{ev:{conf:1}}, goal:'gdp', answer:'con',
+   story:'A stock market boom has households spending freely. Real GDP is above potential and prices are rising.',
+   goalText:'Bring real GDP back down to potential (100).',
+   why:'Spending is too high, so cool it: spend less, raise taxes, or raise the interest rate.',
+   debrief:(s,e) => `Contractionary policy cooled spending. Real GDP is back at potential and the price level came back down to ${Math.round(e.P)}.`},
+  {id:'gfc', title:'2008 financial crisis', setup:{ev:{conf:-1, bus:-1}}, goal:'gdp', answer:'exp',
+   story:'House prices collapse and banks stop lending. Households and businesses both slash their spending. This is a deep recession.',
+   goalText:'Get real GDP back to potential (100).',
+   why:'Spending has collapsed, so boost it. Watch what happens when the Fed\'s rate hits zero.',
+   debrief:(s,e) => s.rate === 0
+     ? 'The Fed cut its rate to zero and that still was not enough, so fiscal policy had to do the rest. That is what happened in 2008 and 2009.'
+     : 'Expansionary policy closed the gap. In 2008 the Fed cut its rate to zero, and Congress added a large spending package because rate cuts alone were not enough.'},
+  {id:'oiljobs', title:'1970s oil shock: fight unemployment', setup:{ev:{oil:1}}, goal:'gdp', answer:'exp',
+   story:'Oil prices jump and SRAS shifts left. Output falls and prices rise at the same time. This is stagflation.',
+   goalText:'Get real GDP back to potential (100).',
+   why:'Boosting spending raises output and cuts unemployment. Watch the price level as you do it.',
+   debrief:(s,e) => `Real GDP is back at 100, but the price level is now ${Math.round(e.P)}, even higher than the 105 right after the shock. Fighting unemployment made inflation worse.`},
+  {id:'oilprices', title:'1970s oil shock: fight inflation', setup:{ev:{oil:1}}, goal:'price', answer:'con',
+   story:'Same oil shock, different choice. This time your job is to stop the rise in prices.',
+   goalText:'Get the price level back to 100.',
+   why:'Cutting spending brings prices down. Watch real GDP and unemployment as you do it.',
+   debrief:(s,e) => `The price level is back to 100, but real GDP fell to ${Math.round(e.Y)} and unemployment rose to ${e.U.toFixed(1)}%. Fighting inflation made the recession deeper.`},
+  {id:'inf22', title:'2021–22 inflation', setup:{ev:{oil:1}, fiscal:3, rate:1}, goal:'priceMax', target:105, answer:'con',
+   story:'After the pandemic, government spending and very low interest rates boosted demand while supply problems raised costs. Prices jumped.',
+   goalText:'Bring the price level down to 105 or lower.',
+   why:'Cutting spending slows price increases. In 2022 the Fed raised its rate quickly.',
+   debrief:(s,e) => `The price level came down from 112 to ${Math.round(e.P)}, but real GDP fell to ${Math.round(e.Y)} and unemployment rose to ${e.U.toFixed(1)}%. In real life, supply problems also eased, which softened the blow.`}
+];
+function goalMet(def, m, e){
+  if (def.goal === 'gdp') return Math.round(e.Y) === Math.round(m.Yp);
+  if (def.goal === 'price') return Math.round(e.P) === 100;
+  return e.P <= def.target + 1e-9;
+}
+
+/* ================= State ================= */
+let state = freshState();
+let tab = 'events';
+let last = {kind:'init'};
+let mission = null;                     // {i, answered, solved, debrief}
+const quiz = {on:false, pending:null, feedback:'', right:0, total:0};
+let done = new Set();
+try { done = new Set(JSON.parse(localStorage.getItem('adasLabMissions') || '[]')); } catch (err) {}
+const saveDone = () => { try { localStorage.setItem('adasLabMissions', JSON.stringify([...done])); } catch (err) {} };
+
+/* ================= Formatting ================= */
+const r0 = v => String(Math.round(v) || 0);
+const $ = id => document.getElementById(id);
+const fiscalWord = v => v === 0 ? 'Neutral' : v > 0 ? `Expansionary (+${v})` : `Contractionary (−${-v})`;
+const rateWord = v => v.toFixed(1) + '%' + (v === 0 ? ' (lowest possible)' : v === 3 ? ' (normal)' : '');
+
+/* ================= SVG helpers ================= */
+function clipSeg(x0,y0,x1,y1){
+  let t0 = 0, t1 = 1; const dx = x1 - x0, dy = y1 - y0;
+  const p = [-dx, dx, -dy, dy], q = [x0 - YMIN, YMAX - x0, y0 - PMIN, PMAX - y0];
+  for (let i = 0; i < 4; i++){
+    if (p[i] === 0){ if (q[i] < 0) return null; }
+    else { const r = q[i] / p[i];
+      if (p[i] < 0){ if (r > t1) return null; if (r > t0) t0 = r; }
+      else { if (r < t0) return null; if (r < t1) t1 = r; } }
+  }
+  return [x0 + t0*dx, y0 + t0*dy, x0 + t1*dx, y0 + t1*dy];
+}
+const PLO = PMIN - 60, PHI = PMAX + 60;
+const adY = (m,P) => 100 + m.D - A * (P - 100);
+const srasY = (m,P) => m.Yp + B * (P - m.C);
+const adSeg = m => clipSeg(adY(m,PLO), PLO, adY(m,PHI), PHI);        // starts lower right
+const srasSeg = m => clipSeg(srasY(m,PLO), PLO, srasY(m,PHI), PHI);  // starts lower left
+const f1 = v => v.toFixed(1);
+const ln = (y1,p1,y2,p2,attrs) => `<line x1="${f1(sx(y1))}" y1="${f1(sy(p1))}" x2="${f1(sx(y2))}" y2="${f1(sy(p2))}" ${attrs}/>`;
+const segLine = (seg,col,attrs) => seg ? ln(seg[0],seg[1],seg[2],seg[3],`stroke="${col}" ${attrs}`) : '';
+const textAt = (x,y,s,cls,anchor='start',fill) => `<text x="${f1(x)}" y="${f1(y)}" text-anchor="${anchor}" class="${cls}"${fill ? ` fill="${fill}"` : ''}>${s}</text>`;
+const inPlot = (y,p) => y >= YMIN && y <= YMAX && p >= PMIN && p <= PMAX;
+const dot = (y,p,fill,stroke,r) => inPlot(y,p) ? `<circle cx="${f1(sx(y))}" cy="${f1(sy(p))}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="2.5"/>` : '';
+function curveLabel(seg, fracs, text, col, isAD, e){
+  if (!seg) return '';
+  const far = f => Math.hypot(sx(seg[0] + (seg[2] - seg[0]) * f) - sx(e.Y), sy(seg[1] + (seg[3] - seg[1]) * f) - sy(e.P)) > 90;
+  const frac = fracs.find(far) || fracs[0];
+  const y = seg[0] + (seg[2] - seg[0]) * frac, p = seg[1] + (seg[3] - seg[1]) * frac;
+  let x = sx(y), yy = sy(p), anchor = 'start', dx = 10, dy = isAD ? -6 : 18;
+  if (x > sx(YMAX) - 64){ anchor = 'end'; dx = -12; dy = isAD ? 22 : -8; }
+  if (yy + dy < sy(PMAX) + 18) dy = 22;
+  if (yy + dy > sy(PMIN) - 6) dy = -12;
+  return `<text x="${f1(x + dx)}" y="${f1(yy + dy)}" text-anchor="${anchor}" class="clbl" fill="${col}">${text}</text>`;
+}
+
+/* ================= Plot frame (shared by all three modes) ================= */
+const PX0 = sx(YMIN), PX1 = sx(YMAX), PY0 = sy(PMIN), PY1 = sy(PMAX);
+const GHOST = 'stroke-width="3" stroke-dasharray="10 7" opacity="0.5"';
+const SOLID = 'stroke-width="4.5" stroke-linecap="round"';
+const GUIDE = `stroke="${COL.ink}" stroke-width="1.5" stroke-dasharray="5 4" opacity=".7"`;
+const MARK = {mA:COL.ad, mS:COL.sras, mK:COL.ink};
+function plotOpen(title, desc, marks){
+  const mk = id => `<marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${MARK[id]}"/></marker>`;
+  let g = `<title id="gTitle">${title}</title><desc id="gDesc">${desc}</desc>`;
+  g += `<defs><clipPath id="clipPlot"><rect x="${PX0}" y="${PY1}" width="${PX1-PX0}" height="${PY0-PY1}"/></clipPath>${marks.map(mk).join('')}</defs>`;
+  g += `<rect x="${PX0}" y="${PY1}" width="${PX1-PX0}" height="${PY0-PY1}" fill="#fbfdff"/>`;
+  // Graph-paper grid
+  for (let p = Math.ceil(PMIN/2)*2; p <= PMAX; p += 2) g += ln(YMIN,p,YMAX,p,`stroke="${p % 10 === 0 ? '#cfdbe8' : '#e9f0f7'}" stroke-width="1"`);
+  for (let y = YMIN; y <= YMAX; y += 2) g += ln(y,PMIN,y,PMAX,`stroke="${y % 10 === 0 ? '#cfdbe8' : '#e9f0f7'}" stroke-width="1"`);
+  return g;
+}
+// Horizontal arrow from one curve position to another, at price level p
+function shiftArrow(ya, yb, p, mid, col){
+  const lo = YMIN + 1.5, hi = YMAX - 1.5, y0 = Math.min(hi, Math.max(lo, ya)), y1 = Math.min(hi, Math.max(lo, yb));
+  if (Math.abs(y1 - y0) < 2.5) return '';
+  const dir = Math.sign(y1 - y0);
+  return `<line x1="${f1(sx(y0) + dir*7)}" y1="${f1(sy(p))}" x2="${f1(sx(y1) - dir*9)}" y2="${f1(sy(p))}" stroke="${col}" stroke-width="3.5" marker-end="url(#${mid})"/>`;
+}
+const hasGap = e => Math.abs(e.gap) >= 0.5;
+function gapShade(e, Yp){
+  if (!hasGap(e)) return '';
+  const xa = sx(Math.min(e.Y, Yp)), xb = sx(Math.max(e.Y, Yp));
+  return `<rect x="${f1(xa)}" y="${PY1}" width="${f1(xb - xa)}" height="${PY0-PY1}" fill="${e.gap < 0 ? COL.rec : COL.inf}" fill-opacity="0.2"/>`;
+}
+function gapBracket(e, Yp){
+  if (!hasGap(e)) return '';
+  const p = PMIN + 4.5, xa = sx(Math.min(e.Y, Yp)), xb = sx(Math.max(e.Y, Yp));
+  const mx = Math.min(Math.max((xa + xb) / 2, PX0 + 86), PX1 - 86);
+  return (xb - xa > 24 ? `<line x1="${f1(xa)}" y1="${f1(sy(p))}" x2="${f1(xb)}" y2="${f1(sy(p))}" stroke="${COL.ink}" stroke-width="2.5" marker-start="url(#mK)" marker-end="url(#mK)"/>` : '')
+    + textAt(mx, sy(p) - 10, e.gap < 0 ? 'Recessionary gap' : 'Inflationary gap', 'tag', 'middle');
+}
+// The "Now" point: guide lines to both axes, then the dot
+const nowDot = e => ln(e.Y,e.P,YMIN,e.P,GUIDE) + ln(e.Y,e.P,e.Y,PMIN,GUIDE) + dot(e.Y, e.P, COL.ink, '#fff', 8.5);
+// Boxed values on the axes for the "Now" point (drawn last, on top of the tick labels)
+const valueBoxes = e =>
+  `<rect x="${M.l - 56}" y="${f1(sy(e.P) - 12)}" width="50" height="24" rx="5" fill="#fff" stroke="${COL.ink}" stroke-width="1.5"/>` + textAt(M.l - 31, sy(e.P) + 5, r0(e.P), 'tag', 'middle') +
+  `<rect x="${f1(sx(e.Y) - 25)}" y="${f1(PY0 + 6)}" width="50" height="24" rx="5" fill="#fff" stroke="${COL.ink}" stroke-width="1.5"/>` + textAt(sx(e.Y), PY0 + 23, r0(e.Y), 'tag', 'middle');
+function plotAxes(e){
+  let g = `<line x1="${PX0}" y1="${PY0}" x2="${PX1}" y2="${PY0}" stroke="${COL.ink}" stroke-width="2"/><line x1="${PX0}" y1="${PY0}" x2="${PX0}" y2="${PY1}" stroke="${COL.ink}" stroke-width="2"/>`;
+  for (let p = 80; p <= PMAX; p += 10){ g += `<line x1="${PX0-6}" y1="${sy(p)}" x2="${PX0}" y2="${sy(p)}" stroke="${COL.ink}"/>`; if (Math.abs(p - e.P) > 3.2) g += textAt(PX0 - 10, sy(p) + 5, p, 'tick', 'end'); }
+  for (let y = YMIN; y <= YMAX; y += 10){ g += `<line x1="${sx(y)}" y1="${PY0}" x2="${sx(y)}" y2="${PY0+6}" stroke="${COL.ink}"/>`; if (Math.abs(y - e.Y) > 3) g += textAt(sx(y), PY0 + 23, y, 'tick', 'middle'); }
+  g += textAt((PX0 + PX1) / 2, H - 8, 'Real GDP (total output)', 'axt', 'middle');
+  g += `<text transform="translate(18,${f1((PY0 + PY1) / 2)}) rotate(-90)" text-anchor="middle" class="axt">Price level</text>`;
+  return g;
+}
+
+/* ================= Graph ================= */
+function drawGraph(m, e){
+  const m0 = START, e0 = E0;
+  const dCh = m.D !== m0.D, lCh = m.Yp !== m0.Yp, sCh = m.C !== m0.C || lCh, anyCh = dCh || sCh;
+  let g = plotOpen('Aggregate demand and aggregate supply graph', `Real GDP is ${r0(e.Y)} and potential GDP is ${r0(m.Yp)}. The price level is ${r0(e.P)}.`, ['mA','mS','mK']);
+
+  g += '<g clip-path="url(#clipPlot)">' + gapShade(e, m.Yp);
+  // "Before" curves
+  if (dCh) g += segLine(adSeg(m0), COL.ad, GHOST);
+  if (sCh) g += segLine(srasSeg(m0), COL.sras, GHOST);
+  if (lCh) g += ln(m0.Yp,PMIN,m0.Yp,PMAX,`stroke="${COL.lras}" ${GHOST}`);
+  // Shift arrows
+  if (dCh) g += shiftArrow(adY(m0,110), adY(m,110), 110, 'mA', COL.ad);
+  if (sCh) g += shiftArrow(srasY(m0,92), srasY(m,92), 92, 'mS', COL.sras);
+  // Current curves
+  g += ln(m.Yp,PMIN,m.Yp,PMAX,`stroke="${COL.lras}" stroke-width="4.5"`);
+  const aS = adSeg(m), sS = srasSeg(m);
+  g += segLine(aS, COL.ad, SOLID) + segLine(sS, COL.sras, SOLID);
+  g += '</g>';
+
+  // Curve labels
+  g += curveLabel(aS, [0.1, 0.3, 0.85], 'AD', COL.ad, true, e);
+  g += curveLabel(sS, [0.9, 0.7, 0.2], 'SRAS', COL.sras, false, e);
+  g += textAt(sx(m.Yp) + 8, PY1 + 20, 'LRAS', 'clbl', 'start', '#00724f');
+  g += gapBracket(e, m.Yp);
+
+  // Before / Now points
+  const right = e.Y >= e0.Y, show = inPlot(e.Y, e.P);
+  if (anyCh && (Math.abs(e.Y - e0.Y) > 0.4 || Math.abs(e.P - e0.P) > 0.4)){
+    g += dot(e0.Y, e0.P, '#fff', COL.ghost, 6.5);
+    if (inPlot(e0.Y, e0.P)) g += textAt(sx(e0.Y) + (right ? -14 : 14), sy(e0.P) + 5, 'Before', 'tag', right ? 'end' : 'start', COL.ghost);
+  }
+  if (show) g += nowDot(e) + textAt(sx(e.Y) + (right ? 13 : -13), sy(e.P) - 12, 'Now', 'clbl', right ? 'start' : 'end', COL.ink);
+  g += plotAxes(e) + (show ? valueBoxes(e) : '');
+  $('graph').innerHTML = g;
+}
+
+/* ================= Readouts ================= */
+function renderStats(m, e){
+  const arr = (now, was) => Math.abs(now - was) < 0.05 ? '' : `<small aria-hidden="true">${now > was ? '▲' : '▼'}</small>`;
+  const pch = Math.round(100 * (e.P / E0.P - 1));
+  const tiles = [
+    ['Real GDP', r0(e.Y) + arr(e.Y, E0.Y), `Potential GDP: ${r0(m.Yp)}`],
+    ['Price level', r0(e.P) + arr(e.P, E0.P), pch === 0 ? 'Same as at the start' : `${pch > 0 ? 'Up' : 'Down'} ${Math.abs(pch)}% from the start`],
+    ['Unemployment', e.U.toFixed(1) + '%' + arr(e.U, E0.U), `Normal rate: ${NAT_U}%`]
+  ];
+  $('stats').innerHTML = tiles.map(([l,v,s]) => `<div class="ro"><div class="rl">${l}</div><div class="rv">${v}</div><div class="rs">${s}</div></div>`).join('');
+  const st = $('status');
+  if (Math.abs(e.gap) < 0.5){ st.className = 'pill ok'; st.textContent = 'At potential GDP (full employment)'; }
+  else if (e.gap < 0){ st.className = 'pill rec'; st.textContent = 'Recessionary gap: output is below potential'; }
+  else { st.className = 'pill inf'; st.textContent = 'Inflationary gap: output is above potential'; }
+}
+
+/* ================= Explanation ================= */
+function lead(m, e){
+  switch (last.kind){
+    case 'init': return 'The economy starts where all three lines cross: real GDP equals potential GDP. Click an event to shake things up, or try a mission.';
+    case 'reset': return 'Back to the start. All three lines cross at the same point again.';
+    case 'event': {
+      const ev = last.ev;
+      if (last.removed) return `You undid “${ev.label}.” The curve moves back.`;
+      return `<b>${ev.label}.</b> ${ev.why} → ${shiftPhrase(ev)}.`;
+    }
+    case 'fiscal': return last.up
+      ? 'More government spending or lower taxes puts more spending into the economy → <span class="cAD">AD shifts right</span>.'
+      : 'Less government spending or higher taxes takes spending out of the economy → <span class="cAD">AD shifts left</span>.';
+    case 'rate': return last.up
+      ? `The Fed raised its interest rate to ${state.rate.toFixed(1)}%. Borrowing costs more, so households and businesses spend less → <span class="cAD">AD shifts left</span>.`
+      : `The Fed cut its interest rate to ${state.rate.toFixed(1)}%. Borrowing is cheaper, so households and businesses spend more → <span class="cAD">AD shifts right</span>.`;
+    case 'mission': { const d = MISSIONS[last.i]; return `<b>${d.title}.</b> ${d.story}`; }
+    default: return '';
+  }
+}
+function resultLine(e){
+  const part = (name, now, was, fmt) => Math.abs(now - was) < 0.05 ? `${name} is unchanged at ${fmt(now)}` : `${name} ${now > was ? 'rose' : 'fell'} to ${fmt(now)}`;
+  if (Math.abs(e.Y - E0.Y) < 0.05 && Math.abs(e.P - E0.P) < 0.05) return `Real GDP is ${r0(e.Y)}, the price level is ${r0(e.P)}, and unemployment is ${e.U.toFixed(1)}%, the same as at the start.`;
+  return `Compared with the start: ${part('real GDP', e.Y, E0.Y, r0)}, ${part('the price level', e.P, E0.P, r0)}, and ${part('unemployment', e.U, E0.U, v => v.toFixed(1) + '%')}.`;
+}
+function keyIdea(m, e){
+  const dCh = m.D !== 0, growth = m.Yp !== 100, oil = state.ev.oil;
+  if (m.clamp) return 'These changes push spending past the edge of this simple model. Ease off one control to see AD move again.';
+  if (oil > 0 && e.gap < -0.4 && e.P > E0.P + 0.4) return 'This is stagflation: output falls while prices rise. Policy can fix one problem, but only by making the other worse.';
+  if (state.rate === 0 && e.gap < -0.4) return 'The Fed\'s rate is at zero and cannot go lower. More help has to come from fiscal policy.';
+  if (last.kind === 'event' && last.ev.curve === 'LRAS' && !last.removed && !dCh && !oil) return 'This is economic growth. The economy can produce more, prices fall, and unemployment stays at its normal rate.';
+  if (dCh && !oil && !growth) return 'When AD shifts, real GDP and the price level move in the same direction.';
+  if (!dCh && oil && !growth) return 'When SRAS shifts, real GDP and the price level move in opposite directions.';
+  if ([dCh, oil, growth].filter(Boolean).length > 1) return 'More than one curve has moved. The economy settles where AD and SRAS cross.';
+  if (growth) return 'Growth in potential GDP shifts LRAS right. Over time, this is what raises living standards.';
+  return `At potential GDP, unemployment is at its normal (natural) rate of ${NAT_U}%.`;
+}
+function renderExplain(m, e){
+  $('explainBody').innerHTML = `<p>${lead(m, e)}</p><p>${resultLine(e)}</p><p class="key"><b>Key idea:</b> ${keyIdea(m, e)}</p>`;
+}
+
+/* ================= Events and quiz ================= */
+function applyEvent(ev){
+  const on = state.ev[ev.key] === ev.d;
+  state.ev[ev.key] = on ? 0 : ev.d;
+  last = {kind:'event', ev, removed:on};
+  render();
+}
+EVENTS.forEach(ev => {
+  const b = document.createElement('button'); b.type = 'button'; b.dataset.id = ev.id; b.style.setProperty('--c', CURVE_COL[ev.curve]);
+  b.innerHTML = `<span>${ev.icon} ${ev.label}</span><span class="badge"></span>`;
+  b.addEventListener('click', () => {
+    const on = state.ev[ev.key] === ev.d;
+    if (quiz.on && !on){ quiz.pending = ev; quiz.feedback = ''; render(); const f = $('quizAsk').querySelector('.opts button'); if (f) f.focus(); }
+    else { quiz.feedback = ''; applyEvent(ev); }
+  });
+  $('eventBtns').appendChild(b);
+});
+function renderQuiz(){
+  const ask = $('quizAsk'), fb = $('quizFb');
+  ask.hidden = !quiz.pending; $('eventBtns').hidden = !!quiz.pending;
+  fb.hidden = !quiz.feedback || !!quiz.pending; fb.innerHTML = quiz.feedback;
+  $('evNote').textContent = quiz.on ? 'Click an event, then guess which curve it shifts.' : 'Click an event to see what it does. Click it again to undo it.';
+  if (!quiz.pending){ ask.innerHTML = ''; return; }
+  const ev = quiz.pending;
+  const opt = (c, d) => `<button type="button" data-a="${c}-${d}">${d === 'left' ? '← ' + c : c + ' →'}</button>`;
+  ask.innerHTML = `<p><b>${ev.icon} ${ev.label}.</b> Which curve shifts, and which way?</p>
+    <div class="opts">${['left','right'].map(d => ['AD','SRAS','LRAS'].map(c => opt(c, d)).join('')).join('')}</div>
+    <button type="button" class="link" id="quizCancel">Cancel</button>`;
+  ask.querySelectorAll('.opts button').forEach(b => b.addEventListener('click', () => {
+    const ok = b.dataset.a === `${ev.curve}-${ev.dir}`;
+    quiz.total++; if (ok) quiz.right++;
+    quiz.feedback = (ok ? '<span class="ok">Correct.</span> ' : '<span class="no">Not quite.</span> ') + `${ev.curve} shifts ${ev.dir}. The reason is in “What's happening.” Score: ${quiz.right} of ${quiz.total}.`;
+    quiz.pending = null;
+    applyEvent(ev);
+  }));
+  $('quizCancel').addEventListener('click', () => { quiz.pending = null; render(); });
+}
+$('quizOn').addEventListener('change', ev => { quiz.on = ev.target.checked; quiz.pending = null; quiz.feedback = ''; render(); });
+
+/* ================= Policy sliders (shared by the Policy tab and missions) ================= */
+function policyHTML(p){
+  return `<div class="ctl">
+      <label for="${p}F"><span>Fiscal policy <small>government spending and taxes</small></span><output id="${p}FOut"></output></label>
+      <input type="range" id="${p}F" min="-6" max="6" step="1">
+      <div class="ends"><span>◀ spend less, tax more</span><span>spend more, tax less ▶</span></div>
+    </div>
+    <div class="ctl">
+      <label for="${p}R"><span>The Fed's interest rate <small>monetary policy</small></span><output id="${p}ROut"></output></label>
+      <input type="range" id="${p}R" min="0" max="6" step="0.5">
+      <div class="ends"><span>◀ lower: borrowing is cheaper</span><span>higher: borrowing costs more ▶</span></div>
+    </div>`;
+}
+['p','m'].forEach(p => {
+  $(p + 'Policy').innerHTML = policyHTML(p);
+  $(p + 'F').addEventListener('input', ev => { const to = +ev.target.value; if (to === state.fiscal) return; last = {kind:'fiscal', up:to > state.fiscal}; state.fiscal = to; render(); });
+  $(p + 'R').addEventListener('input', ev => { const to = +ev.target.value; if (to === state.rate) return; last = {kind:'rate', up:to > state.rate}; state.rate = to; render(); });
+});
+
+/* ================= Missions ================= */
+MISSIONS.forEach((d, i) => {
+  const b = document.createElement('button'); b.type = 'button'; b.dataset.i = i;
+  b.innerHTML = `<span class="n">${i + 1}</span><span>${d.title}</span>`;
+  b.addEventListener('click', () => startMission(i));
+  $('mBtns').appendChild(b);
+});
+function startMission(i){
+  const d = MISSIONS[i];
+  state = freshState();
+  Object.assign(state.ev, d.setup.ev || {});
+  if ('fiscal' in d.setup) state.fiscal = d.setup.fiscal;
+  if ('rate' in d.setup) state.rate = d.setup.rate;
+  mission = {i, answered:null, solved:false, debrief:''};
+  quiz.pending = null; quiz.feedback = '';
+  last = {kind:'mission', i};
+  render();
+}
+$('mAsk').querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+  if (!mission) return;
+  mission.answered = b.dataset.a === MISSIONS[mission.i].answer ? 'right' : 'wrong';
+  render(); $('mF').focus();
+}));
+$('mBack').addEventListener('click', () => { mission = null; render(); });
+function nextMission(){
+  if (!mission) return;
+  const next = MISSIONS.findIndex((x, j) => j > mission.i && !done.has(x.id));
+  if (next >= 0) startMission(next); else { mission = null; render(); }
+}
+function renderMission(m, e){
+  $('mList').hidden = !!mission; $('mView').hidden = !mission;
+  $('mProgress').textContent = done.size === MISSIONS.length
+    ? 'All six missions complete. You can replay any of them.'
+    : `Use policy to fix the economy. ${done.size} of ${MISSIONS.length} missions complete.`;
+  $('mBtns').querySelectorAll('button').forEach(b => {
+    const isDone = done.has(MISSIONS[+b.dataset.i].id);
+    b.classList.toggle('done', isDone);
+    b.querySelector('.n').textContent = isDone ? '✓' : (+b.dataset.i + 1);
+    b.setAttribute('aria-label', MISSIONS[+b.dataset.i].title + (isDone ? ' (complete)' : ''));
+  });
+  $('tabBtn-missions').textContent = done.size ? `Missions (${done.size}/${MISSIONS.length})` : 'Missions';
+  if (!mission) return;
+  const d = MISSIONS[mission.i], met = goalMet(d, m, e);
+  $('mTitle').textContent = `Mission ${mission.i + 1}: ${d.title}`;
+  const now = d.goal === 'gdp' ? `Real GDP now: ${r0(e.Y)}` : `Price level now: ${r0(e.P)}`;
+  $('mGoal').hidden = mission.solved;
+  $('mGoal').className = 'goal' + (met ? ' met' : '');
+  $('mGoal').innerHTML = `<b>Goal:</b> ${d.goalText} <b>${now}${met ? ' ✓' : ''}</b>`;
+  $('mAsk').hidden = !!mission.answered;
+  const fb = $('mFb');
+  fb.hidden = !mission.answered || mission.solved;
+  const kind = d.answer === 'exp' ? 'expansionary' : 'contractionary';
+  if (mission.answered) fb.innerHTML = (mission.answered === 'right' ? `<span class="ok">Right: ${kind} policy.</span> ` : `<span class="no">Not quite: this calls for ${kind} policy.</span> `) + d.why;
+  $('mPolicy').hidden = !mission.answered;
+  const dn = $('mDone'), key = mission.solved ? String(mission.i) : '';
+  dn.hidden = !mission.solved;
+  if (dn.dataset.for !== key){
+    dn.dataset.for = key;
+    const more = MISSIONS.some((x, j) => j > mission.i && !done.has(x.id));
+    dn.innerHTML = mission.solved ? `<p><b>Mission complete.</b> ${mission.debrief}</p><button type="button" class="primary" id="mNext">${more ? 'Next mission' : 'Back to all missions'}</button>` : '';
+    if (mission.solved) $('mNext').addEventListener('click', nextMission);
+  }
+}
+
+/* ================= Tabs, top bar ================= */
+function setTab(t){
+  if (t !== 'missions') mission = null;
+  if (t !== 'events') quiz.pending = null;
+  tab = t; render();
+}
+['events','policy','missions'].forEach(t => $('tabBtn-' + t).addEventListener('click', () => setTab(t)));
+$('resetBtn').addEventListener('click', () => {
+  if (mode === 'sticky'){ stopPlay(); st.shock = 0; st.guess = st.guess2 = null; st.s = 0; st.flex = false; st.gg = null; st.tab = 'flow'; render(); return; }
+  if (mode === 'long'){ pickLong(null); render(); return; }
+  state = freshState(); mission = null; quiz.pending = null; quiz.feedback = ''; last = {kind:'reset'}; render(); });
+$('termsBtn').addEventListener('click', () => { const d = $('terms'); if (d.showModal) d.showModal(); else d.setAttribute('open', ''); });
+$('termsClose').addEventListener('click', () => { const d = $('terms'); if (d.close) d.close(); else d.removeAttribute('open'); });
+$('terms').addEventListener('click', ev => { if (ev.target === $('terms')) $('terms').close(); });
+$('presentBtn').addEventListener('click', () => {
+  const on = document.documentElement.classList.toggle('present');
+  $('presentBtn').setAttribute('aria-pressed', on);
+  $('presentBtn').textContent = on ? 'Exit presentation view' : 'Presentation view';
+  try {
+    if (on && document.documentElement.requestFullscreen) document.documentElement.requestFullscreen().catch(() => {});
+    else if (!on && document.fullscreenElement) document.exitFullscreen().catch(() => {});
+  } catch (err) {}
+});
+
+function syncControls(){
+  ['events','policy','missions'].forEach(t => { $('tabBtn-' + t).setAttribute('aria-selected', tab === t); $('tab-' + t).hidden = tab !== t; });
+  $('quizOn').checked = quiz.on;
+  $('eventBtns').querySelectorAll('button').forEach(b => {
+    const ev = EVENTS.find(x => x.id === b.dataset.id), on = state.ev[ev.key] === ev.d;
+    b.setAttribute('aria-pressed', on);
+    b.querySelector('.badge').textContent = on ? (ev.dir === 'left' ? '← ' + ev.curve : ev.curve + ' →') : '';
+  });
+  ['p','m'].forEach(p => {
+    $(p + 'F').value = state.fiscal; $(p + 'FOut').textContent = fiscalWord(state.fiscal); $(p + 'F').setAttribute('aria-valuetext', fiscalWord(state.fiscal));
+    $(p + 'R').value = state.rate; $(p + 'ROut').textContent = rateWord(state.rate); $(p + 'R').setAttribute('aria-valuetext', rateWord(state.rate));
+  });
+}
+
+/* ================= Modes ================= */
+let mode = 'adas';
+const MODE_BTN = {adas:'modeAdas', sticky:'modeSticky', long:'modeLong'};
+const LEGEND = {adas: $('legend').innerHTML, long: $('legend').innerHTML,
+  sticky: '<span><i style="border-color:var(--ad)"></i><b>AD</b> total spending</span><span><i style="border-color:var(--sras)"></i><b>AS</b> aggregate supply</span><span><i class="dash"></i>before</span>'};
+const TAGLINE = {adas: $('tagline').textContent,
+  sticky: 'What happens before prices can change.',
+  long: 'Watch the short run turn into the long run.'};
+const okNo = ok => ok ? '<span class="ok">Right.</span> ' : '<span class="no">Not quite.</span> ';
+const signed = v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v) + '%';
+// A row of eight tiles. The first n have changed and show `now`; the rest show 0%.
+const tiles = (items, n, now) => items.map(([icon, name], i) =>
+  `<div class="shop${i < n ? ' new' : ''}" title="${name}"><i>${icon}</i><span>${i < n ? now : '0%'}</span></div>`).join('');
+
+/* ================= Sticky prices mode =================
+   One spending shock of 8. f = share of businesses that have changed prices (0 to 1).
+   The AS curve pivots around (100, 100): flat at f = 0, the usual SRAS at f = 1.
+   Each business that changes its price moves it 4%, so the price level ends at 104 or 96. */
+const st = {tab:'flow', shock:0, guess:null, guess2:null, s:0, flex:false, gg:null, timer:null};
+// Left to right: prices that change most often to least often (textbook ch. 26)
+const SHOPS = [['✈️','Airline tickets'], ['⛽','Gasoline'], ['🥕','Farm products'], ['🛒','Retail stores'],
+               ['💡','Utilities'], ['🏭','Factory goods'], ['📰','Newspapers'], ['💈','Haircuts']];
+// Average months between price changes (textbook Table 26.1)
+const INDUSTRIES = [['Farming',3.2], ['Retail stores',4.6], ['Utilities',4.7], ['Finance',7.1], ['Manufacturing',8.1], ['Services',11.3]];
+function stickySolve(){
+  const d = st.guess ? st.shock : 0, f = st.s / 100;
+  return {Y:100 + d * (8 - 4 * f), P:100 + d * 4 * f, k: f === 0 ? 0 : (4 * f) / (8 - 4 * f), d, f};
+}
+function stopPlay(){ if (st.timer){ clearInterval(st.timer); st.timer = null; } }
+
+function drawSticky(){
+  const e = stickySolve(), d = e.d, f = e.f, moved = d !== 0, flex = st.flex && moved;
+  const m0 = {D:0}, m1 = {D:8 * d};
+  const asP = y => 100 + e.k * (y - 100);
+  let g = plotOpen('Aggregate demand and aggregate supply with sticky prices', `Real GDP is ${r0(e.Y)} and the price level is ${r0(e.P)}.`, ['mA']);
+
+  g += '<g clip-path="url(#clipPlot)">';
+  if (moved) g += segLine(adSeg(m0), COL.ad, GHOST) + shiftArrow(adY(m0,112), adY(m1,112), 112, 'mA', COL.ad);
+  if (f > 0) g += ln(YMIN,100,YMAX,100,`stroke="${COL.sras}" ${GHOST}`);     // where AS started: flat
+  if (flex) g += ln(100,PMIN,100,PMAX,`stroke="${COL.lras}" stroke-width="4" stroke-dasharray="2 8" stroke-linecap="round"`);
+  g += segLine(adSeg(m1), COL.ad, SOLID);
+  g += segLine(clipSeg(YMIN, asP(YMIN), YMAX, asP(YMAX)), COL.sras, SOLID);
+  g += '</g>';
+
+  // Labels
+  g += curveLabel(adSeg(m1), [0.1, 0.3, 0.85], 'AD', COL.ad, true, e);
+  const asName = f === 0 ? 'AS: immediate short run' : f === 1 ? 'SRAS: short run' : 'AS: prices adjusting';
+  if (d >= 0) g += textAt(sx(82), sy(asP(82)) + 23, asName, 'clbl', 'start', COL.sras);
+  else { const yr = f > 0.8 ? 117 : 124; g += textAt(sx(yr), sy(asP(yr)) - 11, asName, 'clbl', 'end', COL.sras); }
+
+  // Points
+  if (flex){
+    const fp = 100 + 8 * d;
+    g += textAt(sx(100) + 9, PY1 + 20, 'AS if no prices were sticky', 'tag', 'start', '#00724f');
+    g += dot(100, fp, '#fff', COL.lras, 6.5) + textAt(sx(100) + (d > 0 ? -12 : 12), sy(fp) + 5, 'No sticky prices', 'tag', d > 0 ? 'end' : 'start', '#00724f');
+  }
+  if (moved){
+    g += dot(100, 100, '#fff', COL.ghost, 6.5) + textAt(sx(100) + (flex ? -d * 12 : 0), sy(100) - 13, 'Before', 'tag', flex ? (d > 0 ? 'end' : 'start') : 'middle', COL.ghost);
+    if (f > 0){
+      const ax = sx(100 + 8 * d), ay = sy(100);
+      g += dot(100 + 8 * d, 100, '#fff', COL.sras, 6.5);
+      g += d > 0 ? textAt(ax - 11, ay + 21, 'At first', 'tag', 'end', '#a84a00') : textAt(ax + 11, ay - 11, 'At first', 'tag', 'start', '#a84a00');
+    }
+  }
+  g += nowDot(e);
+  g += d >= 0 ? textAt(sx(e.Y) + 13, sy(e.P) - 12, 'Now', 'clbl', 'start', COL.ink) : textAt(sx(e.Y), sy(e.P) + 32, 'Now', 'clbl', 'middle', COL.ink);
+  g += plotAxes(e) + valueBoxes(e);
+  $('graph').innerHTML = g;
+}
+
+function renderStickyStats(){
+  const e = stickySolve(), d = e.d;
+  const arr = v => v === 100 ? '' : `<small aria-hidden="true">${v > 100 ? '▲' : '▼'}</small>`;
+  const pch = Math.round(e.P - 100), out = Math.abs(Math.round(e.Y - 100)), pr = Math.abs(pch);
+  let third;
+  if (!d) third = `<div class="rl">Where the change in spending goes</div><div class="split"></div><div class="rs">Appears after your prediction</div>`;
+  else third = `<div class="rl">Where the ${d > 0 ? 'extra' : 'lost'} spending went</div>
+    <div class="split"><span class="so" style="flex:${out}">${out}</span>${pr ? `<span class="sp" style="flex:${pr}">${pr}</span>` : ''}</div>
+    <div class="rs">${d > 0 ? 'More' : 'Less'} output: ${out}. ${d > 0 ? 'Higher' : 'Lower'} prices: ${pr}.${st.flex ? ' If no prices were sticky: 0 and 8.' : ''}</div>`;
+  $('stats').innerHTML =
+    `<div class="ro"><div class="rl">Real GDP</div><div class="rv">${r0(e.Y)}${arr(e.Y)}</div><div class="rs">${!d ? 'Started at 100' : d > 0 ? 'Businesses hire more workers' : 'Businesses lay off workers'}</div></div>
+     <div class="ro"><div class="rl">Price level</div><div class="rv">${r0(e.P)}${arr(e.P)}</div><div class="rs">${pch === 0 ? 'Same as at the start' : `${pch > 0 ? 'Up' : 'Down'} ${pr}% from the start`}</div></div>
+     <div class="ro">${third}</div>`;
+  const stg = $('status');
+  stg.className = 'pill stage';
+  stg.textContent = !d ? 'Before the shock' : e.f === 0 ? 'Immediate short run: prices are stuck' : e.f === 1 ? 'Short run: businesses have changed their prices' : 'Prices are adjusting';
+}
+
+function renderStickyExplain(){
+  const e = stickySolve(), d = e.d, up = st.shock > 0;
+  const STICKY = 'Prices are sticky. Menus are printed, contracts are signed, and no business wants to be the first to change its prices.';
+  const slow = d < 0 && e.f > 0 ? ' Prices and wages are usually slower to fall than to rise, so this can take longer.' : '';
+  let a, b, k;
+  if (st.tab === 'goods'){
+    a = '<b>Not every price is equally sticky.</b> Some change within hours. Others stay the same for a year or more. The average good or service goes about four months between price changes.';
+    b = 'The stickier prices are, the longer a change in spending shows up in output and jobs instead of in prices.';
+    k = 'Economists say “sticky,” not “stuck.” Given enough time, prices do change.';
+  } else if (!st.shock){
+    a = 'The economy starts at rest. In the <b>immediate short run</b>, businesses keep their prices where they are, so the <span class="cS">aggregate supply (AS) curve is flat</span> at today\'s price level.';
+    b = 'Pick a shock below to see what happens when spending changes.'; k = STICKY;
+  } else if (!st.guess){
+    a = `<b>Spending ${up ? 'jumps' : 'drops'}.</b> Households and businesses suddenly want to buy ${up ? 'more' : 'less'}.`;
+    b = 'Before you see the result, make your prediction below.'; k = STICKY;
+  } else if (e.f === 0){
+    a = `<b>Immediate short run.</b> Total spending ${up ? 'rose' : 'fell'} → <span class="cAD">AD shifts ${up ? 'right' : 'left'}</span>. No business has changed its prices yet, so the AS curve is still flat.`;
+    b = `Real GDP ${up ? 'rose' : 'fell'} to ${r0(e.Y)} and the price level is still 100. ${up ? 'Businesses meet the extra demand by producing more, so they hire more workers.' : 'Businesses sell less, so they produce less and lay off workers.'}`;
+    k = 'In the immediate short run, prices are stuck, so a change in spending changes output only.';
+  } else if (e.f < 1){
+    a = `<b>Prices are adjusting.</b> ${st.s}% of businesses have changed their prices, so the <span class="cS">AS curve tilts up</span> and the economy slides along AD.`;
+    b = `Real GDP is now ${r0(e.Y)} and the price level is ${r0(e.P)}.${slow}`;
+    k = 'As more prices adjust, less of the spending change shows up in output and more shows up in prices.';
+  } else {
+    a = '<b>Short run.</b> Every business has had time to change its prices. This curve is the <span class="cS">SRAS</span> from the AD–AS mode. It slopes up because the prices businesses charge have adjusted, but wages have not yet.';
+    b = `Real GDP is ${r0(e.Y)} and the price level is ${r0(e.P)}.${slow} Wages are the next thing to change. That is the long run.`;
+    k = 'In the short run, a change in spending changes both output and the price level.';
+  }
+  if (st.tab === 'flow' && st.flex && d) k = `If every price and wage could change right away, the price level would go straight to ${100 + 8 * d} and real GDP would stay at 100. There would be no ${up ? 'boom' : 'recession'}. Sticky prices are why a change in spending moves output and jobs.`;
+  $('explainBody').innerHTML = `<p>${a}</p><p>${b}</p><p class="key"><b>Key idea:</b> ${k}</p>`;
+}
+
+function syncSticky(){
+  ['flow','goods'].forEach(t => { $('stTabBtn-' + t).setAttribute('aria-selected', st.tab === t); $('stTab-' + t).hidden = st.tab !== t; });
+  // Which prices stick?
+  $('ggAsk').hidden = !!st.gg; $('ggView').hidden = !st.gg;
+  if (st.gg) $('ggFb').innerHTML = okNo(st.gg === 'services') + 'Services wait longest: almost a year on average. Farm prices change about every three months.';
+  // Follow a shock
+  const up = st.shock > 0;
+  $('stNote').hidden = !!st.shock;
+  $('stShock').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.d === st.shock));
+  $('stAsk').hidden = !st.shock || !!st.guess;
+  const ask2 = $('stAsk2');
+  ask2.hidden = !st.guess || !!st.guess2;
+  if (!ask2.hidden && ask2.dataset.for !== String(st.shock)){
+    ask2.dataset.for = String(st.shock);
+    ask2.innerHTML = `<p><b>Predict again:</b> now businesses start to change their prices. What happens to real GDP?</p>
+      <div class="opts"><button type="button" data-a="more">${up ? 'Rises even more' : 'Falls even more'}</button><button type="button" data-a="back">${up ? 'Falls back partway' : 'Recovers partway'}</button><button type="button" data-a="same">Stays at ${up ? 108 : 92}</button></div>`;
+  }
+  const fb = $('stFb');
+  fb.hidden = !st.guess;
+  if (st.guess2) fb.innerHTML = okNo(st.guess2 === 'back') + `As prices ${up ? 'rise, people buy less, so real GDP falls back' : 'fall, people buy more, so real GDP recovers'} part of the way. Let time pass to see it.`;
+  else if (st.guess) fb.innerHTML = okNo(st.guess === 'output') + 'Prices are stuck, so only output can change at first.';
+  $('stTime').hidden = !st.guess2;
+  $('stS').value = st.s; $('stSOut').textContent = st.s + '%'; $('stS').setAttribute('aria-valuetext', st.s + '% of businesses have changed their prices');
+  $('stShops').innerHTML = tiles(SHOPS, Math.round(st.s / 100 * 8), signed(4 * st.shock));
+  $('stPlay').textContent = st.timer ? 'Pause' : st.s >= 100 ? 'Replay' : 'Let time pass';
+  $('stNext').hidden = st.s < 100;
+  $('stFlex').checked = st.flex;
+}
+$('ggBars').querySelector('tbody').innerHTML = INDUSTRIES.map(([name, v]) =>
+  `<tr title="${name}: ${v} months between price changes"><th scope="row">${name}</th><td class="track"><i style="width:${(100 * v / 11.3).toFixed(1)}%"></i></td><td class="v">${v.toFixed(1)}</td></tr>`).join('');
+['flow','goods'].forEach(t => $('stTabBtn-' + t).addEventListener('click', () => { st.tab = t; render(); }));
+$('ggAsk').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { st.gg = b.dataset.a; render(); }));
+$('stShock').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { stopPlay(); st.shock = +b.dataset.d; st.guess = st.guess2 = null; st.s = 0; render(); }));
+$('stAsk').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { st.guess = b.dataset.a; render(); const f = $('stAsk2').querySelector('button'); if (f) f.focus(); }));
+$('stAsk2').addEventListener('click', ev => { const b = ev.target.closest('button'); if (!b) return; st.guess2 = b.dataset.a; render(); $('stPlay').focus(); });
+$('stS').addEventListener('input', ev => { stopPlay(); st.s = +ev.target.value; render(); });
+$('stFlex').addEventListener('change', ev => { st.flex = ev.target.checked; render(); });
+$('stPlay').addEventListener('click', () => {
+  if (st.timer){ stopPlay(); render(); return; }
+  if (st.s >= 100){ st.s = 0; render(); return; }
+  const step = () => { st.s = Math.min(100, st.s + 25); if (st.s >= 100) stopPlay(); render(); };
+  st.timer = setInterval(step, st.shock < 0 ? 1300 : 900);    // prices are slower to fall than to rise
+  step();
+});
+$('stNext').addEventListener('click', () => { pickLong(st.shock > 0 ? 'boom' : 'bust'); setMode('long'); });
+
+/* ================= Long run mode =================
+   One shock of 8, then wages adjust in four steps. Each step moves the cost level C by 2,
+   which shifts SRAS until it crosses AD on the LRAS line. Every point is a whole number.
+   pol = where each kind of policy puts AD if the student acts instead of waiting.
+   A demand shock has one right policy. The oil shock has two, and each has a cost. */
+const LR = {
+  boom:{D:8,  C0:100, C1:108, pol:{con:0}, ms:900},
+  bust:{D:-8, C0:100, C1:92,  pol:{exp:0}, ms:1500},    // wages are slower to fall than to rise
+  oil: {D:0,  C0:108, C1:100, pol:{exp:8, con:-8}, ms:1500}
+};
+const STEPS = 4;
+const JOBS = [['🏭','Factory'], ['🏥','Hospital'], ['🏫','School'], ['🍽️','Restaurant'], ['🏗️','Construction'], ['🛒','Store'], ['🚚','Trucking'], ['💻','Office']];
+const KIND = {exp:'expansionary', con:'contractionary'};
+const lr = {sc:null, guess:null, k:0, path:'wait', act:null, seen:{}, timer:null};    // act = the student's policy answer
+function stopLong(){ if (lr.timer){ clearInterval(lr.timer); lr.timer = null; } }
+function pickLong(sc){ stopLong(); lr.sc = sc; lr.guess = null; lr.k = 0; lr.path = 'wait'; lr.act = null; lr.seen = {}; }
+// The economy k steps into the wage adjustment or, if kind is given, right after that policy.
+// w = wage level (start = 100).
+function longAt(k, kind){
+  if (!lr.sc) return {m:START, e:E0, w:100};
+  const d = LR[lr.sc], dC = (d.C1 - d.C0) * k / STEPS;
+  const m = kind ? {D:d.pol[kind], C:d.C0, Yp:100} : {D:d.D, C:d.C0 + dC, Yp:100};
+  return {m, e:solve(m), w: kind ? 100 : 100 + dC};
+}
+// The policy on screen: the student's pick when both kinds are on offer (oil), otherwise the one that fits
+const polKind = () => { const pol = LR[lr.sc].pol; return lr.act in pol ? lr.act : Object.keys(pol)[0]; };
+// What to show now. asking = on the policy path but the policy question is not answered yet.
+function longView(){
+  const pol = !!lr.guess && lr.path === 'policy';
+  if (pol && lr.act) return {...longAt(0, polKind()), k:0, act:polKind(), asking:false};
+  return {...longAt(pol ? 0 : lr.k), k: pol ? 0 : lr.k, act:null, asking:pol};
+}
+
+function drawLong(){
+  const {m, e, k, act} = longView(), sr = longAt(0), m0 = START;
+  let g = plotOpen('Aggregate demand and aggregate supply in the long run', `Real GDP is ${r0(e.Y)} and potential GDP is 100. The price level is ${r0(e.P)}.`, ['mA','mS','mK']);
+
+  g += '<g clip-path="url(#clipPlot)">' + gapShade(e, 100);
+  // Earlier positions of each curve
+  [...new Set([m0.D, sr.m.D])].filter(D => D !== m.D).forEach(D => { g += segLine(adSeg({D}), COL.ad, GHOST); });
+  [...new Set([m0.C, sr.m.C])].filter(C => C !== m.C).forEach(C => { g += segLine(srasSeg({C, Yp:100}), COL.sras, GHOST); });
+  // Shift arrows: the shock, then either the wage adjustment (SRAS) or the policy move (AD)
+  g += act ? shiftArrow(adY(sr.m,110), adY(m,110), 110, 'mA', COL.ad) : shiftArrow(adY(m0,110), adY(m,110), 110, 'mA', COL.ad);
+  g += k > 0 ? shiftArrow(srasY(sr.m,113), srasY(m,113), 113, 'mS', COL.sras) : shiftArrow(srasY(m0,113), srasY(sr.m,113), 113, 'mS', COL.sras);
+  // Current curves
+  g += ln(100,PMIN,100,PMAX,`stroke="${COL.lras}" stroke-width="4.5"`);
+  const aS = adSeg(m);
+  g += segLine(aS, COL.ad, SOLID) + segLine(srasSeg(m), COL.sras, SOLID);
+  g += '</g>';
+
+  // Curve labels
+  g += curveLabel(aS, [0.1, 0.3, 0.85], 'AD', COL.ad, true, e);
+  g += textAt(sx(srasY(m,118)) - 10, sy(118) + 6, 'SRAS', 'clbl', 'end', COL.sras);
+  g += textAt(sx(100) - 8, PY1 + 20, 'LRAS', 'clbl', 'end', '#00724f');    // left of the line, clear of SRAS as it shifts left
+  g += gapBracket(e, 100);
+
+  // The path so far: Start, then Short run, then each step
+  if (lr.sc){
+    const pts = [[E0.Y, E0.P], [sr.e.Y, sr.e.P]];
+    if (act) pts.push([e.Y, e.P]);
+    else for (let i = 1; i <= k; i++){ const q = longAt(i).e; pts.push([q.Y, q.P]); }
+    g += `<polyline points="${pts.map(([y, p]) => f1(sx(y)) + ',' + f1(sy(p))).join(' ')}" fill="none" stroke="${COL.ink}" stroke-width="2.5" stroke-dasharray="1 6" stroke-linecap="round" opacity=".75"/>`;
+    pts.slice(2, -1).forEach(([y, p]) => { g += `<circle cx="${f1(sx(y))}" cy="${f1(sy(p))}" r="4" fill="${COL.ghost}" stroke="#fff" stroke-width="1.5"/>`; });
+    g += dot(E0.Y, E0.P, '#fff', COL.ghost, 6.5);
+    // In the oil case the path comes back in from the upper left, so Start goes below (or right, if Now is on the left)
+    g += lr.sc !== 'oil' ? textAt(sx(E0.Y) - 14, sy(E0.P) + 5, 'Start', 'tag', 'end', COL.ghost)
+      : e.Y < sr.e.Y ? textAt(sx(E0.Y) + 14, sy(E0.P) + 5, 'Start', 'tag', 'start', COL.ghost)
+      : textAt(sx(E0.Y) - 9, sy(E0.P) + 22, 'Start', 'tag', 'end', COL.ghost);
+    if (act || k > 0){
+      g += dot(sr.e.Y, sr.e.P, '#fff', COL.sras, 6.5);
+      g += lr.sc === 'boom' ? textAt(sx(sr.e.Y) + 18, sy(sr.e.P) + 5, 'Short run', 'tag', 'start', '#a84a00') : textAt(sx(sr.e.Y) - 14, sy(sr.e.P) + 5, 'Short run', 'tag', 'end', '#a84a00');
+    }
+  }
+  g += nowDot(e);
+  // "Now" sits above the point during a boom (the Short run label is on its right), otherwise to its right
+  g += lr.sc === 'boom' && !act && e.Y !== 100
+    ? textAt(sx(e.Y), sy(e.P) - 17, 'Now', 'clbl', 'middle', COL.ink)
+    : textAt(sx(e.Y) + 18, sy(e.P) + 5, 'Now', 'clbl', 'start', COL.ink);
+  g += plotAxes(e) + valueBoxes(e);
+  $('graph').innerHTML = g;
+}
+
+function renderLongStats(){
+  const {e, w, k, act} = longView();
+  const arr = (now, was) => Math.abs(now - was) < 0.05 ? '' : `<small aria-hidden="true">${now > was ? '▲' : '▼'}</small>`;
+  const ch = v => v === 100 ? 'Unchanged' : `${v > 100 ? 'Up' : 'Down'} ${Math.abs(Math.round(v - 100))}%`;
+  const rows = [
+    ['Real GDP', r0(e.Y) + arr(e.Y, 100), 'Potential: 100'],
+    ['Price level', r0(e.P) + arr(e.P, 100), ch(e.P)],
+    ['Wages', r0(w) + arr(w, 100), ch(w)],
+    ['Unemployment', e.U.toFixed(1) + '%' + arr(e.U, NAT_U), `Normal: ${NAT_U}%`]
+  ];
+  $('stats').innerHTML = rows.map(([l,v,s]) => `<div class="ro"><div class="rl">${l}</div><div class="rv">${v}</div><div class="rs">${s}</div></div>`).join('');
+  const pill = $('status'), gap = hasGap(e) ? (e.gap < 0 ? 'recessionary gap' : 'inflationary gap') : '';
+  pill.className = 'pill ' + (!gap ? 'ok' : e.gap < 0 ? 'rec' : 'inf');
+  pill.textContent = !lr.sc ? 'Long-run equilibrium: at potential GDP'
+    : act ? (gap ? `Policy lowered prices: the ${gap} is wider` : 'Policy closed the gap: back at potential GDP')
+    : k === 0 ? `Short run: ${gap}`
+    : gap ? `Wages are adjusting: the ${gap} is closing`
+    : 'Long run: back at potential GDP';
+}
+
+function renderLongExplain(){
+  const sc = lr.sc, {e, w, k, act, asking} = longView(), pct = v => v.toFixed(1) + '%';
+  let a, b, key;
+  if (!sc){
+    a = 'In the short run, wages and other input costs stay where they are. In the <b>long run</b>, they change too. When they do, <span class="cS">SRAS shifts</span>.';
+    b = 'Pick a shock below. You will see the short-run result first, then what happens as wages adjust.';
+    key = 'Wages are even stickier than prices. Many are set by contracts or reviewed only once a year.';
+  } else if (act){
+    const sr = longAt(0).e;
+    const tools = act === 'exp' ? 'More government spending, lower taxes, or a lower interest rate' : 'Higher taxes, less government spending, or a higher interest rate';
+    const does = {boom:'reduce spending → <span class="cAD">AD shifts back left</span>', bust:'replace the lost spending → <span class="cAD">AD shifts back right</span>',
+                  oil: act === 'exp' ? 'boost spending → <span class="cAD">AD shifts right</span>' : 'reduce spending → <span class="cAD">AD shifts left</span>'}[sc];
+    a = `<b>${sc === 'oil' ? (act === 'exp' ? 'You fight unemployment.' : 'You fight inflation.') : 'Policy steps in.'}</b> ${tools} ${does}.`;
+    b = sc !== 'oil' ? `Real GDP is back to ${r0(e.Y)}, unemployment is back to ${pct(e.U)}, and the price level is back to ${r0(e.P)}. Wages never had to change.`
+      : act === 'exp' ? `Real GDP is back to ${r0(e.Y)} and unemployment is back to ${pct(e.U)}. But the price level is now ${r0(e.P)}, even higher than the ${r0(sr.P)} right after the shock.`
+      : `The price level is back to ${r0(e.P)}. But real GDP is now ${r0(e.Y)} and unemployment is ${pct(e.U)}, even worse than the ${pct(sr.U)} right after the shock.`;
+    key = {boom:'Policy can close an inflationary gap before higher wages lock in higher prices. In real life, the timing is hard to get right.',
+           bust:'Waiting for wages to fall means a long recession. That is why most economists favor using policy to fight one.',
+           oil: act === 'exp' ? 'This is the trap of cost-push inflation. Policy can bring the jobs back, but only by pushing prices even higher.'
+                              : 'This is the other side of the trap. Policy can stop the inflation, but only by making the recession deeper.'}[sc];
+  } else if (k === 0){
+    a = {boom:`<b>Spending jumps.</b> <span class="cAD">AD shifts right</span>. In the short run, real GDP rises to ${r0(e.Y)} and the price level rises to ${r0(e.P)}.`,
+         bust:`<b>Spending drops.</b> <span class="cAD">AD shifts left</span>. In the short run, real GDP falls to ${r0(e.Y)} and the price level falls to ${r0(e.P)}.`,
+         oil:`<b>Oil prices jump.</b> Production costs rise, so <span class="cS">SRAS shifts left</span>. In the short run, real GDP falls to ${r0(e.Y)} and the price level rises to ${r0(e.P)}.`}[sc];
+    b = sc === 'boom'
+      ? `Unemployment is ${pct(e.U)}, below its normal rate. Workers are hard to find. Prices are up, but wages have not changed yet.`
+      : `Unemployment is ${pct(e.U)}, above its normal rate. Many people are looking for work. Wages have not changed yet.`;
+    key = !lr.guess ? 'The short run is not the end of the story. Make your prediction below.'
+      : asking ? (sc === 'oil' ? 'This is stagflation: output is too low and prices are too high at the same time. Policy that shifts AD can fight only one of them. You have to choose.'
+                               : 'Fiscal and monetary policy both work by shifting AD. Decide which way AD needs to go.')
+      : sc === 'boom' ? 'The economy cannot stay above potential GDP. When workers are scarce, they can ask for higher pay.'
+      : 'When jobs are scarce, wages come under pressure to fall. Pay cuts are rare, so this is slow.';
+  } else if (k < STEPS){
+    a = sc === 'boom'
+      ? '<b>Wages are rising.</b> Businesses pay more to hire and keep scarce workers. Higher wages raise production costs → <span class="cS">SRAS shifts left</span>.'
+      : '<b>Wages are falling.</b> With so many people looking for work, new contracts pay less. Lower wages cut production costs → <span class="cS">SRAS shifts right</span>.';
+    b = `Real GDP is now ${r0(e.Y)} and the price level is ${r0(e.P)}. Wages are ${w > 100 ? 'up' : 'down'} ${Math.abs(w - 100)}% so far.`;
+    key = 'SRAS keeps shifting until real GDP is back at potential GDP. The economy slides along AD the whole way.';
+  } else {
+    const wp = Math.abs(w - 100), back = `Real GDP is back to ${r0(e.Y)} and unemployment is back to ${pct(e.U)}.`;
+    a = {boom:`<b>Long run.</b> Wages have risen ${wp}%, as much as prices. SRAS has shifted left until it crosses AD on the LRAS line.`,
+         bust:`<b>Long run.</b> Wages have fallen ${wp}%, as much as prices. SRAS has shifted right until it crosses AD on the LRAS line.`,
+         oil:`<b>Long run.</b> Wages have fallen ${wp}%, enough to make up for the higher cost of oil. SRAS is back where it started.`}[sc];
+    b = sc === 'oil' ? `${back} The price level is back to ${r0(e.P)}.` : `${back} The price level ${sc === 'boom' ? 'rose' : 'fell'} to ${r0(e.P)}.`;
+    key = {boom:'In the long run, more spending does not mean more output. It only means higher prices. That is why LRAS is vertical.',
+           bust:'The economy can end a recession on its own, but only if wages fall. Most economists think that takes a long time, with high unemployment along the way.',
+           oil:'Doing nothing does end the inflation, but only after a long recession and lower pay for workers.'}[sc];
+  }
+  $('explainBody').innerHTML = `<p>${a}</p><p>${b}</p><p class="key"><b>Key idea:</b> ${key}</p>`;
+}
+
+function syncLong(){
+  const sc = lr.sc, view = longView();
+  $('lrNote').hidden = !!sc;
+  $('lrShock').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.s === sc));
+  const ask = $('lrAsk');
+  ask.hidden = !sc || !!lr.guess;
+  if (!ask.hidden && ask.dataset.for !== sc){
+    ask.dataset.for = sc;
+    const y = r0(longAt(0).e.Y);
+    ask.innerHTML = `<p><b>Predict:</b> suppose the government and the Fed do nothing. Where does real GDP end up in the long run?</p>
+      <div class="opts"><button type="button" data-a="stay">Stays at ${y}</button><button type="button" data-a="back">Back to 100</button><button type="button" data-a="more">${sc === 'boom' ? 'Keeps rising' : 'Keeps falling'}</button></div>`;
+  }
+  const fb = $('lrFb');
+  fb.hidden = !lr.guess || lr.k > 0 || lr.path !== 'wait' || Object.keys(lr.seen).length > 0;
+  if (lr.guess) fb.innerHTML = okNo(lr.guess === 'back') + 'In the long run, real GDP returns to potential GDP (100). Let time pass, and watch what wages do to the price level.';
+  $('lrTime').hidden = !lr.guess;
+  if (!sc) return;
+  const d = LR[sc], up = d.C1 > d.C0, total = Math.abs(d.C1 - d.C0), share = lr.k * 100 / STEPS;
+  $('lrPath').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.p === lr.path));
+  $('lrWait').hidden = lr.path !== 'wait'; $('lrAct').hidden = lr.path !== 'policy';
+  // Wait: wages adjust
+  $('lrK').value = share; $('lrKOut').textContent = share + '%'; $('lrK').setAttribute('aria-valuetext', share + '% of workplaces have changed their wages');
+  $('lrJobs').innerHTML = tiles(JOBS, lr.k * 8 / STEPS, signed(up ? total : -total));
+  $('lrJobsNote').textContent = up
+    ? `Workers are scarce, so each new contract pays ${total}% more.`
+    : `Jobs are scarce, so each new contract pays ${total}% less. This is slow.`;
+  $('lrPlay').textContent = lr.timer ? 'Pause' : lr.k >= STEPS ? 'Replay' : 'Let time pass';
+  // Act: the student names the policy first. With two defensible policies (oil), the question stays up as a switch.
+  const kinds = Object.keys(d.pol), hard = kinds.length > 1, fit = kinds[0];
+  $('lrPolAsk').hidden = !!lr.act && !hard;
+  $('lrPolQ').innerHTML = !hard ? '<b>First, decide:</b> what kind of policy does this economy need?'
+    : !lr.act ? '<b>A hard call:</b> output is too low and prices are too high. Which policy do you use?'
+    : '<b>Now try the other policy</b> and compare what each one fixes.';
+  $('lrPolAsk').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', hard && b.dataset.a === lr.act));
+  const pfb = $('lrPolFb');
+  pfb.hidden = !lr.act || hard;
+  if (lr.act && !hard) pfb.innerHTML = (lr.act === fit ? `<span class="ok">Right: ${KIND[fit]} policy.</span> ` : `<span class="no">Not quite: this calls for ${KIND[fit]} policy.</span> `)
+    + (fit === 'con' ? 'Spending is too high, so cool it. Congress raises taxes or cuts spending, or the Fed raises its interest rate.'
+                     : 'Spending is too low, so boost it. Congress spends more or cuts taxes, or the Fed lowers its interest rate.');
+  $('lrHard').hidden = !(hard && lr.act);
+  $('lrPolNote').hidden = !lr.act || hard;
+  // Wait or act: each column fills in once the student has seen that path
+  const CATCH = {boom:{wait:'Prices end up higher for good.', con:'Policy works with a delay, and ending a boom is unpopular.'},
+                 bust:{wait:'A long recession while wages fall.', exp:'Policy works with a delay and can overshoot.'},
+                 oil:{wait:'A long recession while wages fall.', exp:'Prices end up even higher.', con:'An even deeper recession.'}}[sc];
+  const cols = [{key:'wait', head:'Wait', e:longAt(STEPS).e}].concat(kinds.map(kd => ({key:kd, head: !hard ? 'Use policy' : kd === 'exp' ? 'Boost spending' : 'Reduce spending', e:longAt(0, kd).e})));
+  const on = view.asking ? '' : view.act || 'wait', all = cols.every(c => lr.seen[c.key]);
+  const row = (label, f) => `<tr><th scope="row">${label}</th>${cols.map(c => `<td class="${lr.seen[c.key] ? '' : 'q'}${c.key === on ? ' on' : ''}">${lr.seen[c.key] ? f(c) : '?'}</td>`).join('')}</tr>`;
+  $('lrCmp').className = 'cmp' + (hard ? ' c4' : '');
+  $('lrCmp').innerHTML = `<caption class="note" style="text-align:left">${
+      all ? (hard ? 'No path fixes both problems. Each one costs jobs, higher prices, or time.' : 'Both paths end at potential GDP. They differ in the price level and in the pain along the way.')
+          : `Try ${hard ? 'all three' : 'both'} paths to fill in this table.`}</caption>
+    <thead><tr><td></td>${cols.map(c => `<th scope="col" class="${c.key === on ? 'on' : ''}">${c.head}</th>`).join('')}</tr></thead>
+    <tbody>${row('Real GDP', c => `<b>${r0(c.e.Y)}</b>`)}${row('Price level', c => `<b>${r0(c.e.P)}</b>`)}${row('The catch', c => CATCH[c.key])}</tbody>`;
+}
+$('lrShock').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { pickLong(b.dataset.s); render(); const f = $('lrAsk').querySelector('button'); if (f) f.focus(); }));
+$('lrAsk').addEventListener('click', ev => { const b = ev.target.closest('button'); if (!b) return; lr.guess = b.dataset.a; render(); $('lrPlay').focus(); });
+$('lrPath').querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+  stopLong(); lr.path = b.dataset.p; render();
+  if (lr.path === 'policy' && !lr.act) $('lrPolAsk').querySelector('button').focus();
+}));
+$('lrPolAsk').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { lr.act = b.dataset.a; lr.seen[polKind()] = true; render(); }));
+function setLongStep(k){ lr.k = k; if (k >= STEPS){ stopLong(); lr.seen.wait = true; } render(); }
+$('lrK').addEventListener('input', ev => { stopLong(); setLongStep(+ev.target.value * STEPS / 100); });
+$('lrPlay').addEventListener('click', () => {
+  if (lr.timer){ stopLong(); render(); return; }
+  if (lr.k >= STEPS){ setLongStep(0); return; }
+  lr.timer = setInterval(() => setLongStep(lr.k + 1), LR[lr.sc].ms);
+  setLongStep(lr.k + 1);
+});
+
+/* ================= Mode switch and render ================= */
+function setMode(mo){
+  if (mo === mode) return;
+  stopPlay(); stopLong(); mode = mo; render();
+}
+Object.keys(MODE_BTN).forEach(mo => $(MODE_BTN[mo]).addEventListener('click', () => setMode(mo)));
+function syncMode(){
+  Object.keys(MODE_BTN).forEach(mo => $(MODE_BTN[mo]).setAttribute('aria-pressed', mo === mode));
+  $('tabsBar').hidden = $('adasBody').hidden = mode !== 'adas';
+  $('stTabsBar').hidden = $('stickyBody').hidden = mode !== 'sticky';
+  $('longBody').hidden = mode !== 'long';
+  $('stats').className = 'readouts' + (mode === 'long' ? ' four' : '');
+  if ($('legend').dataset.mode !== mode){ $('legend').dataset.mode = mode; $('legend').innerHTML = LEGEND[mode]; $('tagline').textContent = TAGLINE[mode]; }
+}
+
+function render(){
+  const run = steps => steps.forEach(step => { try { step(); } catch (err) { console.error(err); } });
+  run([syncMode]);
+  if (mode === 'sticky') return run([syncSticky, drawSticky, renderStickyStats, renderStickyExplain]);
+  if (mode === 'long') return run([syncLong, drawLong, renderLongStats, renderLongExplain]);
+  const m = model(state), e = solve(m);
+  if (mission && mission.answered && !mission.solved && goalMet(MISSIONS[mission.i], m, e)){
+    mission.solved = true;
+    mission.debrief = MISSIONS[mission.i].debrief(state, e);
+    done.add(MISSIONS[mission.i].id); saveDone();
+  }
+  run([syncControls, renderQuiz, () => drawGraph(m, e), () => renderStats(m, e), () => renderExplain(m, e), () => renderMission(m, e)]);
+}
+render();
+})();
+</script>
+</body>
+</html>

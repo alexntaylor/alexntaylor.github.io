@@ -14,6 +14,8 @@ author: ""
 **Description**: Macroeconomics is the branch of economics that studies the domestic economic system as a whole and its interaction with foreign economies. This course focuses on the behavior of the aggregate economy as it pertains to the determination of national income, production, level of employment, general price level, and trace flows. Particular attention is devoted to fiscal policy and monetary policy and their respective impact on the economic system. Satisfies a general education requirement in human behavior and society.
 
 **Taught**: Fall 2024, Spring 2025, Fall 2025, Fall 2026, Spring 2027
+
+**Practice Labs**: [AD–AS Lab](/labs/ad-as-lab.html){target="_blank"} ([all labs](labs.qmd))
 :::
 
 ::: {.callout collapse="true" title="Principles of Microeconomics"}
